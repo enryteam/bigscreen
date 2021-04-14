@@ -53,6 +53,8 @@ https://gitee.com/han_meng_fei_sha/TeZhongSheBeiZongHeJianGuanDaPing/tree/master
 
 资源来源：
 
+- [bigdata-examples](https://github.com/zhangti0708/bigdata-examples)
+
 - [大屏数据展示模板](https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi)
 
 - [可视化大屏资源](https://gitee.com/longkang/bigscreen)
