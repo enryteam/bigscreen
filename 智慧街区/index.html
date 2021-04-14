@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/rem.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+<!--    <script src="./js/flexible.js"></script>-->
+    <link rel="stylesheet" href="./css/index.css">
+    <title>大屏</title>
+</head>
+<body>
+  <div class="contianer">
+          <div class="bg-faguang"></div>
+          <div class="bg-jianzhu"></div>
+          <div class="header">
+              <div class="header-left">
+<!--                   <div class="logo" style="visibility: hidden">-->
+<!--                       <div class="logo-img">-->
+<!--                          logo-->
+<!--                       </div>-->
+<!--                       <p>合肥市庐阳区城市更新投资集团</p>-->
+<!--                   </div>-->
+                  <ul class="nav">
+                      <li class="active">主屏</li>
+                      <li>智慧商圈</li>
+                      <li>智慧社区</li>
+                  </ul>
+              </div>
+              <div class="header-right">
+                  <ul>
+                      <li>
+                          <span class="time">2019.09.28  12:12:12</span>
+                      </li>
+                      <li>
+                          <i><img src="./img/header-2.svg" style="width: 0.58rem;height: 0.8rem"></i><span> 温度: </span><span class="tem">25℃</span>
+                      </li>
+                      <li>
+                          <i><img src="./img/header-3.svg" style="width: 0.66rem;height: 0.86rem"></i><span> 湿度: </span><span class="humidity">28%</span>
+                      </li>
+                      <li>
+                          <i><img src="./img/header-4.svg" style="width: 1.08rem;height: 0.84rem" class="wea-img"></i><span> 天气: </span><span class="wea">多云</span>
+                      </li>
+                      <li>
+                          <i><img src="./img/header-1.svg" style="width: 1rem;height: 0.8rem"></i><span> 风力: </span><span class="win_speed">233km/h</span>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="left">
+             <div class="today">
+                 <div class="title">
+                    <p>今日街区</p>
+                     <img src="./img/title-line.png" alt="">
+                 </div>
+                 <div>
+                     <ul class="today-con">
+                         <li>
+                             <div>
+                                 <img src="./img/top-icon.png" class="today-top">
+                                 <img src="./img/right-icon.png" class="today-right">
+                                 <img src="./img/bottom-icon.png" class="today-bottom">
+                                 <img src="./img/left-icon.png" class="today-left">
+                             </div>
+                             <p id="gaust_qty" class="bigNum">27468</p>
+                             <p class="titleText">客流量</p>
+                         </li>
+                         <li>
+                             <div>
+                                 <img src="./img/top-icon.png" class="today-top">
+                                 <img src="./img/right-icon.png" class="today-right">
+                                 <img src="./img/bottom-icon.png" class="today-bottom">
+                                 <img src="./img/left-icon.png" class="today-left">
+                             </div>
+                             <p id="car_qty" class="bigNum">8788</p>
+                             <p class="titleText">车流量</p>
+                         </li>
+                         <li>
+                             <div>
+                                 <img src="./img/top-icon.png" class="today-top">
+                                 <img src="./img/right-icon.png" class="today-right">
+                                 <img src="./img/bottom-icon.png" class="today-bottom">
+                                 <img src="./img/left-icon.png" class="today-left">
+                             </div>
+                             <p id="illegal_qty" class="bigNum">28</p>
+                             <p class="titleText">违章量</p>
+                         </li>
+                         <li>
+                             <div>
+                                 <img src="./img/top-icon.png" class="today-top">
+                                 <img src="./img/right-icon.png" class="today-right">
+                                 <img src="./img/bottom-icon.png" class="today-bottom">
+                                 <img src="./img/left-icon.png" class="today-left">
+                             </div>
+                             <p id="accident_qty" class="bigNum">2468</p>
+                             <p class="titleText">事故量</p>
+                         </li>
+                         <li>
+                             <div>
+                                 <img src="./img/top-icon.png" class="today-top">
+                                 <img src="./img/right-icon.png" class="today-right">
+                                 <img src="./img/bottom-icon.png" class="today-bottom">
+                                 <img src="./img/left-icon.png" class="today-left">
+                             </div>
+                             <p id="illegally_park" class="bigNum">27468</p>
+                             <p class="titleText">违停量</p>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+              <div class="security">
+                  <div class="title">
+                      <p>安全事件预警</p>
+                      <img src="./img/title-line.png" alt="">
+                  </div>
+                  <div>
+                      <div class="security-con">
+                          <div class="slide-title">
+                              <span>等级</span>
+                              <span>时间</span>
+                              <span>位置</span>
+                              <span>内容</span>
+                          </div>
+                          <div class="slide-container"><!--css设置时，注意高度是显示多少个item,如：item的高度是30px，显示3个，高度则是 3*30 = 90px -->
+                              <ul class="slide-list js-slide-list">
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="road">
+                  <div class="title">
+                      <p>街区概况</p>
+                      <img src="./img/title-line.png" alt="">
+                  </div>
+                  <div>
+                      <div class="load-left">
+                          <div class="title">
+                              <p>建筑设施</p>
+                          </div>
+                          <div id="road-table"></div>
+                      </div>
+                      <div class="load-right">
+                          <div class="title">
+                              <p>住宅人口类型</p>
+                          </div>
+                          <div id="people-pie"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="build">
+                  <div class="title">
+                      <p>建筑设施</p>
+                  </div>
+                  <div>
+                      <ul>
+                          <li>
+                              <div class="build-img">
+                                  <img src="./img/build-1.svg">
+                              </div>
+                              <div>
+                                  <p class="build-num">52</p>
+                                  <p class="build-text">无人奶茶店</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="build-img">
+                                  <img src="./img/build-2.svg">
+                              </div>
+                              <div>
+                                  <p class="build-num">188</p>
+                                  <p class="build-text">信用租赁</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="build-img">
+                                  <img src="./img/build-3.svg">
+                              </div>
+                              <div>
+                                  <p class="build-num">6</p>
+                                  <p class="build-text">智能综合体</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="build-img">
+                                  <img src="./img/build-4.svg">
+                              </div>
+                              <div>
+                                  <p class="build-num">12</p>
+                                  <p class="build-text">智能充电桩</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="build-img">
+                                  <img src="./img/build-5.svg">
+                              </div>
+                              <div>
+                                  <p class="build-num">12</p>
+                                  <p class="build-text">智能路灯</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="build-img">
+                                  <img src="./img/build-6.svg">
+                              </div>
+                              <div>
+                                  <p class="build-num">12</p>
+                                  <p class="build-text">智能垃圾桶</p>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="build-img">
+                                  <img src="./img/build-7.svg">
+                              </div>
+                              <div>
+                                  <p class="build-num">12</p>
+                                  <p class="build-text">无人便利店</p>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <img src="./img/bottom-line.png" style="width: 100%;float:left;">
+          </div>
+          <div class="center">
+             <div class="center-titlebg">
+                 <p class="main-title">淮河路步行街智慧街区系统</p>
+<!--                 <div class="line-bink"></div>-->
+                 <div class="center-con">
+                     <div class="commodity-sign-wrap boil1"></div>
+                     <div class="commodity-sign-wrap boil2"></div>
+                     <div class="camera camera1">
+                         <img src="./img/camera.png" alt="">
+                         <div class="video-box">
+                             <div>
+                                 <video src=""></video>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="camera camera2">
+                         <img src="./img/camera.png" alt="">
+                         <div class="video-box">
+                             <div>
+                                 <video src=""></video>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="camera camera3">
+                         <img src="./img/camera.png" alt="">
+                         <div class="video-box">
+                             <div>
+                                 <video src=""></video>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="camera camera4">
+                         <img src="./img/camera.png" alt="">
+                         <div class="video-box">
+                             <div>
+                                 <video src=""></video>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="camera camera5">
+                         <img src="./img/camera.png" alt="">
+                         <div class="video-box">
+                             <div>
+                                 <video src=""></video>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="fire fire1">
+                         <img src="./img/fire.png" alt="">
+                         <div class="device-box">
+                             <div class="device-title">标题</div>
+                             <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>
+                         </div>
+                     </div>
+                     <div class="fire fire2">
+                         <img src="./img/fire.png" alt="">
+                         <div class="device-box">
+                             <div class="device-title">标题</div>
+                             <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>
+                         </div>
+                     </div>
+                     <div class="fire fire3">
+                         <img src="./img/fire.png" alt="">
+                         <div class="device-box">
+                             <div class="device-title">标题</div>
+                             <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>
+                         </div>
+                     </div>
+                     <div class="device device1">
+                         <div class="online">
+                             <img src="./img/online-1.svg" class="online-img">
+                             <img src="./img/outline-1.svg" class="outline-img">
+                         </div>
+                         <div class="device-box">
+                             <div class="device-title">标题</div>
+                             <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>
+                         </div>
+                     </div>
+<!--                     <div class="device device2">-->
+<!--                         <div class="device online">-->
+<!--                             <img src="./img/online-3.svg" class="online-img">-->
+<!--                             <img src="./img/outline-3.svg" class="outline-img">-->
+<!--                         </div>-->
+<!--                     </div>-->
+                     <div class="device device3">
+                         <div class="outline">
+                             <img src="./img/online-1.svg" class="online-img">
+                             <img src="./img/outline-1.svg" class="outline-img">
+                         </div>
+                         <div class="device-box">
+                             <div class="device-title">标题</div>
+                             <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>
+                         </div>
+                     </div>
+                     <div class="device device4">
+                         <div class="online">
+                             <img src="./img/online-1.svg" class="online-img">
+                             <img src="./img/outline-1.svg" class="outline-img">
+                         </div>
+                         <div class="device-box">
+                             <div class="device-title">标题</div>
+                             <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>
+                         </div>
+                     </div>
+                     <div class="device device5">
+                         <div class="online">
+                             <img src="./img/online-3.svg" class="online-img">
+                             <img src="./img/outline-3.svg" class="outline-img">
+                         </div>
+                         <div class="device-box">
+                             <div class="device-title">标题</div>
+                             <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>
+                         </div>
+                     </div>
+                     <div class="device device6">
+                         <div class="outline">
+                             <img src="./img/online-1.svg" class="online-img">
+                             <img src="./img/outline-1.svg" class="outline-img">
+                         </div>
+                         <div class="device-box">
+                             <div class="device-title">标题</div>
+                             <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>
+                         </div>
+                     </div>
+                     <div class="device device7">
+                         <div class="online">
+                             <img src="./img/online-1.svg" class="online-img">
+                             <img src="./img/outline-1.svg" class="outline-img">
+                         </div>
+                         <div class="device-box">
+                             <div class="device-title">标题</div>
+                             <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>
+                         </div>
+                     </div>
+<!--                     <div class="device device8">-->
+<!--                         <div class="device online">-->
+<!--                             <img src="./img/online-1.svg" class="online-img">-->
+<!--                             <img src="./img/outline-1.svg" class="outline-img">-->
+<!--                         </div>-->
+<!--                     </div>-->
+                     <div class="famous famous1">
+                         <span>名胜古迹</span>
+                         <div class="device-box">
+                             <div class="device-title">标题</div>
+                             <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>
+                         </div>
+                     </div>
+                     <div class="building building1">
+                         <span>标志性建筑</span>
+                         <div class="device-box">
+                             <div class="device-title">标题</div>
+                             <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>
+                         </div>
+                     </div>
+                     <div class="things things1">
+                         <img src="./img/quan1.gif" alt="">
+                     </div>
+                     <div class="things things2">
+                         <img src="./img/quan1.gif" alt="">
+                     </div>
+                     <div class="things things3">
+                         <img src="./img/quan1.gif" alt="">
+                     </div>
+                     <div class="things things4">
+                         <img src="./img/quan1.gif" alt="">
+                     </div>
+                     <div class="things things5">
+                         <img src="./img/quan1.gif" alt="">
+                     </div>
+                     <div class="things-box">
+                         <p class="things-title">发生人群拥挤</p>
+                         <p class="things-con">合肥市庐阳区苏州路96号百大鼓楼名品金店</p>
+                         <div class="things-img">
+                             <img src="" alt="">
+                         </div>
+<!--                         <div class="device-title">标题</div>-->
+<!--                         <div class="device-con">介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍 介绍介绍介绍介绍介绍介绍介绍介绍</div>-->
+                     </div>
+                 </div>
+                 <div class="handle-btn-box">
+                     <ul class="handle-btn">
+                         <li class="video-btn" data-type="1">
+                             <img src="./img/center-linenoactive.png" style="width: 100%;height: 100%">
+                             <div class="handle-con">
+                                 <img src="./img/center-1.svg" style="width: 1.44rem;height: 1.18rem">
+                                 <p>摄像头</p>
+                             </div>
+                         </li>
+                         <li class="device-btn" data-type="2">
+                             <img src="./img/center-linenoactive.png" style="width: 100%">
+                             <div class="handle-con">
+                                 <img src="./img/center-2.svg" style="width: 1.44rem;height: 1.18rem">
+                                 <p>智能设备</p>
+                             </div>
+                         </li>
+                         <li class="fire-btn" data-type="3">
+                             <img src="./img/center-linenoactive.png" style="width: 100%">
+                             <div class="handle-con">
+                                 <img src="./img/center-3.svg" style="width: 1.44rem;height: 1.18rem">
+                                 <p>消防安全设施</p>
+                             </div>
+                         </li>
+                         <li class="famous-btn" data-type="4">
+                             <img src="./img/center-linenoactive.png" style="width: 100%">
+                             <div class="handle-con">
+                                 <img src="./img/center-4.svg" style="width: 1.44rem;height: 1.18rem">
+                                 <p>名胜古迹</p>
+                             </div>
+                         </li>
+                         <li class="building-btn" data-type="5">
+                             <img src="./img/center-linenoactive.png" style="width: 100%">
+                             <div class="handle-con">
+                                 <img src="./img/center-5.svg" style="width: 1.44rem;height: 1.18rem">
+                                 <p>标志建筑</p>
+                             </div>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+          </div>
+          <div class="right">
+              <div class="right-box">
+                  <img src="./img/title-line.png" style="width: 100%;">
+                  <div>
+                      <div class="right-left">
+                          <div class="title">
+                              <p>今日商圈</p>
+                          </div>
+                          <div class="ball-box">
+                              <img src="./img/ball-bg.png" style="position: absolute;width: 9rem;height:3.6rem;right:0;left:0;margin:auto;">
+                             <div class="ball1-box">
+                                 <p>市场容量指数</p>
+                                 <span class="ball-con ball1">2</span>
+                             </div>
+                              <div class="ball2-box">
+                                  <p>消费指数</p>
+                                  <span class="ball-con ball2">5</span>
+                              </div>
+                              <div class="ball3-box">
+                                  <span>市场容量指数</span>
+                                  <span class="ball-con ball3">5</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="right-right">
+                          <div class="title">
+                              <p>人流热力图</p>
+                          </div>
+                          <div class="head-box">
+                              <div id="head-map">
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="right-box1">
+                 <div class="right1-left">
+                     <div class="title">
+                         <p>商铺入驻增长分析</p>
+                     </div>
+                     <div id="market-table"></div>
+                 </div>
+                  <div class="right1-right">
+                      <div class="title">
+                          <p>营销总额分析</p>
+                      </div>
+                      <div id="marking-table"></div>
+                  </div>
+              </div>
+              <div class="right-box2">
+                  <div class="title">
+                      <p>今日社区</p>
+                  </div>
+                  <div>
+                      <ul class="coummity">
+                          <li class="small-box">
+                              <p class="commity-title">人员数量</p>
+                              <p class="commity-num">1.5<span class='commity-unit'>万</span></p>
+                          </li>
+                          <li class="small-box">
+                              <p class="commity-title">访客数量</p>
+                              <p class="commity-num">5682</p>
+                          </li>
+                          <li class="big-box">
+                              <p class="commity-title">人员出入数量</p>
+                              <p class="commity-num">1.2<span class='commity-unit'>万</span></p>
+                          </li>
+                          <li class="big-box">
+                              <p class="commity-title">车辆出入数量</p>
+                              <p class="commity-num">5781</p>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="right-box3">
+                  <div class="right3-left">
+                      <div class="title">
+                          <p>今日社区能耗</p>
+                      </div>
+                      <div class="energy-box">
+                          <div class="energy">
+                              <div class="water">
+                                  <p>10<span>吨</span></p>
+                                  <canvas id="pop"></canvas>
+                              </div>
+                              <div class="elect">
+                                  <p>599<span>度</span></p>
+                                  <canvas id="pop1"></canvas>
+                              </div>
+                              <div class="air">
+                                  <p>10<span>m³</span></p>
+                                  <canvas id="pop2"></canvas>
+                              </div>
+                          </div>
+                          <div class="energy-text">
+                              <p>用水</p>
+                              <p>用电</p>
+                              <p>用气</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="right3-right">
+                      <div class="title">
+                          <p>社区停车位情况</p>
+                      </div>
+                      <div>
+                          <ul class="parking">
+                              <li>
+                                  <div>
+                                      <img src="./img/car1.png" class="parking-icon">
+                                  </div>
+                                  <div class="parking-text">
+                                      <p>369</p>
+                                      <p>已使用车位</p>
+                                  </div>
+                              </li>
+                              <li>
+                                  <div>
+                                      <img src="./img/car2.png" class="parking-icon">
+                                  </div>
+                                  <div class="parking-text1">
+                                      <p>16</p>
+                                      <p>剩余车位</p>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="right-box4">
+                 <div class="right4-left">
+                     <div class="title">
+                         <p>今日拥堵指数</p>
+                     </div>
+                     <div id="congestion-table">
+
+                     </div>
+                 </div>
+                  <div class="right4-right">
+                      <div class="title">
+                          <p>今日路口流量排行</p>
+                      </div>
+                      <div class="crossing">
+                          <div class="slide-title1">
+                              <span>路口名称</span>
+                              <span>平均流量</span>
+                              <span>状态</span>
+                          </div>
+                          <div class="slide-container1"><!--css设置时，注意高度是显示多少个item,如：item的高度是30px，显示3个，高度则是 3*30 = 90px -->
+                              <ul class="slide-list1 js-slide-list1">
+                                  <li><span><span class="name-bt">1</span> 某某某某路口名称1</span><span>876辆/小时</span><span>畅通</span></li>
+                                  <li><span><span class="name-bt">2</span> 某某某某路口名称1</span><span>876辆/小时</span><span>畅通</span></li>
+                                  <li><span><span class="name-bt">3</span> 某某某某路口名称1</span><span>876辆/小时</span><span>畅通</span></li>
+                                  <li><span><span class="name-bt">4</span> 某某某某路口名称1</span><span>876辆/小时</span><span>畅通</span></li>
+                                  <li><span><span class="name-bt">5</span> 某某某某路口名称1</span><span>876辆/小时</span><span>畅通</span></li>
+                                  <li><span><span class="name-bt">6</span> 某某某某路口名称1</span><span>876辆/小时</span><span>畅通</span></li>
+                                  <li><span><span class="name-bt">7</span> 某某某某路口名称1</span><span>876辆/小时</span><span>畅通</span></li>
+                                  <li><span><span class="name-bt">8</span> 某某某某路口名称1</span><span>876辆/小时</span><span>畅通</span></li>
+                                  <li><span><span class="name-bt">9</span> 某某某某路口名称1</span><span>876辆/小时</span><span>畅通</span></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <img src="./img/title-line.png" style="width: 100%;float: left">
+              </div>
+          </div>
+  </div>
+</body>
+<script src="./js/mixin.js"></script>
+<script src="./js/core.js"></script>
+<script src="./js/md5.js"></script>
+<script src="./js/http.js"></script>
+<script src="./index.js"></script>
+
+<!-- myEcharts 下的图表 -->
+<script src="./js/myEcharts/building.js"></script>
+<script src="./js/myEcharts/marketingTotal.js"></script>
+<script src="./js/myEcharts/peopleStream.js"></script>
+<script src="./js/myEcharts/populationType.js"></script>
+<script src="./js/myEcharts/storeGrowth.js"></script>
+<script src="./js/myEcharts/todayJam.js"></script>
+
+</html>
