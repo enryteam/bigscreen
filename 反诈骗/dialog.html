@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>可设置内容弹出层，2秒自动消失</title>
+    <meta charset="utf-8">
+    <script src="js/ui/jquery.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        .alertWindowContent h1,p{text-align: center;font-size: 18px;font-weight: bolder;}
+        .alertWindowContent input{width: 100px; height: 50px;cursor: pointer;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+    </style>
+    <script>
+        $(function(){
+            $("#input1").click(function(){
+                jQuery.alertWindow("保存成功");
+            });
+            $("#input2").click(function(){
+                jQuery.alertWindow("修改成功");
+            });
+        });
+    </script>
+    <style>
+        #successImg{
+            width: 58px;
+            height: 58px;
+            margin: 0px auto;
+            background: url("img/icon01.png") no-repeat ;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+<!-- 代码 开始 -->
+<center><br><br><br><br><br><br><br><br>
+    <input type="button" value="按钮1" id="input1">
+    <input type="button" value="按钮2" id="input2">
+</center>
+<script>
+    jQuery.extend({
+        alertWindow:function(e,n){var e=e,r;n===undefined?r="#00a8b7":r=n;
+            if($("body").find(".alertWindow1").length===0){
+                var i='<div class="alertWindow1" style="position: fixed; margin-top: 15%;margin-left: 80%"><div  style="width: 360px; height: 170px;background: #FFF;margin: 300px auto;border: 2px solid #CFCFCF;">'+'<div  style="width: inherit;height: 20px;">'+'<div class="alertWindowCloseButton1" style="float: right; width: 10px; height: 30px;margin-right:5px;font-family:\'microsoft yahei\';color:'+r+';cursor: pointer;"></div>'+"</div>"+'<div id="successImg" class="alertWindowTitle" style="margin-top:10px;text-align:center;font-family:\'Verdana, Geneva, Arial, Helvetica, sans-serif\';font-size: 18px;font-weight: normal;color: '+r+';">'+"</div>"+'<div class="alertWindowContent" style="width:360px;height: 40px;text-align:center;font-size: 18px;color: #7F7F7F;margin-top:10px;">'+e+"</div>"+"</div>"+"</div>";
+                $("body").append(i);
+                var s=$(".alertWindow1");
+                //3秒后自动关闭窗口
+                setTimeout(function(){s.hide()},3000);
+            }
+            else {$(".alertWindowContent").text(e),$(".alertWindow1").show(),setTimeout(function(){$(".alertWindow1").hide()},3000);}
+        }
+    })
+</script>
+</body>
+</html>

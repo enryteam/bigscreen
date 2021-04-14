@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="Keywords" content="浙江省反诈骗系统平台,反诈骗"/>
+		<meta name="description" content="浙江省反诈骗系统平台"/>
+		<title>浙江省反诈骗系统平台</title>
+		<!-- css样式 -->
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/bigScreen_ts.css" />
+		<!-- js脚本 -->
+		<script src="js/ui/jquery.min.js"></script>
+		<script src="js/ui/countUp.min.js"></script>
+		<script src="js/ui/jquery.mCustomScrollbar.js" ></script>
+		<script src="js/ui/jquery.mousewheel_new.js" ></script>
+		<script src="js/ui/num.js"></script>
+		<script src="js/ui/scrollReveal.js"></script>
+		<!--echarts-->
+		<script src="js/ui/echarts/echarts.min.js"></script>
+		<script type="text/javascript" src="js/data/china.js"></script>
+		<!-- 图表js脚本 -->
+		<script src="js/web/bigScreen_ts.js"></script>
+		<style type="text/css">
+			.layout {
+				display: none;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: 1001;
+				text-align:center;
+				opacity:0.5;
+				filter:alpha(opacity=50);
+				background:#000;
+			}
+			.layout img{
+				margin-top: 18%;
+			}
+		</style>
+
+	</head>
+	<body>
+	<div id="layout" class="layout"><img src="img/load.png"/>数据加载中.....</div>
+		<!--head-->
+		<div class="header clearBox">
+			<div class="floatL header-one samePadding" data-scroll-reveal="enter left and move 4vw over 1s">
+				<p class="same-title">
+					<span title="今日统计">今日统计</span>
+				</p>
+				<div class="same-allText">
+					<span class="count"><i>135</i><em>个</em></span>
+					<span class="text">可疑号码</span>
+				</div>
+				<div class="same-allText">
+					<span class="count"><i>135</i><em>个</em></span>
+					<span class="text">高危交易</span>
+				</div>
+				<div class="same-allText">
+					<span class="count"><i>135</i><em>个</em></span>
+					<span class="text">假通缉令</span>
+				</div>
+				<div class="same-allText">
+					<span class="count"><i>135</i><em>个</em></span>
+					<span class="text">银行止付</span>
+				</div>
+			</div>
+			<div class="floatL header-two"  data-scroll-reveal="enter top and move 4vh over 1s">
+				<div class="all-title">浙江省反诈骗系统平台</div>
+				<div class="subTitle clearBox">
+					<span class="floatL">2018年度涉嫌金额总计</span>
+					<span class="floatR">
+						<i>2018-02-20</i>
+						<i>12:35:23</i>
+					</span>
+				</div>
+				<div class="ts-stati clearBox">
+					<div id="moneyCount" class="floatL">
+						<span class="t_num1"></span>
+					</div>
+					<div class="floatL floatY">元</div>
+				</div>
+				<div class="map" id="map">
+				</div>
+			</div>
+			<div class="floatL header-three samePadding"  data-scroll-reveal="enter bottom and move 4vh over 1s">
+				<p class="same-title">
+					<span title="推送统计">推送统计</span>
+				</p>
+				<div id="tsAllMoney" class="tsAllMoney">
+					<span class="t_num2"></span>
+				</div>
+				<div class="money-text">
+					<span class="todayM">今日涉嫌</span>
+					<span class="countM">(金额)</span>
+				</div>
+				<div class="mTable">
+					<p>
+						<span>本周涉嫌</span>
+						<span>
+							<i>金额 :</i>
+							<i>1568</i>
+							<i>￥</i>
+						</span>
+					</p>
+					<p>
+						<span>本月涉嫌</span>
+						<span>
+							<i>金额 :</i>
+							<i>4568</i>
+							<i>￥</i>
+						</span>
+					</p>
+					<p>
+						<span>本季涉嫌</span>
+						<span>
+							<i>金额:</i>
+							<i>9568</i>
+							<i>￥</i>
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<div class="footer clearBox">
+			<div class="floatL footer-one samePadding" data-scroll-reveal="enter left and move 1vw over 1s">
+				<div class="floatL">
+					<p class="same-title">
+						<span title="当天/当周/当月">当天/当周/当月</span>
+					</p>
+					<div class="thisChart" id="thisChart"></div>
+				</div>
+				<div class="floatL">
+					<p class="same-title">
+						<span title="最新拨打排行榜">最新拨打排行榜</span>
+					</p>
+					<div class="thisChart phoneList">
+						<div class="listRow clearBox">
+							<div>
+								<span class="sameIndex">1</span></div>
+							<div>
+								<span>杭州市</span>
+							</div>
+							<div>
+								<span class="sameLoad">
+									<span class="loadBg" style="width: 13.2vw;"></span>
+								</span>
+							</div>
+							<div class="sameCount">
+								<span>30968</span>
+								<span>个</span>
+							</div>
+						</div>
+						<div class="listRow clearBox">
+							<div>
+								<span class="sameIndex">1</span></div>
+							<div>
+								<span>杭州市</span>
+							</div>
+							<div>
+								<span class="sameLoad">
+									<span class="loadBg" style="width: 13.2vw;"></span>
+								</span>
+							</div>
+							<div class="sameCount">
+								<span>30968</span>
+								<span>个</span>
+							</div>
+						</div>
+						<div class="listRow clearBox">
+							<div>
+								<span class="sameIndex">2</span></div>
+							<div>
+								<span>温州市</span>
+							</div>
+							<div>
+								<span class="sameLoad">
+									<span class="loadBg" style="width: 10vw;"></span>
+								</span>
+							</div>
+							<div class="sameCount">
+								<span>30968</span>
+								<span>个</span>
+							</div>
+						</div>
+						<div class="listRow clearBox">
+							<div>
+								<span class="sameIndex">3</span></div>
+							<div>
+								<span>宁波市</span>
+							</div>
+							<div>
+								<span class="sameLoad">
+									<span class="loadBg" style="width: 8vw;"></span>
+								</span>
+							</div>
+							<div class="sameCount">
+								<span>30968</span>
+								<span>个</span>
+							</div>
+						</div>
+						<div class="listRow clearBox">
+							<div>
+								<span class="sameIndex">4</span></div>
+							<div>
+								<span>宁波市</span>
+							</div>
+							<div>
+								<span class="sameLoad">
+									<span class="loadBg" style="width: 8vw;"></span>
+								</span>
+							</div>
+							<div class="sameCount">
+								<span>30968</span>
+								<span>个</span>
+							</div>
+						</div>
+						<div class="listRow clearBox">
+							<div>
+								<span class="sameIndex">5</span></div>
+							<div>
+								<span>宁波市</span>
+							</div>
+							<div>
+								<span class="sameLoad">
+									<span class="loadBg" style="width: 8vw;"></span>
+								</span>
+							</div>
+							<div class="sameCount">
+								<span>30968</span>
+								<span>个</span>
+							</div>
+						</div>
+						<div class="listRow clearBox">
+							<div>
+								<span class="sameIndex">5</span></div>
+							<div>
+								<span>宁波市</span>
+							</div>
+							<div>
+								<span class="sameLoad">
+									<span class="loadBg" style="width: 8vw;"></span>
+								</span>
+							</div>
+							<div class="sameCount">
+								<span>30968</span>
+								<span>个</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="floatL footer-two samePadding" data-scroll-reveal="enter right and move 1vw over 1s">
+				<p class="same-title">
+					<span title="最新疑号">最新疑号</span>
+				</p>
+				<div class="newProblem">
+					<div class="np-title">
+						<span>
+							<img src="img/icon_01.png">浙江</span>
+						<span>主叫</span>
+						<span>被叫</span>
+						<span>时间</span>
+					</div>
+					<div class="np-content">
+						<p>
+							<span>杭州市</span>
+							<span>13098760021</span>
+							<span>18525422165</span>
+							<span>10:50</span>
+						</p>
+						<p>
+							<span>温州市</span>
+							<span>13098760021</span>
+							<span>18525422165</span>
+							<span>10:50</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

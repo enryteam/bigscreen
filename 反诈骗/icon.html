@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        .layout {
+            display: none;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            width: 20%;
+            height: 20%;
+            z-index: 1001;
+            text-align:center;
+        }
+    </style>
+    <script type="text/javascript">
+        function showLoading()
+        {
+            document.getElementById("layout").style.display = "block";
+        }
+        function hiddenLoading()
+        {
+            document.getElementById("layout").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+<div class="current"><a href="#" onclick="showLoading()">show</a></div>
+<div class="current"><a href="#" onclick="hiddenLoading()">hidden</a></div>
+<div class="layout" id="layout"><img src="img/load.gif" />loading.....</div>
+</body>
+</html>
