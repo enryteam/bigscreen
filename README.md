@@ -49,13 +49,13 @@ https://gitee.com/han_meng_fei_sha/TeZhongSheBeiZongHeJianGuanDaPing/tree/master
 
 
 
-
-
-
-
 # 附录
 
 资源来源：
+
+- [大屏数据展示模板](https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi)
+
+- [可视化大屏资源](https://gitee.com/longkang/bigscreen)
 
 - [echart大屏数据](https://gitee.com/chun_cheng/echart-large-screen-data)
 - [特种设备综合监管大屏](https://gitee.com/han_meng_fei_sha/TeZhongSheBeiZongHeJianGuanDaPing)
