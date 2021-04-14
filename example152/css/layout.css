@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color:#bababa;
+    background-image:url("../images/metal_tilt.png");
+    color:#fff;
+    font:14px/1.3 Arial,sans-serif;
+}
+
+footer {
+    background-color:#212121;
+    bottom:0;
+    box-shadow: 0 -1px 2px #111111;
+    display:block;
+    height:70px;
+    left:0;
+    position:fixed;
+    width:100%;
+    z-index:100;
+}
+
+footer h2{
+    font-size:22px;
+    font-weight:normal;
+    left:50%;
+    margin-left:-400px;
+    padding:22px 0;
+    position:absolute;
+    width:540px;
+}
+
+footer a.stuts,a.stuts:visited{
+    border:none;
+    text-decoration:none;
+    color:#fcfcfc;
+    font-size:14px;
+    left:50%;
+    line-height:31px;
+    margin:23px 0 0 110px;
+    position:absolute;
+    top:0;
+}
+
+footer .stuts span {
+    font-size:22px;
+    font-weight:bold;
+    margin-left:5px;
+}
+
+.container {
+    margin:20px auto;
+    position:relative;
+    width:720px;
+    height:720px;
+    background:url("../images/metal_bg.png") no-repeat 11px 22px ;
+}
