@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="css/screen04.css" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>监控与调度屏4</title>
+</head>
+
+<body class="small-screen">
+    <h4 class="tt" style="font-size:60px;">系统预警</h4>
+    <div class="row rows">
+        <div class="col">
+            <!-- 在线成员单位服务专席数量 -->
+            <div class="mod seating" id="seating">
+                <h2 class="mod-title">在线成员单位（联办）服务专席数量</h2>
+                <div class="mod-bd">
+                    <div class="num-tip">
+                        <span>0人</span>
+                        <i></i>
+                    </div>
+                    <ul class="num-state clearfix">
+                        <li class="num-state-item red">
+                            <div class="item-bar"></div>
+                            <span>&le;15人</span>
+                        </li>
+                        <li class="num-state-item green">
+                            <div class="item-bar"></div>
+                            <span>&gt;15人</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 近5分钟电话诉求 -->
+            <div class="mod phone" id="phone">
+                <div class="doublemod">
+                    <h2 class="mod-title">近5分钟电话诉求</h2>
+                    <span class="mod-tot">0件</span>
+                </div>
+                <div class="doublemod">
+                    <div class="gauge">
+                        <div class="pointer"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 近5分钟互联网诉求 -->
+            <div class="mod web" id="web">
+                <div class="doublemod">
+                    <h2 class="mod-title">近5分钟互联网诉求</h2>
+                    <span class="mod-tot">0件</span>
+                </div>
+                <div class="doublemod">
+                    <div class="gauge">
+                        <div class="pointer"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 近5分钟政务服务网咨询量 -->
+            <div class="mod consult" id="consult">
+                <h2 class="mod-title">近5分钟政务服务网咨询量</h2>
+                <div class="mod-bd">
+                    <div class="num-tip">
+                        <span>0件</span>
+                        <i></i>
+                    </div>
+                    <ul class="num-state clearfix">
+                        <li class="num-state-item red redl">
+                            <div class="item-bar sss" style="background-color: #19d6bb;"></div>
+                            <span style="margin-left: -60px;">无工单</span>
+                        </li>
+                        <li class="num-state-item green">
+                            <div class="item-bar"></div>
+                            <span>正常</span>
+                        </li>
+                        <li class="num-state-item red right">
+                            <div class="item-bar"></div>
+                            <span>&ge;500</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 短信发送延时(秒) -->
+            <div class="mod delay" id="delay">
+                <h2 class="mod-title">短信发送延时(秒)</h2>
+                <div class="mod-bd">
+                    <div class="num-tip">
+                        <span>0s</span>
+                        <i></i>
+                    </div>
+                    <ul class="num-state clearfix">
+                        <li class="num-state-item green">
+                            <div class="item-bar"></div>
+                            <span>&le;10s</span>
+                        </li>
+                        <li class="num-state-item yellow">
+                            <div class="item-bar"></div>
+                            <span>10s-30s</span>
+                        </li>
+                        <li class="num-state-item red">
+                            <div class="item-bar"></div>
+                            <span>&ge;30s</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <!-- 系统对接数据交换延时量 -->
+            <h2 class="col-title" style="    height: 50px;
+    line-height: 50px;">系统对接数据交换延时量</h2>
+            <div class="col-bd">
+                <ul class="areadelay" id="areadelay">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script id="areatmpl" type="x-tmpl-mustache">
+        <li class="areadelay-bar clearfix">
+            <span class="area-name"></span>
+            <div class="area-bar">
+                <div class="bar-green"></div>
+                <div class="bar-red"></div>
+                <span class="bar-crisis">0</span>
+            </div>
+        </li>
+        {{#item}}
+        <li class="areadelay-item clearfix">
+            <span class="area-name">{{name}}</span>
+            <div class="area-bar">
+                <div class="inner" data-width="{{percent}}"></div>
+            </div>
+            <span class="area-num">{{time}}分钟</span>
+        </li>
+        {{/item}}
+    </script>
+    <script>
+    var settings = {
+        loaddata: '/rest/forthmonitor'
+    };
+    </script>
+    <!--测试脚本-->
+    <script src="../js/jquery.mockjax.js"></script>
+    <script src="test/_testscreen04.js"></script>
+
+    <script src="../js/mustache.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="js/screen04.js"></script>
+</body>
+
+</html>

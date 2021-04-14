@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="582px" height="41px" viewBox="0 0 582 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56 (81588) - https://sketch.com -->
+    <title>title_1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="nbiot-网络监测中心省份" transform="translate(-669.000000, -47.000000)">
+            <g id="编组" transform="translate(69.000000, 40.000000)">
+                <g id="title_1" transform="translate(600.000000, 7.000000)">
+                    <polyline id="路径" stroke="#084A76" stroke-width="2" points="60 3 92 39 490 39 522 3"></polyline>
+                    <g id="编组-8">
+                        <polygon id="矩形" fill="#136BA6" points="8 2.22044605e-15 59 2.22044605e-15 62 4 8 4"></polygon>
+                        <rect id="矩形" fill="#2094E1" x="0" y="2" width="16" height="2"></rect>
+                    </g>
+                    <g id="编组-8备份" transform="translate(551.000000, 2.000000) scale(-1, 1) translate(-551.000000, -2.000000) translate(520.000000, 0.000000)">
+                        <polygon id="矩形" fill="#136BA6" points="8 2.22044605e-15 59 2.22044605e-15 62 4 8 4"></polygon>
+                        <rect id="矩形" fill="#2094E1" x="0" y="2" width="16" height="2"></rect>
+                    </g>
+                    <rect id="矩形" fill="#2094E1" x="163" y="37" width="256" height="4"></rect>
+                    <rect id="矩形备份" fill="#136BA6" x="107" y="37" width="48" height="4"></rect>
+                    <rect id="矩形备份-2" fill="#136BA6" x="427" y="37" width="48" height="4"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

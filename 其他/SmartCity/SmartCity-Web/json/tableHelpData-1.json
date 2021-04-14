@@ -1,0 +1,103 @@
+{
+  "code": 0,
+  "desc": "SUCCESS",
+  "timestamp": 1533674106829,
+  "data": {
+    "limit": 10,
+    "page": 1,
+    "rows": [
+      {
+        "id": 1647,
+        "title": "用户登录",
+        "level": "INFO",
+        "userName": "超级管理员",
+        "operTime": 1533671221000,
+        "reqIp": "0:0:0:0:0:0:0:1",
+        "reqUri": "/manage/submitLogin",
+        "method": "submitLogin(),POST",
+        "operEvent": "用户名=root",
+        "operStatus": 1,
+        "logDesc": null
+      },
+      {
+        "id": 1648,
+        "title": "进入主页，获取menu菜单",
+        "level": "INFO",
+        "userName": "超级管理员",
+        "operTime": 1533671221000,
+        "reqIp": "0:0:0:0:0:0:0:1",
+        "reqUri": "/manage/menu",
+        "method": "getMenus(),GET",
+        "operEvent": "",
+        "operStatus": 1,
+        "logDesc": null
+      },
+      {
+        "id": 1649,
+        "title": "进入主页，获取menu菜单",
+        "level": "INFO",
+        "userName": "超级管理员",
+        "operTime": 1533671222000,
+        "reqIp": "0:0:0:0:0:0:0:1",
+        "reqUri": "/manage/menu",
+        "method": "getMenus(),GET",
+        "operEvent": "",
+        "operStatus": 1,
+        "logDesc": null
+      },
+      {
+        "id": 1650,
+        "title": "用户登录",
+        "level": "INFO",
+        "userName": "超级管理员",
+        "operTime": 1533674035000,
+        "reqIp": "0:0:0:0:0:0:0:1",
+        "reqUri": "/manage/submitLogin",
+        "method": "submitLogin(),POST",
+        "operEvent": "用户名=root",
+        "operStatus": 1,
+        "logDesc": null
+      },
+      {
+        "id": 1651,
+        "title": "进入主页，获取menu菜单",
+        "level": "INFO",
+        "userName": "超级管理员",
+        "operTime": 1533674036000,
+        "reqIp": "0:0:0:0:0:0:0:1",
+        "reqUri": "/manage/menu",
+        "method": "getMenus(),GET",
+        "operEvent": "",
+        "operStatus": 1,
+        "logDesc": null
+      },
+      {
+        "id": 1652,
+        "title": "进入主页，获取menu菜单",
+        "level": "INFO",
+        "userName": "超级管理员",
+        "operTime": 1533674036000,
+        "reqIp": "0:0:0:0:0:0:0:1",
+        "reqUri": "/manage/menu",
+        "method": "getMenus(),GET",
+        "operEvent": "",
+        "operStatus": 1,
+        "logDesc": null
+      },
+      {
+        "id": 1653,
+        "title": "用户登录",
+        "level": "INFO",
+        "userName": "超级管理员",
+        "operTime": 1533674078000,
+        "reqIp": "0:0:0:0:0:0:0:1",
+        "reqUri": "/manage/submitLogin",
+        "method": "submitLogin(),POST",
+        "operEvent": "用户名=root",
+        "operStatus": 1,
+        "logDesc": null
+      }
+    ],
+    "total": 8
+  }
+}

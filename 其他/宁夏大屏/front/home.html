@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>综合分析</title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/layout.css" />
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/prefixfree.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript">
+  var i=1;
+  $(function(){
+        showLeftTime();
+        setInterval('showLeftTime()', 1000);
+    $(".cardDiv .card-tag").eq(0).addClass("click-on");
+    setInterval('autoTag();', 3000);
+	$("#dlDiv").click(function(){
+		$(this).hide();
+		});
+	$(".card-tag").click(function(){
+		$("#dlDiv").show();
+		var cardNum = $(this).index();
+		$("#btnDL").click(function(){
+		  /*if(cardNum == 0){
+			location.href="wngh.html"
+		  } else if(cardNum == 1){
+			location.href="sngd.html"
+		  } else if(cardNum == 2){
+			location.href="xmsh.html"
+		  } else if(cardNum == 3){
+			location.href="zyys.html"
+		  } else {
+			location.href="zxjs.html"
+		  }*/
+		  fkpage.goToNextSlide();
+		  
+    });
+	});
+  })
+  function autoTag(){
+    $(".cardDiv .card-tag").removeClass("click-on");
+    $(".cardDiv .card-tag").eq(i).addClass("click-on");
+    if(i<4){
+      ++i;
+    } else {
+      i=0;
+    }
+  }
+</script>
+
+</head>
+
+<body>
+<div id="logo"></div>
+	<div style="position:absolute;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:999;display:none" id="dlDiv">
+	<div style="position:absolute;width:454px;height:288px;left:50%;top:50%;margin-left:-227px;margin-top:-144px;">
+	<img src="../themes/images/dl.png" width="454" height="288" usemap="#Map" />
+    <map name="Map">
+      <area shape="rect" coords="50,192,404,240" href="#" id="btnDL">
+    </map>
+    </div>
+</div>
+        <p class="system-Time">
+          <i></i>
+        </p>
+        <div id="indexBg">
+          <iframe src="pb_yhfb.html" class="iframeTest" style="height:100%;width:100%;" frameborder="0"></iframe>
+          <p class="userNum">
+            总用户数
+            <i>111389个</i>
+          </p>
+          <p class="userNum" style="top:32%">
+            活跃用户数
+            <i>938个</i>
+          </p>
+        </div>
+              <div class="cardDiv" style="z-index:999">
+                <div class="card-tag">
+                    <h6>五年规划项目储备</h6>
+                    <p><span>112万</span>项目总数：</p>
+                    <p><span>224万亿元</span>总投资：</p>
+                </div>
+                <div class="card-tag">
+                    <h6>三年滚动投资计划</h6>
+                    <p><span>147万</span>项目总数：</p>
+                    <p><span>175万亿元</span>总投资：</p>
+                </div>
+                <div class="card-tag">
+                    <h6>项目审核备办理</h6>
+                    <p><span>147万</span>项目总数：</p>
+                    <p><span>175万亿元</span>总投资：</p>
+                </div>
+                <div class="card-tag">
+                    <h6>中央预算内投资</h6>
+                    <p><span>147万</span>项目总数：</p>
+                    <p><span>175万亿元</span>总投资：</p>
+                    <p><span>183万亿元</span>下达资金：</p>
+                </div>
+                <div class="card-tag">
+                    <h6>专项建设基金项目</h6>
+                    <p><span>147万</span>项目总数：</p>
+                    <p><span>175万亿元</span>总投资：</p>
+                    <p><span>183万亿元</span>投放资金：</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+  //获得当前时间,刻度为一千分一秒
+  function showLeftTime(){
+    var now=new Date();
+    var year=now.getFullYear();
+    var month=now.getMonth()+1;
+    var day=now.getDate();
+    var hours=now.getHours();
+    var minutes=now.getMinutes();
+    var seconds=now.getSeconds();
+    var zq=now.getDay();
+    var Week = ['日','一','二','三','四','五','六'];
+    if(seconds<10){
+      seconds = "0"+seconds;
+    }
+    if(minutes<10){
+      minutes = "0"+minutes;
+    }
+    var systemTime = "<i>"+hours+":"+minutes+":"+seconds+"</i>"+year+"年"+month+"月"+day+"日 星期"+Week[zq]; 
+    $(".system-Time").html(systemTime);
+    //一秒刷新一次显示时间
+    //var timeID=setTimeout(showLeftTime,1000);
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<!-- 加载redis配置文件 -->
+	<context:property-placeholder location="classpath:redis.properties" ignore-unresolvable="true" />
+
+	<!-- jedis连接池配置 -->
+	<bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<!-- 最小空闲连接数 -->
+		<property name="minIdle" value="${redis.minIdle}" />
+		<!-- 最大空闲连接数 -->
+		<property name="maxIdle" value="${redis.maxIdle}" />
+		<!-- 最大连接数 -->
+		<property name="maxTotal" value="${redis.maxTotal}" />
+		<!-- 获取连接时的最大等待毫秒数,小于零:阻塞不确定的时间,默认-1 -->
+		<property name="maxWaitMillis" value="${redis.maxWaitMillis}" />
+		<!-- 在获取连接的时候检查有效性, 默认false -->
+		<property name="testOnBorrow" value="${redis.testOnBorrow}" />
+		<!-- 每次释放连接的最大数目 -->
+		<property name="numTestsPerEvictionRun" value="${redis.numTestsPerEvictionRun}" />
+		<!-- 释放连接的扫描间隔（毫秒） -->
+		<property name="timeBetweenEvictionRunsMillis" value="${redis.timeBetweenEvictionRunsMillis}" />
+		<!-- 连接最小空闲时间 -->
+		<property name="minEvictableIdleTimeMillis" value="${redis.minEvictableIdleTimeMillis}" />
+		<!-- 连接空闲多久后释放, 当空闲时间>该值 且 空闲连接>最大空闲连接数 时直接释放 -->
+		<property name="softMinEvictableIdleTimeMillis" value="${redis.softMinEvictableIdleTimeMillis}" />
+		<!-- 在空闲时检查有效性, 默认false -->
+		<property name="testWhileIdle" value="${redis.testWhileIdle}" />
+		<!-- 连接耗尽时是否阻塞, false报异常,ture阻塞直到超时, 默认true -->
+		<property name="blockWhenExhausted" value="${redis.blockWhenExhausted}" />
+	</bean>
+
+	<!-- 两种方案：使用jedis连接池(单机版)和jedis集群 -->
+	<!-- 一般生产环境使用集群，开发环境使用单机版 -->
+	<!-- 使用哪种，可以将另一种注释掉 -->
+	<!-- 注意：如果在注入工具类的时候是按类型注入的话，那么不使用的工具类必须注释掉 -->
+
+	<!-- 单机版 -->
+
+	<!-- 配置jedis连接池 -->
+	<bean class="redis.clients.jedis.JedisPool">
+		<constructor-arg name="poolConfig" ref="poolConfig" />
+		<constructor-arg name="host" value="${redis.host}" />
+		<constructor-arg name="port" value="${redis.port}" />
+	</bean>
+
+	<!-- 配置单机版工具类 -->
+	<bean class="com.lapland.core.redis.RedisPool" />
+
+
+	<!-- 集群版 -->
+	<!-- 配置jedis集群 -->
+	<!-- <bean class="redis.clients.jedis.JedisCluster"> <constructor-arg name="nodes"> <set> <bean class="redis.clients.jedis.HostAndPort"> 
+		<constructor-arg name="host" value="${cluster.host1}" /> <constructor-arg name="port" value="${cluster.port1}" /> </bean> 
+		<bean class="redis.clients.jedis.HostAndPort"> <constructor-arg name="host" value="${cluster.host2}" /> <constructor-arg 
+		name="port" value="${cluster.port2}" /> </bean> <bean class="redis.clients.jedis.HostAndPort"> <constructor-arg name="host" 
+		value="${cluster.host3}" /> <constructor-arg name="port" value="${cluster.port3}" /> </bean> <bean class="redis.clients.jedis.HostAndPort"> 
+		<constructor-arg name="host" value="${cluster.host4}" /> <constructor-arg name="port" value="${cluster.port4}" /> </bean> 
+		<bean class="redis.clients.jedis.HostAndPort"> <constructor-arg name="host" value="${cluster.host5}" /> <constructor-arg 
+		name="port" value="${cluster.port5}" /> </bean> <bean class="redis.clients.jedis.HostAndPort"> <constructor-arg name="host" 
+		value="${cluster.host6}" /> <constructor-arg name="port" value="${cluster.port6}" /> </bean> </set> </constructor-arg> </bean> 
+		&lt;!&ndash;配置集群版工具类&ndash;&gt; <bean class="ccom.lapland.core.redis.RedisCluster" /> -->
+</beans>

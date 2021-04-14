@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="168px" height="48px" viewBox="0 0 168 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>编组 7</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1014" transform="translate(-92.000000, -134.000000)">
+            <g id="编组-3" transform="translate(92.000000, 113.000000)">
+                <g id="编组-3备份">
+                    <g id="编组-7" transform="translate(0.000000, 21.000000)">
+                        <path d="M160,30 L150,40 L0,40 L0,0 L160,0 L160,30 Z" id="形状结合" fill="#2AE0FC" opacity="0.32" transform="translate(80.000000, 20.000000) scale(1, -1) translate(-80.000000, -20.000000) "></path>
+                        <path d="M168,38 L158,48 L8,48 L8,8 L168,8 L168,38 Z" id="形状结合" fill="#2AE0FC" opacity="0.32" transform="translate(88.000000, 28.000000) scale(1, -1) translate(-88.000000, -28.000000) "></path>
+                        <polygon id="矩形" fill="#2FDFFF" points="156 0 168 0 168 12"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

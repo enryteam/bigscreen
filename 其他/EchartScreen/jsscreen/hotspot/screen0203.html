@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="css/screen0203.css" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>热点与趋势23</title>
+</head>
+
+<body class="big-screen">
+    <div class="header">
+    </div>
+    <div class="row main">
+        <!-- 左半部分 -->
+        <div class="mod left">
+            <!-- 诉求量趋势 -->
+            <div class="col appealtrend" id="appealtrend">
+                <div class="title">诉求量趋势</div>
+                <div class="col-bd" id="chartappeal" ></div>
+            </div>
+            <!-- 互联网诉求占比趋势 -->
+            <div class="col webtrend" id="webtrend">
+                <div class="title">互联网诉求占比趋势</div>
+                <div class="col-bd" id="chartweb"></div>
+            </div>
+        </div>
+        <!-- 中间部分 -->
+        <div class="mod middle">
+            <div class="col map" id="map">
+                <div class="mapchart" id="charmap" style="position: relative;top:-35px;"></div>
+                <div class="map-tot">
+                    <p>今日汇聚：<span class="map-tot-num">0</span>件</p>
+                </div>
+                <div class="mapthings hidden" id="mapthings">
+                	<p class="thing"></p>
+                	<p class="time"></p>
+                </div>
+            </div>
+        </div>
+        <!-- 右半部分 -->
+        <div class="mod right">
+            <!-- 全省前两月热点问题增幅TOP5 -->
+            <div class="col rise" id="rise">
+                <div class="title">全省热点问题增幅TOP5</div>
+                <div class="col-bd">
+                    <table class="hotpot-table">
+                        <thead class="hotpot-thead">
+                            <tr>
+                                <th>序</th>
+                                <th>热点问题</th>
+                                <th>上月服务工单量</th>
+                                <th>同比上上月</th>
+                            </tr>
+                        </thead>
+                        <tbody class="hotpot-tbody" id="rise-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 全省前两月热点问题降幅TOP5 -->
+            <div class="col reduce" id="reduce">
+                <div class="title">全省热点问题降幅TOP5</div>
+                <div class="col-bd">
+                    <table class="hotpot-table">
+                        <thead class="hotpot-thead">
+                            <tr>
+                                <th>序</th>
+                                <th>热点问题</th>
+                                <th>上月服务工单量</th>
+                                <th>同比上上月</th>
+                            </tr>
+                        </thead>
+                        <tbody class="hotpot-tbody" id="reduce-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全省前两月热点问题增幅TOP5 -->
+    <script id="rise-tmpl" type="x-tmpl-mustache">
+        {{#item}}
+        <tr>
+            <td>{{num}}</td>
+            <td class="top-issue">{{issue}}</td>
+            <td class="top-num">{{totnum}}</td>
+            <td class="top-num rise-top"><span>{{risenum}}%</span></td>
+        </tr>
+        {{/item}}
+    </script>
+	<!-- 全省前两月热点问题降幅TOP5 -->
+    <script id="reduce-tmpl" type="x-tmpl-mustache">
+        {{#item}}
+        <tr>
+            <td>{{num}}</td>
+            <td class="top-issue">{{issue}}</td>
+            <td class="top-num">{{totnum}}</td>
+            <td class="top-num reduce-bottom"><span>{{reducenum}}%</span></td>
+        </tr>
+        {{/item}}
+    </script>
+    <script>
+    var settings = {
+         //loaddata: 'loaddata'
+    	 loaddata: '/rest/sndhotspots'
+    };
+    </script>
+    <!-- 测试数据 -->
+    <script src="../js/jquery.mockjax.js"></script>
+    <script src="test/_testscreen0203.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/jiangsu.js"></script>
+    <script src="../js/mustache.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="js/screen0203.js"></script>
+</body>
+
+</html>

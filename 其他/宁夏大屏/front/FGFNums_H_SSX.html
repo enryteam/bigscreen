@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>省市县的审批件数</title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global_n.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/iframe.css" />
+<script src="../js/echarts/echarts.js"></script>
+ <script src="../data/dataFGF.js"></script>
+    <script src="../data/data.js"></script>
+</head>
+<body>
+ <div style="width:750px;height:100%;" id="main"> </div>
+        <script>
+		 require.config({
+				paths: {
+					echarts: '../js/echarts'
+				}
+			});
+		 require(
+			[
+				'echarts',
+				'echarts/chart/pie',
+				'echarts/chart/bar',
+				'echarts/chart/map',
+				'echarts/chart/line'
+			],
+			function (ec) {
+                var myChart = ec.init(document.getElementById('main'));
+                var  option = {
+                    tooltip : {
+                        trigger: 'axis'
+                    },
+                    grid:{
+                        borderWidth:0
+                    },
+                    calculable : true,
+                    yAxis : [
+                        {
+                            type : 'value',
+                            boundaryGap : [0, 0.01],
+                            splitLine:{show:false},
+                            axisLabel:{ textStyle:{color:'#FFF'}}
+                        }
+                    ],
+                    xAxis : [
+                        {
+                            type : 'category',
+                            axisLabel:{ textStyle:{color:'#FFF',rotate:45}},
+                            splitLine:{show:false},
+                            data : ['省级','市级','县级'],
+                            axisLabel : {
+                                show:true,
+                                textStyle: {
+                                    color: '#FFF'
+                                }
+                            }
+
+                        }
+                    ],
+                    series :  [
+                        {
+                            name:'审备核件数',
+                            type:'bar',
+                            data:[8355,17598,65203]
+
+                        }]};
+                myChart.setOption(option, true);
+            });
+		 </script>
+</body>
+</html>

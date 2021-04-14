@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="10px" viewBox="0 0 46 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56 (81588) - https://sketch.com -->
+    <title>边框1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="nbiot-网络监测中心省份" transform="translate(-24.000000, -784.000000)">
+            <g id="模块" transform="translate(24.000000, 784.000000)">
+                <g id="框线">
+                    <g id="边框1">
+                        <rect id="矩形" fill="#47B4FF" x="0" y="0" width="2" height="10"></rect>
+                        <rect id="矩形备份-36" fill="#47B4FF" x="0" y="0" width="10" height="2"></rect>
+                        <rect id="矩形备份-37" fill="#147DC5" x="10" y="0" width="36" height="2"></rect>
+                        <rect id="矩形备份-37" fill="#47B4FF" x="18" y="0" width="20" height="2"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

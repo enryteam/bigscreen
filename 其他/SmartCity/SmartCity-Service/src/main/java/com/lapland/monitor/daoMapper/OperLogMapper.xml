@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lapland.monitor.daoMapper.OperLogMapper">
+    <resultMap id="BaseResultMap" type="com.lapland.monitor.model.OperLog">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="level" property="level" jdbcType="VARCHAR"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="oper_time" property="operTime" jdbcType="TIMESTAMP"/>
+        <result column="req_ip" property="reqIp" jdbcType="VARCHAR"/>
+        <result column="req_uri" property="reqUri" jdbcType="VARCHAR"/>
+        <result column="method" property="method" jdbcType="VARCHAR"/>
+        <result column="oper_event" property="operEvent" jdbcType="VARCHAR"/>
+        <result column="oper_status" property="operStatus" jdbcType="TINYINT"/>
+        <result column="log_desc" property="logDesc" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
+        id, title, level, user_name, oper_time, req_ip, req_uri, method, oper_event, oper_status,
+        log_desc
+    </sql>
+
+    <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.lapland.monitor.model.OperLogExample">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        'false' as QUERYID,
+        <include refid="Base_Column_List"/>
+        from t_log
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+
+    <!--用户自定义 - 服务端分页-->
+    <select id="getLogTotal" resultType="int">
+        SELECT count(1) FROM t_log
+    </select>
+
+    <select id="getLogByPage" resultMap="BaseResultMap">
+        SELECT * FROM t_log
+        LIMIT #{offset},#{limit}
+    </select>
+    <!--用户自定义 - 服务端分页-->
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from t_log
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from t_log
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+
+    <delete id="deleteByExample" parameterType="com.lapland.monitor.model.OperLogExample">
+        delete from t_log
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+
+    <insert id="insert" parameterType="com.lapland.monitor.model.OperLog">
+        insert into t_log (id, title, level,
+        user_name, oper_time, req_ip,
+        req_uri, method, oper_event,
+        oper_status, log_desc)
+        values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{level,jdbcType=VARCHAR},
+        #{userName,jdbcType=VARCHAR}, #{operTime,jdbcType=TIMESTAMP}, #{reqIp,jdbcType=VARCHAR},
+        #{reqUri,jdbcType=VARCHAR}, #{method,jdbcType=VARCHAR}, #{operEvent,jdbcType=VARCHAR},
+        #{operStatus,jdbcType=TINYINT}, #{logDesc,jdbcType=VARCHAR})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.lapland.monitor.model.OperLog">
+        insert into t_log
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="level != null">
+                level,
+            </if>
+            <if test="userName != null">
+                user_name,
+            </if>
+            <if test="operTime != null">
+                oper_time,
+            </if>
+            <if test="reqIp != null">
+                req_ip,
+            </if>
+            <if test="reqUri != null">
+                req_uri,
+            </if>
+            <if test="method != null">
+                method,
+            </if>
+            <if test="operEvent != null">
+                oper_event,
+            </if>
+            <if test="operStatus != null">
+                oper_status,
+            </if>
+            <if test="logDesc != null">
+                log_desc,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="level != null">
+                #{level,jdbcType=VARCHAR},
+            </if>
+            <if test="userName != null">
+                #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="operTime != null">
+                #{operTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="reqIp != null">
+                #{reqIp,jdbcType=VARCHAR},
+            </if>
+            <if test="reqUri != null">
+                #{reqUri,jdbcType=VARCHAR},
+            </if>
+            <if test="method != null">
+                #{method,jdbcType=VARCHAR},
+            </if>
+            <if test="operEvent != null">
+                #{operEvent,jdbcType=VARCHAR},
+            </if>
+            <if test="operStatus != null">
+                #{operStatus,jdbcType=TINYINT},
+            </if>
+            <if test="logDesc != null">
+                #{logDesc,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.lapland.monitor.model.OperLog">
+        update t_log
+        <set>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="level != null">
+                level = #{level,jdbcType=VARCHAR},
+            </if>
+            <if test="userName != null">
+                user_name = #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="operTime != null">
+                oper_time = #{operTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="reqIp != null">
+                req_ip = #{reqIp,jdbcType=VARCHAR},
+            </if>
+            <if test="reqUri != null">
+                req_uri = #{reqUri,jdbcType=VARCHAR},
+            </if>
+            <if test="method != null">
+                method = #{method,jdbcType=VARCHAR},
+            </if>
+            <if test="operEvent != null">
+                oper_event = #{operEvent,jdbcType=VARCHAR},
+            </if>
+            <if test="operStatus != null">
+                oper_status = #{operStatus,jdbcType=TINYINT},
+            </if>
+            <if test="logDesc != null">
+                log_desc = #{logDesc,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.lapland.monitor.model.OperLog">
+        update t_log
+        set title = #{title,jdbcType=VARCHAR},
+        level = #{level,jdbcType=VARCHAR},
+        user_name = #{userName,jdbcType=VARCHAR},
+        oper_time = #{operTime,jdbcType=TIMESTAMP},
+        req_ip = #{reqIp,jdbcType=VARCHAR},
+        req_uri = #{reqUri,jdbcType=VARCHAR},
+        method = #{method,jdbcType=VARCHAR},
+        oper_event = #{operEvent,jdbcType=VARCHAR},
+        oper_status = #{operStatus,jdbcType=TINYINT},
+        log_desc = #{logDesc,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+</mapper>

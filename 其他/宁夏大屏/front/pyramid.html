@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/javascript" src="../js/fusioncharts/fusioncharts.js"></script>
+</head>
+<body>
+ <div id="main"> </div>
+<script>
+FusionCharts.ready(function () {
+    var wealthChart = new FusionCharts({
+        type: 'pyramid',
+        renderAt: 'main',
+        id: 'main111',
+        width: '280',
+        height: '265',
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+                "theme": "fint",
+                "captionOnTop" : "0",
+				"captionPadding": "25",
+				"alignCaptionWithCanvas" : "1",
+				"subCaptionFontSize" : "12",
+                "borderAlpha": "20",
+                "is2D": "0",
+                "showValues": "0",
+				"bgColor":"#061b36",
+				"borderColor":"#061b36",
+				"valueFontColor":"#FFFFFF",
+				"bgAlpha":"100",
+				"showBorder":"0",
+                "numberSuffix": "(亿)",
+                "plotTooltext": "$label：$value(亿)",
+                "chartLeftMargin": "40"
+            },
+            "data": [
+                {
+                    "label": "暂予监外执行",
+                    "value": "42124"
+                },
+                {
+                    "label": "管制",
+                    "value": "52124"
+                },
+                {
+                    "label": "假释",
+                    "value": "62124"
+                },
+                {
+                    "label": "缓刑",
+                    "value": "82124"
+                }
+            ]
+        }  
+    })
+    
+    .render();
+});
+</script>
+</body>
+</html>

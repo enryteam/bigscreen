@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global_n.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/iframe.css" />
+<script src="../js/echarts/echarts.js"></script>
+ <script src="../data/dataFGF.js"></script>
+    <script src="../data/data.js"></script>
+</head>
+<body>
+ <div style="width:750px;height:100%;" id="main"> </div>
+        <script>
+		 require.config({
+				paths: {
+					echarts: '../js/echarts'
+				}
+			});
+		 require(
+			[
+				'echarts',
+				'echarts/chart/pie',
+				'echarts/chart/bar',
+				'echarts/chart/map',
+				'echarts/chart/line'
+			],
+			function (ec) {
+                var myChart = ec.init(document.getElementById('main'));
+                var  option = {
+                    tooltip : {
+                        trigger: 'axis'
+                    },
+                    grid:{
+                        borderWidth:0
+                    },
+                    legend: {
+                        textStyle:{
+                            color:'#FFF'
+                        },
+                        data:FGF_Legend
+                    },
+                    calculable : true,
+                    yAxis : [
+                        {
+                            type : 'value',
+                            boundaryGap : [0, 0.01],
+                            splitLine:{show:false},
+                            axisLabel:{ textStyle:{color:'#FFF'}}
+                        }
+                    ],
+                    xAxis : [
+                        {
+                            type : 'category',
+                            axisLabel:{ textStyle:{color:'#FFF',rotate:45}},
+                            data : data.AreaData,
+                            axisLabel : {
+                                show:true,
+                                interval: 'auto',    // {number}
+                                rotate: 45,
+                                margin: 8,
+                                formatter: '{value}',
+                                textStyle: {
+                                    color: '#FFF',
+                                    fontFamily: 'sans-serif',
+                                    fontSize: 12,
+                                    fontStyle: 'italic',
+                                    fontWeight: 'bold'
+                                }
+                            }
+
+                        }
+                    ],
+                    series : (function(){
+                        var returndd=[];
+                        var len=FGF_Legend.length;
+                        for (var i=0;i<len;i++){
+                            var obj={};
+                            obj.name=FGF_Legend[i];
+                            obj.type='bar';
+                            // 数据值
+                            var valData=[];
+                            switch (FGF_Legend[i]){
+                                case"审批类项目":
+                                    for(var ii=0;ii<data.AreaData.length;ii++){
+                                        debugger;
+                                        var visit=true;
+                                        for(var ij=0;ij<FGF_DATA.approvalData.length;ij++){
+                                            var ij_data=FGF_DATA.approvalData[ij];
+                                            if(data.AreaData[ii]==ij_data.name){
+                                                valData.push(ij_data.value);
+                                                visit=false;
+                                            }
+                                        }
+                                        if(visit){
+                                            valData.push(0)
+                                        }
+                                    }
+                                    break;
+                                case"核准类项目":
+                                    for(var ii=0;ii<data.AreaData.length;ii++){
+                                        var visit=true;
+                                        for(var ij=0;ij<FGF_DATA.authorizeData.length;ij++){
+                                            var ij_data=FGF_DATA.authorizeData[ij];
+                                            if(data.AreaData[ii]==ij_data.name){
+                                                valData.push(ij_data.value);
+                                                visit=false;
+                                            }
+                                        }
+                                        if(visit){
+                                            valData.push(0)
+                                        }
+                                    }
+                                    break;
+                                case"备案类项目":
+                                    for(var ii=0;ii<data.AreaData.length;ii++){
+                                        var visit=true;
+                                        for(var ij=0;ij<FGF_DATA.recordData.length;ij++){
+                                            var ij_data=FGF_DATA.recordData[ij];
+                                            if(data.AreaData[ii]==ij_data.name){
+                                                valData.push(ij_data.value);
+                                                visit=false;
+                                            }
+                                        }
+                                        if(visit){
+                                            valData.push(0)
+                                        }
+                                    }
+                                    break;
+                            }
+                            // 数据
+                            obj.data=valData;
+                            returndd.push(obj);
+                        }
+                        return returndd;
+                    })()
+                };
+                myChart.setOption(option, true);
+            });
+		 </script>
+</body>
+</html>

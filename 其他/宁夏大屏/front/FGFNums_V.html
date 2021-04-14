@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global_n.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/iframe.css" />
+<script src="../js/echarts/echarts.js"></script>
+ <script src="../data/dataFGF.js"></script>
+</head>
+<body>
+ <div style="width:750px;height:100%;" id="main"> </div>
+        <script>
+		 require.config({
+				paths: {
+					echarts: '../js/echarts'
+				}
+			});
+		 require(
+			[
+				'echarts',
+				'echarts/chart/pie',
+				'echarts/chart/bar',
+				'echarts/chart/map',
+				'echarts/chart/line'
+			],
+			function (ec) {
+                var myChart = ec.init(document.getElementById('main'));
+                var  option = {
+                    tooltip : {
+                        trigger: 'axis'
+                    },
+                    grid:{
+                        borderWidth:0
+                    },
+                    legend: {
+                        textStyle:{
+                            color:'#FFF'
+                        },
+                        data:["审批事项总数","接件","受理"]
+                    },
+                    calculable : true,
+                    xAxis : [
+                        {
+                            type : 'value',
+                            boundaryGap : [0, 0.01],
+                            splitLine:{show:false}
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'category',
+                            axisLabel:{ textStyle:{color:'#FFF'}},
+                            data : FGF_DATA.Y_axisData,
+                            splitLine:{show:false}
+
+                        }
+                    ],
+                    series :[
+                               {
+                                name:"审批事项总数",
+                                type:"bar",
+                                data:[118,167,191,61,50,1,1,11,78,1,4,3,1,1,9,1,1,8,10,1,1,1,1,2,1]
+                               },
+                               {
+                                   name:"接件",
+                                   type:"bar",
+                                   data:[15,3,6,4,0,0,0,1,0,0,0,0,0,0,1,1,0,2,0,0,0,0,0,0,0]
+                               },
+                               {
+                                   name:"受理",
+                                   type:"bar",
+                                   data:[21,9,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                               }]
+                };
+                myChart.setOption(option, true);
+            });
+		 </script>
+</body>
+</html>

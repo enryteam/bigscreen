@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="css/screen04.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>服务座席</title>
+</head>
+
+<body class="small-screen">
+    <div class="row">
+        <div class="doublecol">
+            <div class="col">
+                <h2 class="col-title">设区市实时在线座席</h2>
+                <div class="col-bd" id="onguardsum">
+                	<!-- <div class="module" data-lbl="szx">
+                		<span >省中心</span><em>50</em>
+                	</div> -->
+                	<div class="module" data-lbl="nj">
+                		<span>南京市</span><em>50</em>
+                	</div>
+					<div class="module" data-lbl="wx">
+                		<span>无锡市</span><em>50</em>
+                	</div>
+					<div class="module" data-lbl="xz">
+                		<span>徐州市</span><em>50</em>
+                	</div>
+                	<div class="module" data-lbl="cz">
+                		<span>常州市</span><em>50</em>
+                	</div>
+                	<div class="module" data-lbl="sz">
+                		<span>苏州市</span><em>50</em>
+                	</div>
+					<div class="module" data-lbl="nt">
+                		<span>南通市</span><em>50</em>
+                	</div>
+					<div class="module" data-lbl="lyg">
+                		<span>连云港市</span><em>50</em>
+                	</div>
+                	<div class="module" data-lbl="ha">
+                		<span>淮安市</span><em>50</em>
+                	</div>
+                	<div class="module" data-lbl="yc">
+                		<span>盐城市</span><em>50</em>
+                	</div>
+					<div class="module" data-lbl="yz">
+                		<span>扬州市</span><em>50</em>
+                	</div>
+					<div class="module" data-lbl="zj">
+                		<span>镇江市</span><em>50</em>
+                	</div>
+                	<div class="module" data-lbl="tz">
+                		<span>泰州市</span><em>50</em>
+                	</div>
+                	<div class="module" data-lbl="sq">
+                		<span>宿迁市</span><em>50</em>
+                	</div>
+                </div>
+            </div>
+            <div class="col">
+                <h2 class="knowledgetitle" style="height:50px;line-height:50px;">设区市今日服务量</h2>
+                <div class="col-bd"  id="chartservicetoday">
+                </div>
+            </div>
+        </div>
+        <div class="doublecol-monitor doublecol">
+            <h2>试点成员单位服务现场</h2>
+            <div class="doublecol-bd">
+            	<!-- <div class="module">
+            		<div class="video">
+                    <img src="images/1.png"/>
+
+                    </div>
+            		<span>省中心</span>
+            	</div> -->
+            	<div class="module" onclick="getVideo('unit_law','省直属单位');">
+            		<div class="video">
+                    <img src="images/11.png"/>
+                    </div>
+            		<span>省司法厅</span>
+            	</div>
+            	<div class="module">
+            		<div class="video">
+                    <img src="images/12.png"/>
+                    </div>
+            		<span>省质监局</span>
+            	</div>
+            	<div class="module">
+            		<div class="video">
+                    <img src="images/13.png"/>
+                    </div>
+            		<span>省交通运输厅</span>
+            	</div>
+            	<div class="module">
+            		<div class="video">
+                    <img src="images/14.png"/>
+                    </div>
+            		<span>省人社厅</span>
+            	</div>
+                <div class="module">
+                    <div class="video">
+                    <img src="images/15.png"/>
+                    </div>
+                    <span>省工商局</span>
+                </div>
+                <div class="module">
+                    <div class="video">
+                    <img src="images/16.png"/>
+                    </div>
+                    <span>省地税局</span>
+                </div>
+            	<div class="module" onclick="getVideo('city_njs','设区市');">
+            		<div class="video">
+                    <img src="images/2.png"/>
+
+                    </div>
+            		<span>南京市</span>
+            	</div>
+            	<div class="module">
+            		<div class="video">
+                    <img src="images/3.png"/>
+                    </div>
+            		<span>无锡市</span>
+            	</div>
+            	<div class="module">
+            		<div class="video">
+                    <img src="images/4.png"/>
+                    </div>
+            		<span>徐州市</span>
+            	</div>
+            	<div class="module">
+            		<div class="video">
+                    <img src="images/5.png"/>
+                    </div>
+            		<span>常州市</span>
+            	</div>
+            	<div class="module">
+            		<div class="video">
+                    <img src="images/6.png"/>
+                    </div>
+            		<span>苏州市</span>
+            	</div>
+            	<div class="module">
+            		<div class="video">
+                    <img src="images/7.png"/>
+                    </div>
+            		<span>南通市</span>
+            	</div>
+            	<div class="module" onclick="getVideo('city_yzs','设区市');">
+            		<div class="video">
+                    <img src="images/8.png"/>
+                    </div>
+            		<span>扬州市</span>
+            	</div>
+            	<div class="module">
+            		<div class="video">
+                    <img src="images/9.png"/>
+                    </div>
+            		<span>淮安市</span>
+            	</div>
+            	<div class="module" onclick="getVideo('city_tzs','设区市');">
+            		<div class="video">
+                    <img src="images/10.png"/>
+                    </div>
+            		<span>泰州市</span>
+            	</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var settings = {
+            loaddata: '/rest/trdseat',
+        };
+    </script>
+    <!--测试脚本-->
+<!--     <script src="../js/jquery.mockjax.js"></script> -->
+<!--     <script src="test/_testscreen04.js"></script> -->
+    <script src="../js/common.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="js/screen04.js"></script>
+    
+    <script>
+	    setInterval(refreshChart, 1000 * 25);
+	    
+	    function refreshChart(){
+			Util.ajax({
+				url : "/rest/refresh/fstonguard",
+				success : function(data) {
+					renderonGuard(data.onguardsum);
+				}
+			})
+		}
+	    
+		setInterval(refreshToday, 1000 * 60);
+	    
+	    function refreshToday(){
+			Util.ajax({
+				url : "/rest/refresh/fsttoday",
+				success : function(data) {
+					renderServiceToday(data.servicetoday);
+				}
+			})
+		}
+    
+	    function getVideo(code,type) {
+	    	// 测试用
+// 	    	window.open(_rootPath+"/jsscreen/Videomonitor/VideoMonitoringIndex?code=" + code + "&type=" + type);
+	    	
+	    	var url = "/jsscreen/Videomonitor/VideoMonitoringIndex?code=" + code + "&type=" + type;
+			Util.ajax({
+				url : "/rest/sndrabbitmq/send",
+				type : "post",
+				data : {
+					four : encodeURI(url),
+				},
+				success : function(data) {
+				}
+			})
+		}
+    </script>
+</body>
+
+</html>

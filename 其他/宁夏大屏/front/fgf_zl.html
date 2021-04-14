@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>综合分析</title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/layout.css" />
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../js/prefixfree.min.js"></script>
+<style>
+</style>
+
+</head>
+
+<body>
+<div id="logo"></div>
+<div id="base-sidebar" class="sidebar">
+	<h6><img id="close-sidebar" src="../themes/images/sidebar-left-hide.gif">基础业务</h6>
+	<ul>
+		<li><a href="default.html" class="afterHover"><span class="sidebar-ztts"></span>总览</a></li>
+		<li><a href="wngh.html" class="afterHover"><span class="sidebar-wngh"></span>五年规划项目储备</a>
+			<ol>
+				<li><a href="javascript:void(0)">入库储备项目</a></li>
+				<li><a href="javascript:void(0)">初审储备项目</a></li>
+			</ol>
+		</li>
+		<li><a href="sngd.html" class="afterHover"><span class="sidebar-sngdjh"></span>三年滚动投资计划</a>
+			<ol>
+				<li><a href="javascript:void(0)">滚动计划编制</a></li>
+				<li><a href="javascript:void(0)">滚动计划审核</a></li>
+			</ol>
+		</li>
+		<li><a href="xmsh.html" class="afterHover"><span class="sidebar-xmshba"></span>项目审核备办理</a>
+			<ol>
+				<li><a href="xmsh-1.html">项目办理</a></li>
+				<li><a href="xmsh-2.html">事项办理</a></li>
+			</ol>
+		</li>
+		<li><a href="zyys.html" class="afterHover textLineHeight"><span class="sidebar-ysnzj"></span>中央预算内<br/>投资项目管理</a>
+			<ol>
+				<li><a href="javascript:void(0)">年度计划申报</a></li>
+				<li><a href="javascript:void(0)">年度计划下达</a></li>
+				<li><a href="javascript:void(0)">年度计划调度</a></li>
+			</ol>
+		</li>
+		<li><a href="zxjs.html" class="afterHover"><span class="sidebar-zxjsjj"></span>专项建设基金项目</a>
+			<ol>
+				<li><a href="javascript:void(0)">专项基金项目申报</a></li>
+				<li><a href="javascript:void(0)">专项基金项目投放</a></li>
+			</ol>
+		</li>
+		<li><a href="ptyh.html" class="afterHover"><span class="sidebar-zxjsjj"></span>平台用户分析</a>
+			<ol>
+				<li><a href="javascript:void(0)">活跃度分析</a></li>
+				<li><a href="javascript:void(0)">用户上报情况</a></li>
+				<li><a href="javascript:void(0)">用户分布情况</a></li>
+			</ol>
+		</li>
+		<li><a href="xmda.html" class="afterHover"><span class="sidebar-zxjsjj"></span>项目档案</a>
+			<!-- <ol>
+				<li><a href="xmda_xmjs.html">项目检索</a></li>
+				<li><a href="xmda_xmda.html">项目档案</a></li>
+			</ol> -->
+		</li>
+	</ul>
+</div>
+<div id="zdyw-sidebar" class="sidebar">
+	<h6><img id="close-sidebar" src="../themes/images/sidebar-left-hide.gif">重点业务</h6>
+	<ul>
+		<li class="click-on"><a href="javascript:void(0)" class="afterHover"><span class="sidebar-wngh"></span>放管服</a>
+			<ol>
+				<li><a href="fgf_zl.html">简政放权</a></li>
+				<li><a href="#">放管结合</a></li>
+				<li><a href="#">优化服务</a></li>
+			</ol>
+		</li>
+		<li><a href="javascript:void(0)" class="afterHover"><span class="sidebar-sngdjh"></span>投资形势分析</a>
+		</li>
+		<li><a href="javascript:void(0)" class="afterHover  textLineHeight"><span class="sidebar-xmshba"></span>项府投资<br/>精细化管理</a>
+		</li>
+		<li><a href="javascript:void(0)" class="afterHover"><span class="sidebar-ysnzj"></span>预测预警分析</a>
+			<ol>
+				<li><a href="#" class="textLineHeight" style="padding-top:10px;">项目实施进展监测<br/>预警分析</a></li>
+				<li><a href="#" class="textLineHeight" style="padding-top:10px;">项目办理进展监测<br/>预警分析</a></li>
+			</ol>
+		</li>
+		<li><a href="javascript:void(0)" class="afterHover"><span class="sidebar-zxjsjj"></span>综合分析报告</a>
+		</li>
+	</ul>
+</div>
+
+<div id="toolbar">
+	<span><a href="#" title="返回上一页" class="btn-back" onclick="history.go(-1)"></a></span>
+	<span><a href="index.html" title="主页" class="btn-index"></a></span>
+	<span><a href="#" title="菜单" class="btn-list"></a>
+		<ul class="listMenu">
+			<h6>
+				<a href="javascript:void(0).html" id="base">基础业务</a>
+				<a href="javascript:void(0)" id="zdyw" class="active">重点业务</a>
+			</h6>
+			<div id="base-menu">
+				<li class="active"><a href="default.html">总览</a></li>
+				<li><a href="wngh.html">五年规划项目储备</a>
+					<ul>
+						<li><a href="javascript:void(0)">入库储备项目</a></li>
+						<li><a href="javascript:void(0)">初审储备项目</a></li>
+					</ul>
+				</li>
+				<li><a href="sngd.html">三年滚动投资计划</a>
+					<ul>
+						<li><a href="javascript:void(0)">滚动计划编制</a></li>
+						<li><a href="javascript:void(0)">滚动计划审核</a></li>
+					</ul>
+				</li>
+				<li><a href="xmsh.html">项目审核备办理</a>
+					<ul>
+						<li><a href="javascript:void(0)">办理进展</a></li>
+						<li><a href="javascript:void(0)">办结批复</a></li>
+					</ul>
+				</li>
+				<li><a href="zyys.html">中央预算内投资项目管理</a>
+					<ul>
+						<li><a href="javascript:void(0)">年度计划申报</a></li>
+						<li><a href="javascript:void(0)">年度计划下达</a></li>
+						<li><a href="javascript:void(0)">年度计划调度</a></li>
+					</ul>
+				</li>
+				<li><a href="zxjs.html">专项建设基金项目</a>
+					<ul>
+						<li><a href="javascript:void(0)">专项基金项目申报</a></li>
+						<li><a href="javascript:void(0)">专项基金项目投放</a></li>
+					</ul>
+				</li>
+				<li><a href="ptyh.html">平台用户分析</a>
+					<ul>
+						<li><a href="javascript:void(0)">活跃度分析</a></li>
+						<li><a href="javascript:void(0)">用户上报情况</a></li>
+						<li><a href="javascript:void(0)">用户分布情况</a></li>
+					</ul>
+				</li>
+				<li><a href="xmda.html">项目档案</a></li>
+			</div>
+			<div id="zdyw-menu" style="display:none;">
+				<li><a href="fgf.html">放管服</a>
+					<ul>
+						<li><a href="javascript:void(0)">简政放权</a></li>
+						<li><a href="javascript:void(0)">放管结合</a></li>
+						<li><a href="javascript:void(0)">优化服务</a></li>
+					</ul>
+				</li>
+				<li><a href="tzxs.html">投资形势分析</a></li>
+				<li><a href="zftz.html">政府投资精细化管理</a></li>
+				<li><a href="ycyj.html">预测预警分析</a>
+					<ul>
+						<li><a href="javascript:void(0)">项目实施进展监测预警分析</a></li>
+						<li><a href="javascript:void(0)">项目办理进展监测预警分析</a></li>
+						<li><a href="javascript:void(0)">用户分布情况</a></li>
+					</ul>
+				</li>
+				<li><a href="zhfx.html">综合分析报告</a></li>
+			</div>
+		</ul>
+	</span>
+	<span><a href="#" title="搜索" class="btn-search"></a>
+		<ul class="listSearch">
+			<h6>搜索条件</h6>
+			<li>
+				<lable>上报单位</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>建设地点</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>所属行业</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>重大战略</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>行政层级</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>政府投资方向</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>资金渠道</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>专项类别</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>比对年份</lable>
+				<p><font style="display:inline-block;width:43%;"><input type="text"></font> - 
+				<font style="display:inline-block;width:43%;"><input type="text"></font></p>
+			</li>
+			<li>
+				<lable>项目类型</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>项目规模</lable>
+				<p><input type="text"></p>
+			</li>
+			<div><button>搜索</button></div>
+		</ul>
+	</span>
+	<span><a href="#" title="图例" class="btn-chart"></a>
+		<ul class="listChart">
+			<li><a href="#"><img src="../themes/images/img_menu01.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu02.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu03.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu04.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu05.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu06.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu07.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu08.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu09.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu10.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu11.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu12.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu13.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu14.gif" /></a></li>
+			<li><a href="#"><img src="../themes/images/img_menu15.gif" /></a></li>
+		</ul>
+	</span>
+	<span><a href="#" title="导出WORD" class="btn-word"></a></span>
+	<span><a href="#" title="导出PDF" class="btn-pdf"></a></span>
+	<span><a href="#" title="打印" class="btn-print"></a></span>
+</div>
+<div id="contentDiv">
+	<div class="selectTree" style="top:130px;">
+		<h6><span><img src="../themes/images/arrow-icon.png"></span>拟开工时间</h6>
+		<ul>
+		    <li><a href="#">2012</a></li>
+			<li><a href="#">2013</a></li>
+			<li><a href="#">2014</a></li>
+			<li><a href="#">2015</a></li>
+			<li><a href="#">2016</a></li>	
+		</ul>
+	</div>
+	<div class="rightDiv">
+		<div class="chartDiv">
+			<span class="jbg topLeft"></span>
+			<span class="jbg topRight"></span>
+			<span class="jbg bottomLeft"></span>
+			<span class="jbg bottomRight"></span>
+			<h6 >项目类别对比</h6>
+			<div class="chartHeight">
+				<iframe src="./FGFNumsAndFunds_pie.html" class="iframeTest" style="height:280px;width:390px;" frameborder="0"></iframe>
+			</div>
+		</div>
+		<div class="chartDiv">
+			<span class="jbg topLeft"></span>
+			<span class="jbg topRight"></span>
+			<span class="jbg bottomLeft"></span>
+			<span class="jbg bottomRight"></span>
+			<h6>分层级事项对比</h6>
+			<div class="chartHeight">
+				<iframe src="FGFNums_H_SSX.html" class="iframeTest" style="height:280px;width:390px;" frameborder="0"></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="leftDiv">
+		<div class="chartDiv">
+			<span class="jbg topLeft"></span>
+			<span class="jbg topRight"></span>
+			<span class="jbg bottomLeft"></span>
+			<span class="jbg bottomRight"></span>
+			<h6>事项全国分布总览 </h6>
+			<div class="chartHeight">
+				<iframe src="./FGFmapNums.html" class="iframeTest" style="height:550px;" frameborder="0"></iframe>
+            </div>l
+		</div>
+		<div class="chartDiv">
+			<span class="jbg topLeft"></span>
+			<span class="jbg topRight"></span>
+			<span class="jbg bottomLeft"></span>
+			<span class="jbg bottomRight"></span>
+			<h6>各类事项办理件数</h6>
+			<div class="chartHeight">
+				<iframe src="FGFNums_V.html" class="iframeTest" style="height:585px;" frameborder="0"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

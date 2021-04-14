@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  	  	<link rel="stylesheet" type="text/css" href="css/new_page/new_page4.css">
+  	  	<link rel="stylesheet" type="text/css" href="css/quick-modal.min.css">
+	</head>
+	<style>
+		h2{
+			position: absolute;
+			z-index: 100;
+			top: 50%;
+			left: 50%;
+			margin-left: -125px;
+			margin-top: -15px;
+			color: #fff;
+			font: bold 28px/20px "微软雅黑";
+		}
+	</style>
+	
+	<body class="page_bg">
+		
+		<section>
+			<div class="return_back">
+				<a href="new_page.html"></a>
+			</div>
+	</section>
+		
+		<header>
+			<article>
+				<div class="new_page4_header_logo"></div>
+			</article>
+		</header>
+		
+		
+		<article>
+			
+			<section>
+				<h2 class="">社区矫正信息管理平台</h1>
+			</section>
+			
+			<section>
+				<div class="new_page4_content">
+					<div class="wrap">
+						<div id="showcase" class="noselect">
+					      <a class="dwjg"data-modal-id="my-modal1"><img class="cloud9-item" src="images/new_page4_dwjg.png" alt="定位监管"></a>
+					      <a><img class="cloud9-item" src="images/new_page4_xxgl.png" alt="信息管理"></a>
+					      <a><img class="cloud9-item" src="images/new_page4_fxpg.png" alt="风险评估"></a>
+					      <a class="jypx" data-modal-id="my-modal4"><img class="cloud9-item" src="images/new_page4_jypx.png" alt="教育培训"></a>
+					      <a class="jszzk" data-modal-id="my-modal5"><img class="cloud9-item" src="images/new_page4_jzzzk.png" alt="矫正资料库"></a>
+					      <a><img class="cloud9-item" src="images/new_page4_lhkh.png" alt="量化考核"></a>
+					      <a><img class="cloud9-item" src="images/new_page4_wsbg.png" alt="网上办公"></a>
+					      <a><img class="cloud9-item" src="images/new_page4_xljz.png" alt="心理矫正"></a>
+					    </div>
+					</div>
+			</section>
+			
+			<section>
+				
+				<div id="my-modal1" class="qm-modal">
+		           <div class="qm-close-modal"></div>
+		            <iframe src="dwjg.html" frameborder="0" width="100%" height="100%"></iframe>
+		        </div>
+	        
+		        <div id="my-modal4" class="qm-modal">
+		            <div class="qm-close-modal"></div>
+		            <iframe src="sjxx.html" frameborder="0" width="100%" height="100%"></iframe>
+		        </div>
+		        
+		         <div id="my-modal5" class="qm-modal">
+		            <div class="qm-close-modal"></div>
+		            <iframe src="jzzlk.html" frameborder="0" width="100%" height="100%"></iframe>
+		        </div>
+				
+			</section>
+			
+		</article>
+	</body>
+	
+</html>
+
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.reflection.js"></script>
+<script src="js/jquery.cloud9carousel.js"></script>
+<script src="js/jquery.quick-modal.js"></script>
+ <script>
+ 	function a(url){ 		
+ 		setTimeout(function(){
+ 			window.open(url)
+ 		},1500);
+		return false;
+ 	}
+ 	
+   $(document).ready(function() {
+   	 $('.dwjg').quickModal({
+        animation: 'fade-zoom',
+        speed: 1000,
+        timing: 'ease',
+  	  });
+  	  
+  	 $('.jypx').quickModal({
+        animation: 'fade-left',
+        speed: 1000,
+        timing: 'ease',
+  	  });
+  	  
+   	 $('.jszzk').quickModal({
+        animation: 'fade-down',
+        speed: 1000,
+        timing: 'ease',
+  	  });
+	});                  
+        
+
+
+    $(function() {
+      var showcase = $("#showcase"), title = $('#item-title')
+
+      showcase.Cloud9Carousel( {
+        yOrigin: 160,
+        yRadius: 160,
+        mirror: {
+          gap: 12,
+          height: 0.4
+        },
+        buttonLeft: $("#nav > .left"),
+        buttonRight: $("#nav > .right"),
+        autoPlay: 0,
+        bringToFront: true,
+        onRendered: rendered,
+        onLoaded: function() {
+          showcase.css( 'visibility', 'visible' )
+          showcase.css( 'display', 'none' )
+          showcase.fadeIn( 1500 )
+        }
+      } )
+
+      function rendered( carousel ) {
+        title.text( carousel.nearestItem().element.alt )
+
+        var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
+        title.css('opacity', 0.5 + (0.5 * c))
+      }
+
+
+      $('#nav > button').click( function( e ) {
+        var b = $(e.target).addClass( 'down' )
+        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+      } )
+
+    })
+  </script>

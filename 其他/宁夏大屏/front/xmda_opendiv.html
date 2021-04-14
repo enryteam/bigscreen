@@ -1,0 +1,1244 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- add css -->
+    <link type="text/css" rel="stylesheet" href="../book/css/style.css">
+	<link type="text/css" rel="stylesheet" href="../book/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../themes/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="../themes/css/layout.css" />
+    
+    <!-- add js -->
+    <script src="../book/js/jquery.js"></script>
+    <script type="text/javascript" src="../js/base.js"></script>
+    <script src="../book/js/turn.js"></script>
+    <script src="../book/js/jquery.fullscreen.js"></script>
+    <script src="../book/js/jquery.address-1.6.min.js"></script>
+	<script src="../book/js/onload.js"></script>
+
+	<style>
+        html, body {
+            margin: 0;
+            padding: 0;
+    		overflow:auto !important;
+        }
+    </style>
+</head>
+<body>
+<!--目录弹出层start-->
+<div class="mlopenDiv" style="display:none;">
+   <h1>目录</h1>
+   <div class="mlNr">
+   	 <ul>
+     	<li><a href="javascript:void(0)" onClick="setPage(2)">一、项目履历&nbsp;&nbsp;....................................................................................&nbsp;3</a></li>
+        <li><a href="javascript:void(0)" onClick="setPage(4)">二、基本信息&nbsp;&nbsp;....................................................................................&nbsp;4</a></li>
+        <li><a href="javascript:void(0)" onClick="setPage(10)">三、审核备办理事项&nbsp;&nbsp;......................................................................&nbsp;10</a></li>
+        <li><a href="javascript:void(0)" onClick="setPage(12)">四、投资情况&nbsp;&nbsp;..................................................................................&nbsp;12</a></li>
+        <li><a href="javascript:void(0)" onClick="setPage(20)">五、计划下达情况&nbsp;&nbsp;..........................................................................&nbsp;20</a></li>
+        <li><a href="javascript:void(0)" onClick="setPage(21)">六、资金到位完成情况&nbsp;&nbsp;..................................................................&nbsp;21</a></li>
+        <li><a href="javascript:void(0)" onClick="setPage(22)">七、项目调度-最新报告期&nbsp;&nbsp;.............................................................&nbsp;22</a></li>
+        <li><a href="javascript:void(0)" onClick="setPage(26)">八、项目调度-往月报告期&nbsp;&nbsp;.............................................................&nbsp;26</a></li>
+     </ul>
+   </div>
+</div>
+<!--目录弹出层end-->
+<div id="toolbar">
+    <span><a href="#" title="返回上一页" class="btn-back" onClick="history.go(-1)"></a></span>
+    <span><a href="home1.html" title="主页" class="btn-index"></a></span>
+    <span><a href="#" title="菜单" class="btn-list"></a>
+        <ul class="listMenu">
+          <h6>
+            <a href="javascript:void(0)" id="base" class="active">基础业务</a>
+            <a href="javascript:void(0)" id="zdyw">重点业务</a>
+          </h6>
+          <div id="base-menu">
+            <li><a href="default.html">总览</a></li>
+            <li><a href="wngh.html">五年规划项目储备</a>
+              <ul>
+                <li><a href="wngh-1.html">入库储备项目</a></li>
+                <li><a href="wngh-2.html">初审储备项目</a></li>
+              </ul>
+            </li>
+            <li><a href="sngd.html">三年滚动投资计划</a>
+              <ul>
+                <li><a href="sngd-1.html">滚动计划编制</a></li>
+                <li><a href="sngd-2.html">滚动计划审核</a></li>
+              </ul>
+            </li>
+            <li><a href="xmsh.html">项目审核备办理</a>
+              <ul>
+                <li><a href="xmsh-1.html">项目办理</a></li>
+                <li><a href="xmsh-2.html">事项办理</a></li>
+              </ul>
+            </li>
+            <li><a href="zyys.html">中央预算内投资项目管理</a>
+              <ul>
+                <li><a href="zyys-1.html">年度计划申报</a></li>
+                <li><a href="zyys-2.html">年度计划下达</a></li>
+                <li><a href="zyys-3.html">年度计划调度</a></li>
+              </ul>
+            </li>
+            <li><a href="zxjs.html">专项建设基金项目</a>
+              <ul>
+                <li><a href="zxjs-1.html">专项基金项目申报</a></li>
+                <li><a href="zxjs-2.html">专项基金项目投放</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="xmda.html">项目档案</a></li>
+          </div>
+          <div id="zdyw-menu" style="display:none;">
+            <li><a href="tzxs.html">投资形势分析</a></li>
+            <li><a href="fgf.html">放管服改革</a>
+              <ul>
+                <li><a href="fgf-1.html">简政放权</a></li>
+                <li><a href="fgf-2.html">放管结合</a></li>
+                <li><a href="fgf-3.html">优化服务</a></li>
+              </ul>
+            </li>
+            <li><a href="zftz.html">政府投资精细化管理</a></li>
+            <li><a href="ycyj.html">预测预警分析</a>
+              <ul>
+                <li><a href="ycyj-1.html">项目实施进展监测预警分析</a></li>
+                <li><a href="ycyj-2.html">项目办理进展监测预警分析</a></li>
+                <li><a href="ycyj-3.html">用户分布情况</a></li>
+              </ul>
+            </li>
+            <li><a href="zhfx.html">综合分析报告</a></li>
+          </div>
+        </ul>
+    </span>
+    <span><a href="#" title="搜索" class="btn-search"></a>
+        <ul class="listSearch">
+            <h6>搜索条件</h6>
+            <table class="listSearchdiv">
+      <tr>
+          <th>项目申报日期</th>
+          <td><input type="text"></td>
+          <th>年度计划申报日期</th>
+          <td><input type="text"></td>
+      </tr>
+      <tr>
+          <th>专项建设基金申报日期</th>
+          <td><input type="text"></td>
+          <th>建设地点</th>
+          <td><input type="text"></td>
+      </tr>
+      <tr>
+          <th>所属行业</th>
+          <td><input type="text"></td>
+          <th>中央预算内申请规模</th>
+          <td><input type="text"></td>
+      </tr>
+      <tr>
+          <th>专项建设基金申请规模</th>
+          <td><input type="text"></td>
+          <th>中央预算内需求规模</th>
+          <td><input type="text"></td>
+      </tr>
+      <tr>
+          <th>专项建设基金需求规模</th>
+          <td><input type="text"></td>
+          <th>开工或拟开工年月</th>
+          <td><input type="text"></td>
+      </tr>
+      <tr>
+          <th>竣工或拟建成年份</th>
+          <td><input type="text"></td>
+          <th>投资总体进展</th>
+          <td><input type="text"></td>
+      </tr>
+      <tr>
+          <th>项目实施进展</th>
+          <td><input type="text"></td>
+          <th>数据来源</th>
+          <td><input type="text"></td>
+      </tr>
+      <tr>
+          <th>审批阶段</th>
+          <td><input type="text"></td>
+          <th>项目状态</th>
+          <td><input type="text"></td>
+      </tr>
+        <tr>
+          <th>政府投资方向</th>
+          <td><input type="text"></td>
+          <th>是否PPP</th>
+          <td><input type="text"></td>
+      </tr>
+      <tr>
+          <th>是否专项建设基金</th>
+          <td colspan="3"><input type="text"></td>
+      </tr>
+      </table>
+            <div><button>搜索</button></div>
+        </ul>
+    </span>
+    <span><a href="#" title="图例" class="btn-chart"></a>
+        <ul class="listChart">
+            <li><a href="#"><img src="../themes/images/img_menu01.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu02.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu03.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu04.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu05.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu06.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu07.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu08.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu09.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu10.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu11.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu12.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu13.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu14.gif" /></a></li>
+            <li><a href="#"><img src="../themes/images/img_menu15.gif" /></a></li>
+        </ul>
+    </span>
+    <span><a href="#" title="导出WORD" class="btn-word"></a></span>
+    <span><a href="#" title="导出PDF" class="btn-pdf"></a></span>
+    <span><a href="#" title="打印" class="btn-print"></a></span>
+</div>
+
+<!-- BEGIN FLIPBOOK STRUCTURE -->
+<div data-template="true" data-cat="book7" id="fb7-ajax">
+    
+    <!-- BEGIN HTML BOOK -->
+    <div data-current="book7" class="fb7" id="fb7">
+    
+        <!-- preloader -->
+        <div class="fb7-preloader">
+            <div id="wBall_1" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_2" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_3" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_4" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_5" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_6" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_7" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_8" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_9" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_10" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_11" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_12" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_13" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_14" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_15" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+            <div id="wBall_16" class="wBall">
+                <div class="wInnerBall">
+                </div>
+            </div>
+        </div>
+    
+        <!-- background for book -->
+        <div class="fb7-bcg-book"></div>
+      
+        <!-- BEGIN CONTAINER BOOK -->
+        <div id="fb7-container-book" style="background-image:url(../book/images/xmda_00.jpg)" class="fb7-double1 fb7-first fb7-noshadow" >
+     
+           <!-- BEGIN deep linking -->
+           <section id="fb7-deeplinking">
+             <ul>
+                 <li data-address="page1" data-page="1"></li>
+                 <li data-address="page2" data-page="2"></li>
+                 <li data-address="page3" data-page="3"></li>
+                 <li data-address="page4" data-page="4"></li>
+                 <li data-address="page5" data-page="5"></li>
+                 <li data-address="page6" data-page="6"></li>
+                 <li data-address="page7" data-page="7"></li>
+                 <li data-address="page8" data-page="8"></li>
+                 <li data-address="page9" data-page="9"></li>
+                 <li data-address="page10" data-page="10"></li>
+                 <li data-address="page11" data-page="11"></li>
+                 <li data-address="page12" data-page="12"></li>
+                 <li data-address="page13" data-page="13"></li>
+                 <li data-address="page14" data-page="14"></li>
+                 <li data-address="page15" data-page="15"></li>
+                 <li data-address="page16" data-page="16"></li>
+                 <li data-address="page17" data-page="17"></li>
+                 <li data-address="page18" data-page="18"></li>
+                 <li data-address="page19" data-page="19"></li>
+                 <li data-address="page20" data-page="20"></li>
+                 <li data-address="page21" data-page="21"></li>
+                 <li data-address="page22" data-page="22"></li>
+                 <li data-address="page23" data-page="23"></li>
+                 <li data-address="page24" data-page="24"></li>
+                 <li data-address="page25" data-page="25"></li>
+                 <li data-address="page26" data-page="26"></li>
+                 <li data-address="page27" data-page="27"></li>
+                 <li data-address="page28" data-page="28"></li>
+                 <li data-address="page29" data-page="29"></li>
+                 <li data-address="page30" data-page="30"></li>
+                 <li data-address="page31" data-page="31"></li>
+                 <li data-address="page32" data-page="32"></li>
+                 <li data-address="page33" data-page="33"></li>
+                 <li data-address="page34" data-page="34"></li>
+                 <li data-address="page35" data-page="35"></li>
+                 <li data-address="end" data-page="36"></li>
+             </ul>
+           </section>
+           <!-- END deep linking -->
+            
+           <!-- BEGIN ABOUT -->
+           <section id="fb7-about">
+           </section>
+           <!-- END ABOUT -->
+            <!-- BEGIN PAGES -->
+            <div id="fb7-book">
+                
+                <!-- BEGIN PAGE 1 -->
+                <div style="background-image:url(../book/images/xmda_00.jpg);background-color:rgba(255,255,255,0);"  class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 1 -->
+                
+                <!-- BEGIN PAGE 2 -->
+                <div style="background-image:url(../book/images/xmda_01.jpg)"  class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page  -->
+                        <div class="fb7-page-book">
+                        </div>
+                        
+                        <!-- begin number page -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">2</span>
+                        </div>
+                        <!-- end number page -->
+                        
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 2 -->
+                
+                <!-- BEGIN PAGE 3 -->
+                <div class="fb7-double fb7-second fb7-noshadow" style="background-image:url(../book/images/xmda_01.jpg)">
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                           
+                        <!-- description for page-->
+                        <div class="fb7-page-book">
+                            <div class="book_content book_right" style="top:70px;display:none;">
+                                <h1 class="book_title">项目履历</h1>
+                                <table class="tableList">
+                                    <thead>
+                                    <tr>
+                                        <th>编制操作</th>
+                                        <th>编制时间</th>
+                                        <th>编制部门</th>
+                                        <th>编制人员</th>
+                                        <th>备注</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>项目入库</th>
+                                            <td>2016/1/23</td>
+                                            <td>国家改委</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>项目初审</th>
+                                            <td>2016/1/23</td>
+                                            <td>国家改委</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>项目纳入滚动计划</th>
+                                            <td>2016/1/23</td>
+                                            <td>国家改委</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>上报至市级</th>
+                                            <td>2016/1/23</td>
+                                            <td>国家改委</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>上报至省级</th>
+                                            <td>2016/1/23</td>
+                                            <td>国家改委</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>省级编制年度计划</th>
+                                            <td>2016/1/23</td>
+                                            <td>国家改委</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>省级上报年度计划</th>
+                                            <td>2016/1/23</td>
+                                            <td>国家改委</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>年度计划审核</th>
+                                            <td>2016/1/23</td>
+                                            <td>国家改委</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>年度计划下达</th>
+                                            <td>2016/1/23</td>
+                                            <td>国家改委</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>年度计划调度</th>
+                                            <td>2016/1/23</td>
+                                            <td>国家改委</td>
+                                            <td></td>
+                                            <td>目前调度到<br>第四报告期</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">3</span>
+                        </div>
+                        <!-- end number page  -->
+                        
+                    </div>
+                    <!-- end container page book -->
+                
+                </div>
+                <!-- END PAGE 3 -->
+                
+                <!-- BEGIN PAGE 4-5 -->
+                <div style="background-image:url(../book/images/xmda_02.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                            <div class="book_content book_left" style="top:0px;display:none;">
+                                <h1 class="book_title">基本信息</h1>
+                                <table class="tableList">
+                                    <tbody>
+                                        <tr>
+                                            <th>重大库编号</th>
+                                            <td>2016-06-23-01-01-002146</td>
+                                        </tr>
+                                        <tr>
+                                            <th>项目名称</th>
+                                            <td>孙斌年度数据46</td>
+                                        </tr>
+                                        <tr>
+                                            <th>建设性质</th>
+                                            <td>新建</td>
+                                        </tr>
+                                        <tr>
+                                            <th>项目（法人）单位</th>
+                                            <td>高新技术产业处</td>
+                                        </tr>
+                                        <tr>
+                                            <th>建设地点</th>
+                                            <td>2016/1/23</td>
+                                        </tr>
+                                        <tr>
+                                            <th>省级编制年度计划</th>
+                                            <td>2016/1/23</td>
+                                        </tr>
+                                        <tr>
+                                            <th>省级上报年度计划</th>
+                                            <td>2016/1/23</td>
+                                        </tr>
+                                        <tr>
+                                            <th>年度计划审核</th>
+                                            <td>2016/1/23</td>
+                                        </tr>
+                                        <tr>
+                                            <th>年度计划下达</th>
+                                            <td>2016/1/23</td>
+                                        </tr>
+                                        <tr>
+                                            <th>年度计划调度</th>
+                                            <td>2016/1/23</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">4</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_02.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">5</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 4-5 -->
+                <!-- BEGIN PAGE 6-7 -->
+                <div style="background-image:url(../book/images/xmda_03.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">6</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_03.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">7</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 6-7 -->
+                <!-- BEGIN PAGE 8 -->
+                <div style="background-image:url(../book/images/xmda_04.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">8</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_04.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">9</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 9 -->
+                <!-- BEGIN PAGE 10 -->
+                <div style="background-image:url(../book/images/xmda_05.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">10</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_05.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">11</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 11 -->
+                <!-- BEGIN PAGE 12 -->
+                <div style="background-image:url(../book/images/xmda_06.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">12</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_06.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">13</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 13 -->
+                <!-- BEGIN PAGE 14 -->
+                <div style="background-image:url(../book/images/xmda_07.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">14</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_07.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">15</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 15 -->
+                <!-- BEGIN PAGE 16 -->
+                <div style="background-image:url(../book/images/xmda_08.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">16</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_08.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">17</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 17 -->
+                <!-- BEGIN PAGE 18 -->
+                <div style="background-image:url(../book/images/xmda_09.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">18</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_09.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">19</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 19 -->
+                <!-- BEGIN PAGE 20 -->
+                <div style="background-image:url(../book/images/xmda_10.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">20</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_10.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">21</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 21 -->
+                <!-- BEGIN PAGE 22 -->
+                <div style="background-image:url(../book/images/xmda_10-1.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">22</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_10-1.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">23</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 23 -->
+                <!-- BEGIN PAGE 24 -->
+                <div style="background-image:url(../book/images/xmda_10-2.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">24</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_10-2.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">25</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 25 -->
+                <!-- BEGIN PAGE 26 -->
+                <div style="background-image:url(../book/images/xmda_10-3.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">26</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_10-3.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">27</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 27 -->
+                <!-- BEGIN PAGE 28 -->
+                <div style="background-image:url(../book/images/xmda_11.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">28</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_11.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">29</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 29 -->
+                <!-- BEGIN PAGE 30 -->
+                <div style="background-image:url(../book/images/xmda_12.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">30</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_12.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">31</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 31 -->
+                <!-- BEGIN PAGE 32 -->
+                <div style="background-image:url(../book/images/xmda_13.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">32</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_13.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">33</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 33 -->
+                <!-- BEGIN PAGE 34 -->
+                <div style="background-image:url(../book/images/xmda_14.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">34</span>
+                        </div>
+                    
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                     
+                <div style="background-image:url(../book/images/xmda_14.jpg)" class="fb7-double fb7-second fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page -->
+                        <div class="fb7-page-book">
+                        </div>
+                        <!-- begin number page  -->
+                        <div class="fb7-meta">
+                            <span class="fb7-num">35</span>
+                        </div>
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE 35 -->
+                <!-- BEGIN PAGE end -->
+                <div style="background-image:url(../book/images/xmda_00.jpg)" class="fb7-double fb7-first fb7-noshadow">
+                    
+                    <!-- begin container page book -->
+                    <div class="fb7-cont-page-book">
+                        
+                        <!-- description for page-->
+                        <div class="fb7-page-book">
+                        </div>
+                              
+                    </div>
+                    <!-- end container page book -->
+                    
+                </div>
+                <!-- END PAGE end -->
+            
+            </div>
+            <!-- END PAGES -->
+            
+            <!-- arrows -->
+            <a class="fb7-nav-arrow prev"></a>
+            <a class="fb7-nav-arrow next"></a>
+            
+            <!-- shadow -->
+            <div class="fb7-shadow"></div>
+    
+        </div>
+        <!-- END CONTAINER BOOK -->
+    
+        <!-- BEGIN FOOTER -->
+        <div id="fb7-footer">
+        
+            <div class="fb7-bcg-tools"></div>
+            <div class="fb7-menu" id="fb7-center">
+                <ul>
+                
+                    <!-- margin left -->
+                    <li></li>
+                    
+                    <!-- icon download -->
+                     <!--<li>
+                        <a title="Pdf File Or Zip" class="fb7-download" href="img/file.pdf"></a>
+                    </li>-->
+                    
+                    <!-- icon_zoom_in -->
+                    <li>
+                        <a title="放大" class="fb7-zoom-in"></a>
+                    </li>
+                    
+                    <!-- icon_zoom_out -->
+                    <li>
+                        <a title="缩小" class="fb7-zoom-out"></a>
+                    </li>
+                    
+                    <!-- icon_zoom_auto -->
+                    <li>
+                        <a title="字体" class="fb7-zoom-auto"></a>
+                    </li>
+                    
+                    <!-- icon_zoom_original -->
+                    <li>
+                        <a title="1:1" class="fb7-zoom-original"></a>
+                    </li>
+                    
+                    <!-- icon_allpages -->
+                    <li>
+                        <a title="目录" class="fb7-show-all"></a>
+                    </li>
+                    
+                    <!-- icon_home -->
+                    <li>
+                        <a title="返回主页" class="fb7-home"></a>
+                    </li>
+                    
+                    <!-- icon fullscreen -->
+                    <li>
+                        <a title="全屏" class="fb7-fullscreen"></a>
+                    </li>
+                    
+                    <!-- margin right -->
+                    <li></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="fb7-menu" id="fb7-right">
+                <ul>
+                    <!-- icon page manager -->
+                    <li class="fb7-goto">
+                        <label for="fb7-page-number" id="fb7-label-page-number"></label>
+                        <input type="text" id="fb7-page-number">
+                        <button type="button">Go</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+    
+        <!-- BEGIN THUMBS -->
+        <div id="fb7-all-pages" class="fb7-overlay">
+    
+            <section class="fb7-container-pages">
+    
+                <div id="fb7-menu-holder">
+    
+                    <ul id="fb7-slider" style="left:50%;margin-left:-280px!important;">
+                
+                        <!-- PAGE 2 - THUMB -->
+                        <li class="2" >
+                            <img alt="" src="../book/images/xmda_01.jpg">
+                        </li>
+                             
+                         
+          
+                    </ul>
+            
+                </div>
+    
+            </section>
+    
+        </div>
+        <!-- END THUMBS -->
+
+    </div>
+    <!-- END HTML BOOK -->
+    
+</div>
+<!-- END FLIPBOOK STRUCTURE --> 
+
+<!-- CONFIGURATION FLIPBOOK -->    
+<script>
+jQuery('#fb7-ajax').data('config',
+    {
+		"page_width":"640",
+		"page_height":"920",
+		"go_to_page":"Page",
+		"gotopage_width":"45",
+		"zoom_double_click":"1",
+		"zoom_step":"0.06",
+		"tooltip_visible":"true",
+		"toolbar_visible":"true",
+		"deeplinking_enabled":"true",
+		"double_click_enabled":"true",
+		"rtl":"false"
+     })
+</script>
+</body>
+</html>

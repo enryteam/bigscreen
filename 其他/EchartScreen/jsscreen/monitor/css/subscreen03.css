@@ -1,0 +1,163 @@
+@charset "UTF-8";
+.small-screen {
+  position: relative;
+  font-family: "方正黑体_GBK";
+}
+.small-screen .title {
+  font-size: 42px;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+}
+.small-screen .mainInner {
+  margin: 0px auto 0;
+  width: 1760px;
+  height: 889px;
+  background: url(../images/Drill.jpg) 0 0 no-repeat;
+  border: 2px solid #095dab;
+}
+
+.content.mt10 {
+  margin-top: 15px;
+}
+.content .name {
+  margin: -2px 0 0 -15px;
+  height: 95px;
+  font-size: 38px;
+  line-height: 112px;
+  text-indent: 12px;
+  overflow: hidden;
+  background: url(../images/Drill2.png) 0 0 no-repeat;
+}
+.content .name.blue {
+  background: url(../images/Drill3.png) 0 0 no-repeat;
+}
+.content .inner {
+  margin-top: 20px;
+}
+.content .inner > dl {
+  display: block;
+  font-size: 28px;
+  line-height: 53px;
+  color: #fff;
+  overflow: hidden;
+}
+.content .inner > div {
+  width: 100%;
+}
+.content .inner > div dl {
+  float: left;
+  width: 33%;
+  font-size: 28px;
+  line-height: 60px;
+  color: #fff;
+  overflow: hidden;
+}
+.hd h4{
+	  margin: -2px 0 0 -15px;
+  height: 95px;
+  font-size: 38px;
+  line-height: 112px;
+  text-indent: 36px;
+  overflow: hidden;
+  background: url(../images/Drill3.png) 0 0 no-repeat;
+}
+.content dt {
+  float: left;
+  width: 173px;
+  text-align: right;
+  color: #8dfbff;
+}
+.hd dt{
+	float: left;
+	margin-top:40px;
+  width: 173px;
+  font-size:28px;
+  text-align: right;
+  color: #8dfbff;
+}
+.hd dd{
+	font-size:28px;
+	float:left;
+	margin-top:40px;
+}
+.content dd {
+  float: left;
+}
+.dcontent{
+	width:1000px;
+	white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.content dd.lager {
+  font-size: 40px;
+}
+
+.search {
+  margin: 1px 0 0 20px;
+}
+.search textarea {
+  float: left;
+  padding: 10px 0 0 23px;
+  width: 1500px;
+  height: 77px;
+  font-size: 28px;
+  font-family: "方正黑体_GBK";
+  color: #fff;
+  background-color: #000234;
+  border: 2px solid #656adf;
+  outline: none;
+}
+.search input {
+  float: left;
+  width: 177px;
+  height: 91px;
+  line-height: 91px;
+  font-size: 40px;
+  text-align: center;
+  font-family: "方正黑体_GBK";
+  color: #fff;
+  background-color: #656adf;
+  border: 0;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  cursor: pointer;
+}
+
+.choose{
+  float: left;
+  width: 142px;
+  height: 62px;
+  font-size: 28px;
+  line-height: 62px;
+  text-align: center;
+  border:2px solid #2c69bd;
+  margin:15px 15px 15px 0;
+}
+.choose.current{
+  background: url(../images/current.png) right bottom no-repeat;
+}
+.warnlevel
+{
+    display: inline-block;
+    width: 31px;
+    height: 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.warnlevel.level01
+{
+    background-image: url("../images/level01.png");
+}
+
+.warnlevel.level02
+{
+    background-image: url("../images/level02.png");
+}
+
+.warnlevel.level03
+{
+    background-image: url("../images/level03.png");
+}
+
+/*# sourceMappingURL=subscreen03.css.map */

@@ -1,0 +1,149 @@
+.login-container {
+    height: 100%;
+    width: 100%;
+    background-image: url(../../resources/images/login/bg.png);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    overflow: hidden;
+    position: absolute;
+}
+
+.login-main {
+    height: 100%;
+    background: rgba(0, 0, 0, .2);
+}
+
+/*登录页面信息*/
+.login-info {
+    color: #fff;
+    height: 431px;
+    padding-top: 100px;
+    padding-left: 300px;
+}
+
+.login-info-title {
+    line-height: 90px;
+}
+
+.login-info-item {
+    line-height: 28px;
+}
+
+.login-info, .login-panel {
+    margin-top: 280px;
+    margin-left: 20px;
+}
+
+/*登录面板*/
+.login-panel {
+    border-radius: 6px;
+    background: #fff;
+    height: 431px;
+    width: 370px;
+    padding: 30px 50px 25px 50px;
+}
+
+.login-panel-title {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #409eff;
+    letter-spacing: 3px;
+}
+
+.login-panel .form-control {
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+/*菜单切换*/
+.tabList {
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.tab-user, .tab-code, .tab-QRcode {
+    display: inline-block;
+    width: 90px;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tab-user {
+    color: #409eff;
+    border-bottom: solid 2px #409eff;
+}
+
+.tab-code, .tab-QRcode {
+    border-bottom: solid 2px #e4e7ed;
+}
+
+/*输入框*/
+.text-input {
+    position: relative;
+    margin: 15px 0px 20px 0px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.text-input_prefix, .text-input_suffix {
+    position: absolute;
+    width: 30px;
+    color: #c0c4cc;
+    text-align: center;
+}
+
+.text-input_suffix {
+    top: 0px;
+    right: 0px;
+}
+
+.text-input_prefix, .text-input_suffix i {
+    line-height: 34px;
+}
+
+/*验证码*/
+#validateCode {
+    width: 157px;
+}
+
+#validateCode-img {
+    float: right;
+    width: 100px;
+    height: 34px;
+    background-color: #fdfdfd;
+    border: 1px solid #f0f0f0;
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    line-height: 32px;
+    text-indent: 5px;
+    text-align: center;
+}
+
+/*登录按钮*/
+.login-panel .btn {
+    margin-top: 15px;
+}
+
+/*记住我*/
+#rememberMe {
+    margin: 15px 0px 25px 0px;
+
+}
+
+/*页脚*/
+.login-footer {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    margin-left: -155px;
+}
+
+

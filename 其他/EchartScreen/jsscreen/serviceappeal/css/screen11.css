@@ -1,0 +1,45 @@
+/*!
+ * project: 
+ * author: dongyf
+ * date:2016-12-11
+ */
+
+.doublecol{
+	width: 1920px;
+	height: 540px;
+}
+.doublecol h2,
+.col h2{
+    text-align: center;
+    font-size: 42px;
+    height: 100px;
+    line-height: 100px;
+    font-family: "方正黑体_GBK";
+}
+.doublecol .doublecol-bd{
+	width: 1920px;
+	height: 440px;
+}
+.appealageinfo{
+	position: absolute;
+	// bottom: 150px ;
+	top:730px;
+	left: 630px;
+	width: 271px;
+	height: 134px;
+	padding: 30px 0 10px;
+	background-color: #0b1264;
+	border:3px dashed #05f2d9;
+	border-radius: 5px;
+}
+.appealageinfo span{
+	display: block;
+	font-size: 30px;
+	text-align: center;
+	line-height: 80px;
+}
+.appealageinfo .years{
+	font-size: 60px;
+	color: #f7e444;
+	line-height: 60px;
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global_n.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/iframe.css" />
+<script src="../js/echarts/echarts.js"></script>
+</head>
+<body>
+ <div style="width:750px;height:100%;" id="main"> </div>
+        <script>
+		 require.config({
+				paths: {
+					echarts: '../js/echarts'
+				}
+			});
+		 require(
+			[
+				'echarts',
+				'echarts/chart/pie',
+				'echarts/chart/bar',
+				'echarts/chart/map',
+				'echarts/chart/line'
+			],
+			function (ec) {
+                var myChart = ec.init(document.getElementById('main'));
+                var mapType = [
+                    'china',
+                    // 23个省
+                    '广东', '青海', '四川', '海南', '陕西',
+                    '甘肃', '云南', '湖南', '湖北', '黑龙江',
+                    '贵州', '山东', '江西', '河南', '河北',
+                    '山西', '安徽', '福建', '浙江', '江苏',
+                    '吉林', '辽宁', '台湾',
+                    // 5个自治区
+                    '新疆', '广西', '宁夏', '内蒙古', '西藏',
+                    // 4个直辖市
+                    '北京', '天津', '上海', '重庆',
+                    // 2个特别行政区
+                    '香港', '澳门','南昌'
+                ];
+              var  option =   {
+                          tooltip: {
+                              'trigger': 'item',
+                              showContent:true
+                          },
+                            legend: {
+                                orient: 'vertical',
+                                selectedMode:'single',
+                                x:'left',
+                                textStyle:{
+                                    color:'#FFF'
+                                },
+                                selected: {
+                                    '资金需求' : true,
+                                    '下达资金':false,
+                                    '到位资金':false,
+                                    '支付情况':false,
+                                    '完成投资':false
+                                },
+                                data:['资金需求','下达资金','到位资金','支付情况','完成投资']
+                            },
+                            dataRange: {
+                                min: 0,
+                                max: 53000,
+                                text: ['高', '低'],           // 文本，默认为数值文本
+                                calculable: true,
+                                x: 'left',
+                                y2: 50,
+                                color: ['orangered', 'yellow', 'lightskyblue'],
+                                textStyle: {
+                                    "color": "#fff"
+                                }
+                            },
+                            series: [
+                                {
+                                    seriesIndex: 0,
+                                    'name': '资金需求',
+                                    'type': 'map',
+                                     mapType: 'china',
+                                     selectedMode : 'single',
+                                    tooltip: {
+                                        show:true,
+                                        'trigger': 'item',
+                                        formatter: '{b} {a} {c} 个'
+                                    },
+                                    'mapLocation': {
+                                        "y": "top",
+                                        "height": "85%"
+                                    },
+                                    'data': [
+                                        {name: '北京', value: Math.round(Math.random() * 53000)},
+                                        {name: '天津', value: Math.round(Math.random() * 53000)},
+                                        {name: '上海', value: Math.round(Math.random() * 53000)},
+                                        {name: '重庆', value: Math.round(Math.random() * 53000)},
+                                        {name: '河北', value: Math.round(Math.random() * 53000)},
+                                        {name: '河南', value: Math.round(Math.random() * 53000)},
+                                        {name: '云南', value: Math.round(Math.random() * 53000)},
+                                        {name: '辽宁', value: Math.round(Math.random() * 53000)},
+                                        {name: '黑龙江', value: Math.round(Math.random() * 53000)},
+                                        {name: '湖南', value: Math.round(Math.random() * 53000)},
+                                        {name: '安徽', value: Math.round(Math.random() * 53000)},
+                                        {name: '山东', value: Math.round(Math.random() * 53000)},
+                                        {name: '新疆', value: Math.round(Math.random() * 53000)},
+                                        {name: '江苏', value: Math.round(Math.random() * 53000)},
+                                        {name: '浙江', value: Math.round(Math.random() * 53000)},
+                                        {name: '江西', value: Math.round(Math.random() * 53000)},
+                                        {name: '湖北', value: Math.round(Math.random() * 53000)},
+                                        {name: '广西', value: Math.round(Math.random() * 53000)},
+                                        {name: '甘肃', value: Math.round(Math.random() * 53000)},
+                                        {name: '山西', value: Math.round(Math.random() * 53000)},
+                                        {name: '内蒙古', value: Math.round(Math.random() * 53000)},
+                                        {name: '陕西', value: Math.round(Math.random() * 53000)},
+                                        {name: '吉林', value: Math.round(Math.random() * 53000)},
+                                        {name: '福建', value: Math.round(Math.random() * 53000)},
+                                        {name: '贵州', value: Math.round(Math.random() * 53000)},
+                                        {name: '广东', value: Math.round(Math.random() * 53000)},
+                                        {name: '青海', value: Math.round(Math.random() * 53000)},
+                                        {name: '西藏', value: Math.round(Math.random() * 53000)},
+                                        {name: '四川', value: Math.round(Math.random() * 53000)},
+                                        {name: '宁夏', value: Math.round(Math.random() * 53000)},
+                                        {name: '海南', value: Math.round(Math.random() * 53000)},
+                                        {name: '香港', value: Math.round(Math.random() * 53000)},
+                                        {name: '澳门', value: Math.round(Math.random() * 53000)}
+                                    ]
+                                },
+                                {
+                                    seriesIndex: 1,
+                                    'name': '下达资金',
+                                    'type': 'map',
+                                    mapType: 'china',
+                                    selectedMode : 'single',
+                                    tooltip: {
+                                        'trigger': 'item',
+                                        showContent:true,
+                                        formatter: '{b} {a} {c} 个'
+                                    },
+                                        'mapLocation': {
+                                        "y": "top",
+                                        "height": "85%"
+                                    },
+                                    'data': [
+                                        {name: '北京', value: Math.round(Math.random() * 53000)},
+                                        {name: '天津', value: Math.round(Math.random() * 53000)},
+                                        {name: '上海', value: Math.round(Math.random() * 53000)},
+                                        {name: '重庆', value: Math.round(Math.random() * 53000)},
+                                        {name: '河北', value: Math.round(Math.random() * 53000)},
+                                        {name: '河南', value: Math.round(Math.random() * 53000)},
+                                        {name: '云南', value: Math.round(Math.random() * 53000)},
+                                        {name: '辽宁', value: Math.round(Math.random() * 53000)},
+                                        {name: '黑龙江', value: Math.round(Math.random() * 53000)},
+                                        {name: '湖南', value: Math.round(Math.random() * 53000)},
+                                        {name: '安徽', value: Math.round(Math.random() * 53000)},
+                                        {name: '山东', value: Math.round(Math.random() * 53000)},
+                                        {name: '新疆', value: Math.round(Math.random() * 53000)},
+                                        {name: '江苏', value: Math.round(Math.random() * 53000)},
+                                        {name: '浙江', value: Math.round(Math.random() * 53000)},
+                                        {name: '江西', value: Math.round(Math.random() * 53000)},
+                                        {name: '湖北', value: Math.round(Math.random() * 53000)},
+                                        {name: '广西', value: Math.round(Math.random() * 53000)},
+                                        {name: '甘肃', value: Math.round(Math.random() * 53000)},
+                                        {name: '山西', value: Math.round(Math.random() * 53000)},
+                                        {name: '内蒙古', value: Math.round(Math.random() * 53000)},
+                                        {name: '陕西', value: Math.round(Math.random() * 53000)},
+                                        {name: '吉林', value: Math.round(Math.random() * 53000)},
+                                        {name: '福建', value: Math.round(Math.random() * 53000)},
+                                        {name: '贵州', value: Math.round(Math.random() * 53000)},
+                                        {name: '广东', value: Math.round(Math.random() * 53000)},
+                                        {name: '青海', value: Math.round(Math.random() * 53000)},
+                                        {name: '西藏', value: Math.round(Math.random() * 53000)},
+                                        {name: '四川', value: Math.round(Math.random() * 53000)},
+                                        {name: '宁夏', value: Math.round(Math.random() * 53000)},
+                                        {name: '海南', value: Math.round(Math.random() * 53000)},
+                                        {name: '香港', value: Math.round(Math.random() * 53000)},
+                                        {name: '澳门', value: Math.round(Math.random() * 53000)}
+                                    ]
+                                },
+                                {
+                                    seriesIndex: 2,
+                                    'name': '到位资金',
+                                    'type': 'map',
+                                    mapType: 'china',
+                                    selectedMode : 'single',
+                                    tooltip: {
+                                        'trigger': 'item',
+                                        showContent:true,
+                                        formatter: '{b} {a} {c} 个'
+                                    },
+                                    'mapLocation': {
+                                        "y": "top",
+                                        "height": "85%"
+                                    },
+                                    'data': [
+                                        {name: '北京', value: Math.round(Math.random() * 53000)},
+                                        {name: '天津', value: Math.round(Math.random() * 53000)},
+                                        {name: '上海', value: Math.round(Math.random() * 53000)},
+                                        {name: '重庆', value: Math.round(Math.random() * 53000)},
+                                        {name: '河北', value: Math.round(Math.random() * 53000)},
+                                        {name: '河南', value: Math.round(Math.random() * 53000)},
+                                        {name: '云南', value: Math.round(Math.random() * 53000)},
+                                        {name: '辽宁', value: Math.round(Math.random() * 53000)},
+                                        {name: '黑龙江', value: Math.round(Math.random() * 53000)},
+                                        {name: '湖南', value: Math.round(Math.random() * 53000)},
+                                        {name: '安徽', value: Math.round(Math.random() * 53000)},
+                                        {name: '山东', value: Math.round(Math.random() * 53000)},
+                                        {name: '新疆', value: Math.round(Math.random() * 53000)},
+                                        {name: '江苏', value: Math.round(Math.random() * 53000)},
+                                        {name: '浙江', value: Math.round(Math.random() * 53000)},
+                                        {name: '江西', value: Math.round(Math.random() * 53000)},
+                                        {name: '湖北', value: Math.round(Math.random() * 53000)},
+                                        {name: '广西', value: Math.round(Math.random() * 53000)},
+                                        {name: '甘肃', value: Math.round(Math.random() * 53000)},
+                                        {name: '山西', value: Math.round(Math.random() * 53000)},
+                                        {name: '内蒙古', value: Math.round(Math.random() * 53000)},
+                                        {name: '陕西', value: Math.round(Math.random() * 53000)},
+                                        {name: '吉林', value: Math.round(Math.random() * 53000)},
+                                        {name: '福建', value: Math.round(Math.random() * 53000)},
+                                        {name: '贵州', value: Math.round(Math.random() * 53000)},
+                                        {name: '广东', value: Math.round(Math.random() * 53000)},
+                                        {name: '青海', value: Math.round(Math.random() * 53000)},
+                                        {name: '西藏', value: Math.round(Math.random() * 53000)},
+                                        {name: '四川', value: Math.round(Math.random() * 53000)},
+                                        {name: '宁夏', value: Math.round(Math.random() * 53000)},
+                                        {name: '海南', value: Math.round(Math.random() * 53000)},
+                                        {name: '香港', value: Math.round(Math.random() * 53000)},
+                                        {name: '澳门', value: Math.round(Math.random() * 53000)}
+                                    ]
+                                },
+                                {
+                                    seriesIndex: 3,
+                                    'name': '支付情况',
+                                    'type': 'map',
+                                    mapType: 'china',
+                                    selectedMode : 'single',
+                                    tooltip: {
+                                        'trigger': 'item',
+                                        showContent:true,
+                                        formatter: '{b} {a} {c} 个'
+                                    },
+                                    'mapLocation': {
+                                        "y": "top",
+                                        "height": "85%"
+                                    },
+                                    'data': [
+                                        {name: '北京', value: Math.round(Math.random() * 53000)},
+                                        {name: '天津', value: Math.round(Math.random() * 53000)},
+                                        {name: '上海', value: Math.round(Math.random() * 53000)},
+                                        {name: '重庆', value: Math.round(Math.random() * 53000)},
+                                        {name: '河北', value: Math.round(Math.random() * 53000)},
+                                        {name: '河南', value: Math.round(Math.random() * 53000)},
+                                        {name: '云南', value: Math.round(Math.random() * 53000)},
+                                        {name: '辽宁', value: Math.round(Math.random() * 53000)},
+                                        {name: '黑龙江', value: Math.round(Math.random() * 53000)},
+                                        {name: '湖南', value: Math.round(Math.random() * 53000)},
+                                        {name: '安徽', value: Math.round(Math.random() * 53000)},
+                                        {name: '山东', value: Math.round(Math.random() * 53000)},
+                                        {name: '新疆', value: Math.round(Math.random() * 53000)},
+                                        {name: '江苏', value: Math.round(Math.random() * 53000)},
+                                        {name: '浙江', value: Math.round(Math.random() * 53000)},
+                                        {name: '江西', value: Math.round(Math.random() * 53000)},
+                                        {name: '湖北', value: Math.round(Math.random() * 53000)},
+                                        {name: '广西', value: Math.round(Math.random() * 53000)},
+                                        {name: '甘肃', value: Math.round(Math.random() * 53000)},
+                                        {name: '山西', value: Math.round(Math.random() * 53000)},
+                                        {name: '内蒙古', value: Math.round(Math.random() * 53000)},
+                                        {name: '陕西', value: Math.round(Math.random() * 53000)},
+                                        {name: '吉林', value: Math.round(Math.random() * 53000)},
+                                        {name: '福建', value: Math.round(Math.random() * 53000)},
+                                        {name: '贵州', value: Math.round(Math.random() * 53000)},
+                                        {name: '广东', value: Math.round(Math.random() * 53000)},
+                                        {name: '青海', value: Math.round(Math.random() * 53000)},
+                                        {name: '西藏', value: Math.round(Math.random() * 53000)},
+                                        {name: '四川', value: Math.round(Math.random() * 53000)},
+                                        {name: '宁夏', value: Math.round(Math.random() * 53000)},
+                                        {name: '海南', value: Math.round(Math.random() * 53000)},
+                                        {name: '香港', value: Math.round(Math.random() * 53000)},
+                                        {name: '澳门', value: Math.round(Math.random() * 53000)}
+                                    ]
+                                },
+                                {
+                                    seriesIndex: 4,
+                                    'name': '完成投资',
+                                    'type': 'map',
+                                    mapType: 'china',
+                                    selectedMode : 'single',
+                                    tooltip: {
+                                        'trigger': 'item',
+                                        showContent:true,
+                                        formatter: '{b} {a} {c} 个'
+                                    },
+                                    'mapLocation': {
+                                        "y": "top",
+                                        "height": "85%"
+                                    },
+                                    'data': [
+                                        {name: '北京', value: Math.round(Math.random() * 53000)},
+                                        {name: '天津', value: Math.round(Math.random() * 53000)},
+                                        {name: '上海', value: Math.round(Math.random() * 53000)},
+                                        {name: '重庆', value: Math.round(Math.random() * 53000)},
+                                        {name: '河北', value: Math.round(Math.random() * 53000)},
+                                        {name: '河南', value: Math.round(Math.random() * 53000)},
+                                        {name: '云南', value: Math.round(Math.random() * 53000)},
+                                        {name: '辽宁', value: Math.round(Math.random() * 53000)},
+                                        {name: '黑龙江', value: Math.round(Math.random() * 53000)},
+                                        {name: '湖南', value: Math.round(Math.random() * 53000)},
+                                        {name: '安徽', value: Math.round(Math.random() * 53000)},
+                                        {name: '山东', value: Math.round(Math.random() * 53000)},
+                                        {name: '新疆', value: Math.round(Math.random() * 53000)},
+                                        {name: '江苏', value: Math.round(Math.random() * 53000)},
+                                        {name: '浙江', value: Math.round(Math.random() * 53000)},
+                                        {name: '江西', value: Math.round(Math.random() * 53000)},
+                                        {name: '湖北', value: Math.round(Math.random() * 53000)},
+                                        {name: '广西', value: Math.round(Math.random() * 53000)},
+                                        {name: '甘肃', value: Math.round(Math.random() * 53000)},
+                                        {name: '山西', value: Math.round(Math.random() * 53000)},
+                                        {name: '内蒙古', value: Math.round(Math.random() * 53000)},
+                                        {name: '陕西', value: Math.round(Math.random() * 53000)},
+                                        {name: '吉林', value: Math.round(Math.random() * 53000)},
+                                        {name: '福建', value: Math.round(Math.random() * 53000)},
+                                        {name: '贵州', value: Math.round(Math.random() * 53000)},
+                                        {name: '广东', value: Math.round(Math.random() * 53000)},
+                                        {name: '青海', value: Math.round(Math.random() * 53000)},
+                                        {name: '西藏', value: Math.round(Math.random() * 53000)},
+                                        {name: '四川', value: Math.round(Math.random() * 53000)},
+                                        {name: '宁夏', value: Math.round(Math.random() * 53000)},
+                                        {name: '海南', value: Math.round(Math.random() * 53000)},
+                                        {name: '香港', value: Math.round(Math.random() * 53000)},
+                                        {name: '澳门', value: Math.round(Math.random() * 53000)}
+                                    ]
+                                }
+                            ]
+                };
+                myChart.setOption(option, true);
+                // 定义初始变量
+                var ecConfig = require('echarts/config');
+                var curIndx = 0;
+                // 绑定事件 地图选择事件
+                myChart.on(ecConfig.EVENT.MAP_SELECTED, function (param) {
+                        var len = mapType.length;
+                        var mt = mapType[curIndx % len];
+                        if (mt == 'china') {
+                            // 全国选择时指定到选中的省份
+                            var selected = param.selected;
+                            for (var i in selected) {
+                                if (selected[i]) {
+                                    mt = i;
+                                    while (len--) {
+                                        if (mapType[len] == mt) {
+                                            curIndx = len;
+                                        }
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                        else {
+                            curIndx = 0;
+                            mt = 'china';
+                        }
+                    // var obj= myChart.component.legend.getSelectedMap();
+                        option.series[0].mapType=mt;
+                        option.series[1].mapType=mt;
+                        option.series[2].mapType=mt;
+                        option.series[3].mapType=mt;
+                        option.series[4].mapType=mt;
+                        myChart.setOption(option, true);
+                });
+            });
+		 </script>
+</body>
+</html>

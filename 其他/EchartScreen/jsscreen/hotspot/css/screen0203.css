@@ -1,0 +1,221 @@
+/*!
+ * 热点趋势23
+ * author:buly;
+ * data:2016-12-14;
+ */
+
+body
+{
+    position: relative;
+}
+
+
+/*header*/
+
+.header
+{
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background: url(../images/bgg.png) no-repeat center top;
+}
+
+.header-tt
+{
+    font-size: 68px;
+    line-height: 108px;
+    height: 115px;
+    padding-left: 150px;
+    display: inline-block;
+    letter-spacing: 10px;
+    color: #fff;
+    font-family: '方正黑体_GBK';
+}
+
+.col
+{
+    width: 100%;
+}
+/*main*/
+
+.main
+{
+    position: absolute;
+    z-index: 2;
+}
+
+.mod
+{
+    float: left;
+    height: 1080px;
+    text-align: center;
+}
+
+.mod .title
+{
+    font-size: 42px;
+    line-height: 100px;
+    display: inline-block;
+    height: 100px;
+    padding-left: 30px;
+    font-family: '方正黑体_GBK';
+    background: url(../images/appeal-tt02.png) no-repeat left center;
+}
+
+
+/*左半部分*/
+
+.mod.left
+{
+    width: 1480px;
+}
+
+
+/*中间部分*/
+
+.mod.middle
+{
+    width: 880px;
+}
+
+.col.map
+{
+    margin-top: 152px;
+    height: 893px;
+    border: 1px solid #2c69bd;
+    box-shadow: 0 0 0 1px #1b378b inset;
+    background: rgba(16, 9, 100, 0.66);
+    position: relative;
+}
+
+.col.map .map-tot
+{
+    font-size: 30px;
+    color: #fff;
+    height: 130px;
+    line-height: 130px;
+    text-align: right;
+    padding-right: 77px;
+    font-family: '方正黑体_GBK';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.col.map .map-tot-num
+{
+    color: #feea44;
+    font-size: 60px;
+    font-weight: bold;
+    padding: 0 10px;
+    font-family: 'Microsoft Yahei';
+}
+
+.col.map .mapchart
+{
+    height: 893px;
+}
+
+.col.map .mapthings
+{
+    position: absolute;
+    top: 192px;
+    right: 28px;
+    width: 243px;
+    padding: 25px 10px 10px 15px;
+    border-radius: 4px;
+    background: #996633;
+    font-size: 26px;
+    color: #fff;
+    text-align: left;
+}
+
+.col.map .mapthings .thing
+{
+    line-height: 33px;
+    font-family: '方正黑体_GBK';
+}
+
+.col.map .mapthings .time
+{
+    color: #ffcc99;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: right;
+}
+/*右半部分*/
+
+.mod.right
+{
+    width: 1480px;
+}
+
+.col .hotpot-table
+{
+    width: 1342px;
+    color: #fff;
+    height: 66px;
+    line-height: 66px;
+    margin: 19px 0 0 97px;
+    border-bottom: 2px solid #282f97;
+}
+
+.col .hotpot-thead tr
+{
+    background: #095dab;
+}
+
+.col .hotpot-thead th
+{
+    font-size: 28px;
+    text-align: center;
+    border-right: 1px solid #282f97;
+}
+
+.col .hotpot-tbody tr
+{
+    background: #000467;
+}
+
+.col .hotpot-tbody tr:nth-child(2n)
+{
+    background: #00024e;
+}
+
+.col .hotpot-tbody td
+{
+    font-size: 24px;
+    border-right: 1px solid #282f97;
+}
+
+.col .hotpot-tbody .top-issue
+{
+    text-align: center;
+    padding-left: 10px;
+}
+
+.col .hotpot-tbody .top-num
+{
+    color: #f7e444;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.col .hotpot-tbody td:last-child
+{
+    border-right: 0;
+}
+
+.col .hotpot-tbody .rise-top > span
+{
+    padding-right: 30px;
+    background: url(../images/rise-icon.png) no-repeat right center;
+}
+
+.col .hotpot-tbody .reduce-bottom > span
+{
+    padding-right: 30px;
+    background: url(../images/reduce-icon.png) no-repeat right center;
+}

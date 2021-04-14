@@ -1,0 +1,65 @@
+/* --------------------------------------------------------------
+
+   reset.css
+   * Resets default browser CSS.
+
+-------------------------------------------------------------- */
+
+
+
+#fb7,#fb7 a,#fb7 abbr,#fb7 address,#fb7 article,#fb7 aside,#fb7 audio,#fb7 b,#fb7 blockquote, #fb7 button,#fb7 canvas, 
+#fb7 caption,#fb7 cite,#fb7 code,#fb7 dd,#fb7 del,#fb7 details,#fb7 dfn,#fb7 div,#fb7 dl,#fb7 dt,#fb7 em,#fb7 embed,#fb7 fieldset,
+#fb7 figcaption,#fb7 figure,#fb7 footer,#fb7 form,#fb7 h1,#fb7 h2,#fb7 h3,#fb7 h4,#fb7 h5,#fb7 h6,#fb7 header,#fb7 hgroup,#fb7 i,#fb7 iframe,#fb7 img,#fb7 ins,#fb7 kbd,#fb7 label,#fb7 legend,#fb7.fb6 li,#fb7 mark,#fb7 menu,#fb7 nav, 
+#fb7 object,#fb7 ol,#fb7 p,#fb7 pre,#fb7 q,#fb7 samp,#fb7 section,#fb7 small,#fb7 span,#fb7 sub,#fb7 summary,#fb7 sup,#fb7 table,#fb7 tbody,#fb7 td,#fb7 tfoot,#fb7 th,#fb7 thead,#fb7 time,#fb7 tr,#fb7 ul,#fb7 var,#fb7 video,#fb7 input {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius:0;
+	font-size: 100%;
+	font-weight: inherit;
+	font-style: inherit;
+	vertical-align: baseline;
+	line-height:1.5;
+	text-align:left;
+	
+	box-shadow:none;
+	text-shadow:none;
+	overflow:visible;
+	background:none;
+	list-style:none;	
+	background-image: none
+	display:none;
+	box-sizing:content-box;
+	-moz-box-sizing:content-box;
+}
+
+#fb7.fb6 li, #fb7 li:before, #fb7:after {
+    content:none;
+}
+
+#fb7 img {
+		
+}
+
+#fb7 article,#fb7 aside,#fb7 canvas,#fb7 details,#fb7 figcaption,#fb7 figure,#fb7 footer,#fb7 header,#fb7 hgroup,#fb7 menu,#fb7 nav,#fb7 section,#fb7 summary { display: block; }
+
+#fb7 a,#fb7 ins,#fb7 del { text-decoration: none; }
+
+#fb7 ul,#fb7 ol {
+	 list-style: none;
+	 text-indent:0px;
+	 margin:0 !important;
+}
+
+#fb7 table {
+	border-spacing: 0;
+	border-collapse: collapse; }
+
+#fb7 caption,#fb7 th { text-align: left; }
+
+#fb7 q:after,#fb7 q:before { content: ""; }
+
+#fb7 a,#fb7 button:hover { cursor: pointer; }
+
+#fb7 input,#fb7 textarea { outline: none; }
+

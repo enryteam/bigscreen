@@ -1,0 +1,56 @@
+<div id="prism-window" data-ng-controller="windowbase.controllers.window">
+
+    <div id="prism-header" data-ng-controller="windowbase.controllers.header"
+         data-ng-style="sizing.header"
+         data-ng-click="hideMenuPanel()">
+
+
+        <div class="user-control-holder" data-ng-hide="nonav">
+            <div class="user-fullname" data-ng-bind="getLoggedInName()"  command="dashboard.commands.recoverpwd"></div>
+            <div class="signout-link-holder" data-ng-click="signout()">
+                <div class="signout-text">({{'header.sign_out'|translate}})</div>
+                <div class="line"></div>
+            </div>
+            <div class="main-header-help" style="color:#FFF"><a class="desktop_clear"  href="JavaScript:void(0)"  onClick="location.reload();" >清除缓存</a></div>
+
+        </div>
+        <script>
+            function tiaozhuan() {
+                window.location.href="/daping/html/index.html";
+            }
+        </script>
+        <div id="main-nav" data-ng-hide="nonav">
+            <div data-ng-repeat="nav in navItems" class="nav-item" data-ng-click="selectNavItem(nav)" data-ng-show="nav.visible" data-ng-disabled="nav.disable">
+                <a data-ng-disabled="nav.disable" data-ng-href="{{nav.url}}">{{nav.title}}</a>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div style="float: right  ;  padding-top: 5px;
+    margin: 10px 2px 0px 0px;"><a href="/daping/html/index.html" style="    color: #fff;
+    font-family: tahoma, arial, 'Hiragino Sans GB', 宋体, sans-serif;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+    text-decoration: none">大屏展示</a></div>
+
+        <div class="header-actions-host" data-ng-show="nonav" data-ng-style="{width: sizing.atoms.sidewidth + 'px'}" data-ng-class="{dirty: dirtyWidget}">
+            <button class="toolbar-action we-t-back" data-command="widget-editor.commands.cancel" data-ng-show="viewonly && !canMakeChanges">{{'we.back'|translate}}</button>
+            <button class="toolbar-action we-t-cancel" data-command="widget-editor.commands.cancel" data-ng-hide="viewonly && !canMakeChanges">{{'we.cancel'|translate}}</button>
+            <button class="toolbar-action we-t-ok"
+                    data-command="widget-editor.commands.save"
+                    data-command-args="({ widget: $root.widget, standalone: $root.standalone, newwidget: $root.newwidget, applying : applying})"
+                    data-ng-hide="( viewonly && !canMakeChanges) || cantsave">{{'we.apply'|translate}}</button>
+        </div>
+
+        <div id="prism-logo" branding="logo.desktop.small" branding-type="logo"></div>
+
+        <data-zoom-warning></data-zoom-warning>
+    </div>
+
+    <div data-ui-view="toolbarview" id="prism-toolbar" data-ng-style="sizing.toolbar"></div>
+    <div data-ui-view="leftview" id="prism-leftview" data-ng-style="sizing.leftpane"></div>
+    <div data-ui-view="rightview" id="prism-rightview" data-ng-style="sizing.rightpane"></div>
+    <div data-ui-view="mainview" id="prism-mainview" data-ng-style="sizing.midpane"></div>
+    <div class="home-comment-mask" style="  background: #9CAAB3;opacity: 0.5;width: 100%;height: 100%;position: absolute;top:0px;left:0px;z-index: 1005;display: none;"></div>
+	<!--@@ph 增加菜单浮动层-->
+    <div data-ui-view="menuview" id="prism-menuview" data-ng-style="sizing.menupane"></div>
+</div>

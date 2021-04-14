@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>SmartCity-未登录</title>
+
+    <!-- 公共CSS -->
+    <script src="../../style/common/common_css.js"></script>
+    <!-- 用户CSS -->
+    <link href="../../style/css/style.css" rel="stylesheet">
+</head>
+
+<script type="text/javascript">
+    setTimeout(function () {
+        document.location.href = 'manage/login.html';
+    }, 3000);
+</script>
+
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content  animated fadeInDown">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox">
+                <div class="ibox-content text-center">
+                    <h4 class="m-b-xxs">
+                        <img style="margin:10px;" src="../../resources/images/error/icon-error.gif"> 您还未登录或登录信息已经失效,
+                        系统将在3秒钟后自动跳转至登录页面!
+                    </h4>
+                    如果未自动跳转，请点击<a style="font-size: 14px; color: red" href='manage/login'>登录！</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- 公共js -->
+<script src="../../style/common/common_js.js"></script>
+</html>

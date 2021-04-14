@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>数据可视化系统 -组件管理</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/images/common/favicon.ico">
+    <!-- 公共CSS -->
+    <script src="../../style/common/common_css.js"></script>
+    <!-- 用户CSS -->
+    <link href="../../style/css/style.css" rel="stylesheet">
+    <!-- jquery -->
+    <script type="text/javascript" src="../../style/common/jquery/jquery.min.js"></script>
+</head>
+
+<script language="javascript">
+    $(function () {
+        $(".file-box").mouseover(function () {
+            $(this).find(".tooltip").css("display", "block");
+        }).mouseout(function () {
+            $(this).find(".tooltip").css("display", "none");
+        });
+    });
+
+    function renamereport(id) {
+        $.messager.prompt('视图改名', '请输入新的视图名称？', function (msg) {
+            if (msg) {
+                $.ajax({
+                    type: "POST",
+                    url: "PortalIndex!rename.action",
+                    dataType: "HTML",
+                    data: {
+                        pageId: id,
+                        pageName: msg
+                    },
+                    success: function (resp) {
+                        $("div.file-box[cid=\"" + id + "\"] .file-name a")
+                            .text(msg);
+                    },
+                    error: function () {
+
+                    }
+                });
+            }
+        });
+    }
+
+    function delreport(id) {
+        if (confirm('是否确认删除？')) {
+            $.ajax({
+                type: "POST",
+                url: "PortalIndex!del.action",
+                dataType: "HTML",
+                data: {
+                    pageId: id
+                },
+                success: function (resp) {
+                    $("div.file-box[cid=\"" + id + "\"]").remove();
+                },
+                error: function () {
+
+                }
+            });
+        }
+    }
+
+    function newreport() {
+        location.href = 'PortalIndex!customization.action';
+    }
+
+    function editreport(id) {
+        location.href = 'PortalIndex!customization.action?pageId=' + id;
+    }
+</script>
+
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<div id="wrapper">
+    <!--主页面-->
+    <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-sm-9  animated fadeInRight">
+                <div class="file-box">
+                    <div class="file">
+                        <a href="PortalIndex!customization.action">
+                            <div class="icon">
+                                <i class="fa fa-plus-square-o"></i>
+                            </div>
+                        </a>
+
+                        <div class="file-name" align="center">
+                            <a href="PortalIndex!customization.action">新建组件</a>
+                        </div>
+                    </div>
+                </div>
+
+                <%--循环自定义图表 --%>
+                <c:forEach var="id" begin="1" end="7" step="1">
+                    <div class="file-box" cid="${id}">
+                        <div class="file">
+                            <%--编辑控件 --%>
+                            <span class="corner"></span>
+                            <div class="tooltip" align="right"
+                                 style="position:absolute; display:none; margin:3px;">
+                                <button class="btn btn-default btn-xs" type="button"
+                                        onclick="renamereport('${id}')" title="重命名">
+                                    <i class="fa fa-paste"></i>
+                                </button>
+                                <button class="btn btn-default btn-xs" type="button"
+                                        onclick="editreport('${id}')" title="编辑">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button class="btn btn-default btn-xs" type="button"
+                                        onclick="delreport('${i}')" title="删除">
+                                    <i class="fa fa-remove"></i>
+                                </button>
+                            </div>
+                            <%--缩略图 --%>
+                            <a href="*.action?id=${id}">
+                                <div class="Thumbnail">
+                                    <img src="../../resources/images/thumbnail/component/c${id}.gif">
+                                </div>
+                            </a>
+                            <%--组件名称 --%>
+                            <div class="file-name" align="center">
+                                <a href="*.action?id=${id}">自定义组件-${id} </a>
+                            </div>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

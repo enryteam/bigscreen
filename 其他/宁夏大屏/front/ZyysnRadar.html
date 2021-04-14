@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../themes/css/global_n.css" />
+    <link rel="stylesheet" type="text/css" href="../themes/css/iframe.css" />
+    <script src="../js/echarts/echarts.js"></script>
+    <script src="../data/data.js"></script>
+</head>
+<body>
+<div style="width:390px;height:400px;" id="main"> </div>
+<script>
+    require.config({
+        paths: {
+            echarts: '../js/echarts'
+        }
+    });
+    require(
+            [
+                'echarts',
+                'echarts/chart/pie',
+                'echarts/chart/bar',
+                'echarts/chart/map',
+                'echarts/chart/line',
+                'echarts/chart/radar'
+            ],
+            function (ec) {
+                var myChart = ec.init(document.getElementById('main'));
+                var option = {
+                    tooltip : {
+                        trigger: 'axis',
+                        formatter:'{d}(万元) <br/>{b0}：{c0} {b1}：{c1} <br/> {b2}：{c2} {b3}：{c3} <br/> {b4}：{c4}'
+
+                    },
+                    legend: {
+                        x : 'center',
+                        data:legendData,
+                        textStyle:{
+                            color:'#FFF'
+                        }
+                    },
+                    calculable : true,
+                    polar : [
+                        {
+                            name:{
+                            show: true,
+                            formatter: null,
+                            textStyle: {
+                                color:'#FFF'
+                            } },
+                            indicator :(function(){
+                                var arr=[];
+                                // 维度数值个数
+                                var len=data.AreaData.length;
+                                for(var ii=0;ii<len;ii++) {
+                                    arr.push({
+                                        text:data.AreaData[ii]
+                                    });
+                                }
+                                return arr;
+                            })(),
+                           radius : 130,
+                           axisLabel:{ textStyle:{color:'#FFF'}}
+                        }
+                    ],
+                    series : [
+                        {
+                            name: '地区雷达图',
+                            type: 'radar',
+                            itemStyle: {
+                                normal: {
+                                    areaStyle: {
+                                        type: 'default'
+                                    }
+                                }
+                            },
+                            data :  (function(){
+                                var returndd=[];
+                                var len=legendData.length;
+                                for (var i=0;i<len;i++){
+                                    var obj={};
+                                    obj.name=legendData[i];
+                                    // 数据值
+                                    var valData=[];
+                                    switch (legendData[i]){
+                                        case"资金需求":
+                                            for(var ii=0;ii<data.AreaData.length;ii++){
+                                                debugger;
+                                                var visit=true;
+                                                for(var ij=0;ij<data.ReqData.length;ij++){
+                                                    var ij_data=data.ReqData[ij];
+                                                    if(data.AreaData[ii]==ij_data.name){
+                                                        valData.push(ij_data.value);
+                                                        visit=false;
+                                                    }
+                                                }
+                                                if(visit){
+                                                    valData.push(0)
+                                                }
+                                            }
+                                            break;
+                                        case"下达资金":
+                                            for(var ii=0;ii<data.AreaData.length;ii++){
+                                                var visit=true;
+                                                for(var ij=0;ij<data.issueFunds.length;ij++){
+                                                    var ij_data=data.issueFunds[ij];
+                                                    if(data.AreaData[ii]==ij_data.name){
+                                                        valData.push(ij_data.value);
+                                                        visit=false;
+                                                    }
+                                                }
+                                                if(visit){
+                                                    valData.push(0)
+                                                }
+                                            }
+                                            break;
+                                        case"到位资金":
+                                            for(var ii=0;ii<data.AreaData.length;ii++){
+                                                var visit=true;
+                                                for(var ij=0;ij<data.placeFunds.length;ij++){
+                                                    var ij_data=data.placeFunds[ij];
+                                                    if(data.AreaData[ii]==ij_data.name){
+                                                        valData.push(ij_data.value);
+                                                        visit=false;
+                                                    }
+                                                }
+                                                if(visit){
+                                                    valData.push(0)
+                                                }
+                                            }
+                                            break;
+                                        case"支付情况":
+                                            for(var ii=0;ii<data.AreaData.length;ii++){
+                                                var visit=true;
+                                                for(var ij=0;ij<data.payFunds.length;ij++){
+                                                    var ij_data=data.payFunds[ij];
+                                                    if(data.AreaData[ii]==ij_data.name){
+                                                        valData.push(ij_data.value);
+                                                        visit=false;
+                                                    }
+                                                }
+                                                if(visit){
+                                                    valData.push(0)
+                                                }
+                                            }
+                                            break;
+                                        case"完成资金":
+                                            for(var ii=0;ii<data.AreaData.length;ii++){
+                                                var visit=true;
+                                                for(var ij=0;ij<data.finishFunds.length;ij++){
+                                                    var ij_data=data.finishFunds[ij];
+                                                    if(data.AreaData[ii]==ij_data.name){
+                                                        valData.push(ij_data.value);
+                                                        visit=false;
+                                                    }
+                                                }
+                                                if(visit){
+                                                    valData.push(0)
+                                                }
+                                            }
+                                            break;
+
+                                    }
+                                    // 数据
+                                    obj.value=valData;
+                                    returndd.push(obj);
+                                }
+                                return returndd;
+                            })()
+                        }
+                    ]
+                };
+
+                myChart.setOption(option, true);
+            });
+</script>
+</body>
+</html>

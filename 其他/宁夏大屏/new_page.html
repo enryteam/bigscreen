@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+    <link href="themes/css/global.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="themes/css/layout.css" />
+    <link href="themes/css/fkpagetransitions.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/MODALit.min.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+</head>
+<style>
+	
+	
+	
+	.new_page_content1{
+		width: 500px;
+		height: 500px;
+		margin-left: -25px;
+		bottom: 60px;
+		left: 3%;
+		
+	}
+	
+	
+	.person{
+		position: absolute;
+		width: 400px;
+		height: 660px;
+		right: 30px;
+	}
+	
+	.person1{
+		left: 10px;
+		top: 160px !important;
+	}
+	
+	.person2{
+		left: 220px;
+		top: 160px !important;
+	}
+	
+	.new_page_time{
+		right:100px;
+		top: 45px;
+	}
+	
+	.myfkpage{
+		margin: 0 auto !important;
+	}
+	
+	.cardDiv .card-tag:first-child{
+		margin-left: 0;
+	}
+	
+	.cardDiv .card-tag{
+		margin: 0;
+	}
+	
+	.new_page_btn{
+		width: 400px;
+		height: 340px;
+		position: relative;
+		top: 300px;
+	}
+	
+	.new_page_btn ul li{
+		width: 400px;
+		height: 65px;
+		margin-bottom: 20px;
+		position: relative;
+		z-index: 9999;
+	}
+
+	
+	.new_page_btn ul li a{
+		width: 400px;
+		height: 65px;
+		display: block;
+		text-align: center;
+		padding-top: 15px;
+	}
+	
+	.new_page_btn ul li:nth-child(1){
+		background: url(images/new_page_btn1.png);
+	}
+	.new_page_btn ul li:nth-child(2){
+		background: url(images/new_page_btn2.png);
+	}
+	.new_page_btn ul li:nth-child(3){
+		background: url(images/new_page_btn3.png);
+	}
+	.new_page_btn ul li:nth-child(4){
+		background: url(images/new_page_btn4.png);
+	}
+	
+</style>
+
+<script type="text/javascript">
+  var i=1;
+  $(function(){
+    $(".btn-Sort").hover(function(){
+      $(this).parent().removeClass();
+      var addClassName = $(this).attr("id");
+      $(this).parent().addClass(addClassName);
+    },function(){
+      $(this).parent().removeClass();
+    });
+    $(".cardDiv .card-tag").eq(0).addClass("click-on");
+    setInterval('autoTag();', 3000);
+	$("#dlDiv").click(function(){
+		$(this).hide();
+	});
+  })
+  
+  function autoTag(){
+    $(".cardDiv .card-tag").removeClass("click-on");
+    $(".cardDiv .card-tag").eq(i).addClass("click-on");
+    if(i<4){
+      ++i;
+    } else {
+      i=0;
+    }
+  }
+</script>
+<body>
+	
+<div id="logo"></div>
+
+
+
+<!--登录按钮框 -->
+<!--
+<div style="position:absolute;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:999;display:none" id="dlDiv">
+	<div style="position:absolute;width:454px;height:288px;left:50%;top:50%;margin-left:-227px;margin-top:-144px;">
+	<img src="themes/images/dl.png" width="454" height="288" usemap="#Map" />
+    <map name="Map">
+      <area shape="rect" coords="50,192,404,240" href="#" id="btnDL">
+    </map>
+    </div>
+</div>-->
+
+
+	<ul class="myfkpage">
+    <!--首页文字框 --> 
+	 <li> 
+      <div onClick="fkpage.goToNextSlide();"></div>
+      
+     
+        
+        <div class="person">
+        	
+    	   	<p class="system-Time new_page_time">
+       		   <i></i>
+       		</p>
+        	
+        	
+        	<p class="userNum person1">
+	           	在矫人员
+	            <i>4403人</i>
+         	 </p>
+          
+         	 <p class="userNum person2">
+	     		 实时定位人数
+	            <i>3209人</i>
+      		</p>
+      		
+      		<div class="new_page_btn">
+      			<ul>
+      				<li><a href="new_page1.html"></a></li>
+      				<li><a href="new_page2.html"></a></li>
+      				<li><a href="new_page3.html"></a></li>
+      				<li><a href="new_page4.html"></a></li>
+      			</ul>
+      		</div>
+        </div>
+        
+         
+        
+       
+        
+        <div id="indexBg">
+        
+          <iframe src="pb_yhfb.html" class="iframeTest" style="height:100%;width:100%;" frameborder="0"></iframe>
+  
+        </div>
+        
+        
+        
+        <div class="new_page_content1 cardDiv">
+        	<div class="card-tag">
+                    <h6>银川市</h6>
+                    <p><span>1627人</span>在矫人员：</p>
+                    <p><span>930人</span>定位人数：</p>
+					<p><span>22人</span>社矫工作人员：</p>
+                </div>
+                
+                
+                <div class="card-tag">
+                    <h6>石嘴山市</h6>
+                    <p><span>664人</span>在矫人员：</p>
+                    <p><span>492人</span>定位人数：</p>
+					<p><span>18人</span>社矫工作人员：</p>
+                </div>
+                
+                <div class="card-tag">
+					<h6>吴忠市</h6>
+					<p><span>1260人</span>在矫人员：</p>
+					<p><span>809人</span>定位人数：</p>
+					<p><span>19人</span>社矫工作人员：</p>
+				</div>
+				
+				<div class="card-tag">
+					<h6>固原市</h6>
+					<p><span>695人</span>在矫人员：</p>
+					<p><span>406人</span>定位人数：</p>
+					<p><span>17人</span>社矫工作人员：</p>
+				</div>
+				
+				<div class="card-tag">
+					<h6>中卫市</h6>
+					<p><span>820人</span>在矫人员：</p>
+					<p><span>572人</span>定位人数：</p>
+					<p><span>18人</span>社矫工作人员：</p>
+				</div>
+        	
+        </div>
+        
+        
+    
+              
+            </div>
+        </div>
+      </li>
+	  
+	<!--总框架 菱形图 
+      <li style="height:100%;width:100%">
+	  
+      	<div id="homeBg" onClick="fkpage.goToNextSlide();">
+  <div id="home-contentDiv">
+    <div id="btn-Div">
+      <div class="btn-Sort btn-1" id="bgImg1" onClick="window.top.location='default.html'"><span></span></div>
+      <div class="btn-Sort btn-2" id="bgImg2" onClick="window.top.location='zxjs.html'"><span></span></div>
+      <div class="btn-Sort btn-3" id="bgImg3" onClick="window.top.location='zyys.html'"><span></span></div>
+      <div class="btn-Sort btn-4" id="bgImg4" onClick="window.top.location='xmsh.html'"><span></span></div>
+      <div class="btn-Sort btn-5" id="bgImg5" onClick="window.top.location='sngd.html'"><span></span></div>
+      <div class="btn-Sort btn-6" id="bgImg6" onClick="window.top.location='wngh.html'"><span></span></div>
+    </div>
+  </div>
+</div>
+      </li>  -->
+	  <!--总框架 蛇形图 -->  
+      <!--<li style="height:100%;width:100%">
+<div id="homeBg">
+  <div id="zd-contentDiv">
+    <div id="zd-btn-Div">
+      <div class="btn-Sort zdbtn-1" id="bgImg1" onClick="window.location.href='tzxs1.html'"><span></span></div>
+      <div class="btn-Sort zdbtn-2" id="bgImg2" onClick="window.location.href='zhfx.html'"><span></span></div>
+      <div class="btn-Sort zdbtn-3" id="bgImg3" onClick="window.location.href='default.html'"><span></span></div>
+      <div class="btn-Sort zdbtn-4" id="bgImg4"><span></span></div>
+      <div class="btn-Sort zdbtn-5" id="bgImg5" onClick="window.location.href='tzxs.html'"><span></span></div>
+    </div>
+  </div>
+</div>
+      </li>
+    </ul>-->
+
+	
+    
+	
+	<!-- jQuery library -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- FKPageTransitions Javascript file -->
+    <script src="js/fkpagetransitions.min.js"></script>
+    <script type="text/javascript">
+	var fkpage,cindex = 5;
+  //获得当前时间,刻度为一千分一秒
+  function showLeftTime(){
+    var now=new Date();
+    var year=now.getFullYear();
+    var month=now.getMonth()+1;
+    var day=now.getDate();
+    var hours=now.getHours();
+    var minutes=now.getMinutes();
+    var seconds=now.getSeconds();
+    var zq=now.getDay();
+    var Week = ['日','一','二','三','四','五','六'];
+    if(seconds<10){
+      seconds = "0"+seconds;
+    }
+    if(minutes<10){
+      minutes = "0"+minutes;
+    }
+    var systemTime = "<i>"+hours+":"+minutes+":"+seconds+"</i>"+year+"年"+month+"月"+day+"日 星期"+Week[zq]; 
+    $(".system-Time").html(systemTime);
+    //一秒刷新一次显示时间
+    //var timeID=setTimeout(showLeftTime,1000);
+  }
+	function shownewts(){
+	  if (cindex<0) cindex =5;
+	  var tmp = fkpage.setSlideMode(cindex); 
+	  fkpage.goToNextSlide(); //下一页
+	  cindex --;
+	}
+
+	    $(document).ready(function(){
+        showLeftTime();
+        setInterval('showLeftTime()', 1000);
+	      fkpage = $('.myfkpage').FKPageTransitions();
+	    });
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/*!
+ * project: 
+ * author: dongyf
+ * date:2016-12-12
+ */
+.doublecol{
+	width: 1920px;
+	height: 540px;
+}
+.doublecol h2,
+.col h2{
+    text-align: center;
+    font-size: 42px;
+    height: 100px;
+    line-height: 100px;
+    font-family: "方正黑体_GBK";
+}
+.doublecol .doublecol-bd{
+	width: 1920px;
+	height: 440px;
+}
+#chartforthwith{
+	float: left;
+	width: 600px;
+	height: 540px;
+	margin-left: 0px;
+	margin-top: 0px;
+
+}
+.col-one{
+	float: left;
+	margin-top: 127px;
+	margin-left: 250px;
+	width: 327px;
+	height: 340px;
+}
+.col-one span{
+	display: block;
+	width: 100%;
+	margin-top: 124px;
+	font-size: 26px;
+	text-align: center;
+}
+.col-one em{
+	display: block;
+	width: 100%;
+	margin-top: -30px;
+	font-size: 60px;
+	color: #f7e444;
+	font-weight: bold;
+	text-align: center;
+}
+.bgb{
+	background: url(../images/bg-blue.png) no-repeat;
+}
+.bgp{
+	background: url(../images/bg-purple.png) no-repeat;
+}

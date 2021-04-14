@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var code = Util.getUrlParams("code");//获取设备编号	
+		var params = {
+			code : code
+		};
+		var url = '';
+		Util.ajax({
+			url : "/rest/videomonitor/login",
+			data : params,
+			success : function(data) {
+				if (data) {
+					console.log(data.PlayUrl);
+					url = data.PlayUrl;
+					CallBack(url);
+				}
+			}
+		})
+
+		function CallBack(url_New) {
+			initvlc();//初始化视频插件
+			InitMediaPlayerWithMediaPath(url_New); //初始化视频地址
+			MediaPlayerPlay(); //播放视频
+		}
+
+	});
+</script>
+<script type="text/javascript">
+	window.onunload = function() {
+		// 要执行的代码  
+		//setMainDialogSize();
+		uninitvlc();
+		console.log("关闭播放器成功");
+	}
+
+	function initvlc() {
+		document.getElementById("MyActiveX1").InitVLCInstance();
+		document.getElementById("MyActiveX1").SetStunServer("202.102.108.42",
+				"3478");
+	}
+
+	function InitMediaPlayerWithMediaPath(url) {
+		document.getElementById("MyActiveX1")
+				.InitMediaPlayerWithMediaPath2(url);
+	}
+	function uninitvlc() {
+		document.getElementById("MyActiveX1").UnInitVLCInstance();
+	}
+	function MediaPlayerPlay() {
+
+		//播放视频
+		document.getElementById("MyActiveX1").MediaPlayerPlay();
+
+		//设置视频窗口 宽高
+		document.getElementById("MyActiveX1").SetMaindialogSize(1920, 1080);
+
+		//设置定时 全屏
+		//setTimeout(function() {
+		//	document.getElementById("MyActiveX1").SetPlayerFullScreen();
+	//	}, 5000);
+	}
+
+	function setMainDialogSize(){
+		document.getElementById("MyActiveX1").SetMaindialogSize(1920, 1080);
+	}
+	
+	function SetPlayerFullScreen() {
+		document.getElementById("MyActiveX1").SetPlayerFullScreen();
+	}
+
+	function showTime() {
+
+	}
+
+	function getState() {
+
+	}
+</script>
+<SCRIPT FOR=MyActiveX1 EVENT=VLCErr()>
+	
+</SCRIPT>
+</head>
+<body style="margin: 0">
+	<div
+		style="overflow: hidden; padding: 0px; margin: 0px; width: 100%; height: 100%">
+		<!--视频监控插件 -->
+		<OBJECT ID="MyActiveX1" WIDTH="100%" HEIGHT="100%"
+			CLASSID="CLSID:27FCB6D7-15CD-42E9-88E7-D8DE7CBE8B63">
+			<PARAM NAME="_Version" VALUE="65536">
+			<PARAM NAME="_ExtentX" VALUE="1323">
+			<PARAM NAME="_ExtentY" VALUE="1323">
+			<PARAM NAME="_StockProps" VALUE="0">
+			<PARAM NAME="enable_slider" VALUE=false>
+		</OBJECT>
+	</div>
+</body>
+</html>

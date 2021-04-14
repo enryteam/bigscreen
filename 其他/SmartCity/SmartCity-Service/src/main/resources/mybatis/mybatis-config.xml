@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 别名 ,用于daoMapper.xml -->
+<!-- 	<typeAliases>
+		批量别名定义:指定包路径,自动扫描包下边的pojo,定义别名,别名默认为类名（首字母小写或大写）
+		<package name="com.lapland.core.model"/>
+	</typeAliases> -->
+
+	<!-- 配置mapper.xml文件 -->
+<!-- 	<mappers>
+		<mapper resource="com/lapland/common/daoMapper/UserMapper.xml" />
+	</mappers> -->
+
+</configuration>

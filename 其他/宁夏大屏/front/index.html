@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+    <link href="../themes/css/global.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../themes/css/layout.css" />
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <link href="../themes/css/fkpagetransitions.min.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript">
+  var i=1;
+  $(function(){
+    $(".btn-Sort").hover(function(){
+      $(this).parent().removeClass();
+      var addClassName = $(this).attr("id");
+      $(this).parent().addClass(addClassName);
+    },function(){
+      $(this).parent().removeClass();
+    });
+    $(".cardDiv .card-tag").eq(0).addClass("click-on");
+    setInterval('autoTag();', 3000);
+	$("#dlDiv").click(function(){
+		$(this).hide();
+		});
+	$(".card-tag").click(function(){
+		$("#dlDiv").show();
+		var cardNum = $(this).index();
+		$("#btnDL").click(function(){
+		  /*if(cardNum == 0){
+			location.href="wngh.html"
+		  } else if(cardNum == 1){
+			location.href="sngd.html"
+		  } else if(cardNum == 2){
+			location.href="xmsh.html"
+		  } else if(cardNum == 3){
+			location.href="zyys.html"
+		  } else {
+			location.href="zxjs.html"
+		  }*/
+		  fkpage.goToNextSlide();
+		  
+    });
+	});
+  })
+  function autoTag(){
+    $(".cardDiv .card-tag").removeClass("click-on");
+    $(".cardDiv .card-tag").eq(i).addClass("click-on");
+    if(i<4){
+      ++i;
+    } else {
+      i=0;
+    }
+  }
+</script>
+<body>
+<div id="logo"></div>
+
+<!--最右侧菜单 -->
+<div id="toolbar">
+  <span><a href="#" title="返回上一页" class="btn-back" onClick="history.go(-1)"></a></span>
+  <span><a href="index.html" title="主页" class="btn-index"></a></span>
+  <span><a href="#" title="菜单" class="btn-list"></a>
+    <ul class="listMenu">
+      <div id="base-menu">
+        <li><a href="home1.html">基础业务</a></li>
+        <li><a href="home2.html">重点业务</a></li>
+      </div>
+    </ul>
+  </span>
+  
+ 
+ <span><a href="#" title="图例" class="btn-chart"></a>
+    <ul class="listChart">
+      <li onClick="addBox('test','分重大战略','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu01.gif" /></a></li>
+      <li onClick="addBox('test2','分重大战略2','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu02.gif" /></a></li>
+      <li onClick="addBox('test3','分重大战略3','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu03.gif" /></a></li>
+      <li onClick="addBox('test4','分重大战略4','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu04.gif" /></a></li>
+      <li onClick="addBox('test5','分重大战略5','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu05.gif" /></a></li>
+      <li onClick="addBox('test6','分重大战略6','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu06.gif" /></a></li>
+      <li onClick="addBox('test7','分重大战略7','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu07.gif" /></a></li>
+      <li onClick="addBox('test8','分重大战略8','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu08.gif" /></a></li>
+      <li onClick="addBox('test9','分重大战略9','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu09.gif" /></a></li>
+      <li onClick="addBox('test10','分重大战略10','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu10.gif" /></a></li>
+      <li onClick="addBox('test11','分重大战略11','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu11.gif" /></a></li>
+      <li onClick="addBox('test12','分重大战略12','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu12.gif" /></a></li>
+      <li onClick="addBox('test13','分重大战略13','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu13.gif" /></a></li>
+      <li onClick="addBox('test14','分重大战略14','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu14.gif" /></a></li>
+      <li onClick="addBox('test15','分重大战略15','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu15.gif" /></a></li>
+    </ul>
+  </span>
+  <span><a href="#" title="导出WORD" class="btn-word"></a></span>
+  <span><a href="#" title="导出PDF" class="btn-pdf"></a></span>
+  <span><a href="#" title="打印" class="btn-print"></a></span>
+</div>
+
+<!--登录按钮框 -->
+<div style="position:absolute;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:999;display:none" id="dlDiv">
+	<div style="position:absolute;width:454px;height:288px;left:50%;top:50%;margin-left:-227px;margin-top:-144px;">
+	<img src="../themes/images/dl.png" width="454" height="288" usemap="#Map" />
+    <map name="Map">
+      <area shape="rect" coords="50,192,404,240" href="#" id="btnDL">
+    </map>
+    </div>
+</div>
+
+
+	<ul class="myfkpage">
+    <!--首页文字框 --> 
+	 <li style="height:100%;width:100%"> 
+      <div style="position: absolute;height:100%;width:100%;z-index:1;left:0px;top:0px;" onClick="fkpage.goToNextSlide();"></div>
+        <p class="system-Time">
+          <i></i>
+        </p>
+        <div id="indexBg">
+          <iframe src="pb_yhfb.html" class="iframeTest" style="height:100%;width:100%;" frameborder="0"></iframe>
+          <p class="userNum">
+            在矫人员
+            <i>1113人</i>
+          </p>
+          <p class="userNum" style="top:32%">
+            实时定位人数
+            <i>938人</i>
+          </p>
+        </div>
+        <div class="cardDiv" style="z-index:999">
+                <div class="card-tag">
+                    <h6>银川市</h6>
+                    <p><span>116人</span>在矫人员：</p>
+                    <p><span>102人</span>定位人数：</p>
+					   <p><span>25人</span>社矫工作人员：</p>
+                </div>
+                <div class="card-tag">
+                    <h6>石嘴山市</h6>
+                    <p><span>106人</span>在矫人员：</p>
+                    <p><span>82人</span>定位人数：</p>
+					   <p><span>19人</span>社矫工作人员：</p>
+                </div>
+                <div class="card-tag">
+                    <h6>吴忠市</h6>
+                <p><span>86人</span>在矫人员：</p>
+                    <p><span>72人</span>定位人数：</p>
+					   <p><span>18人</span>社矫工作人员：</p>
+                </div>
+                <div class="card-tag">
+                    <h6>固原市</h6>
+                     <p><span>136人</span>在矫人员：</p>
+                    <p><span>112人</span>定位人数：</p>
+					   <p><span>32人</span>社矫工作人员：</p>
+                </div>
+                <div class="card-tag">
+                    <h6>中卫市</h6>
+                     <p><span>96人</span>在矫人员：</p>
+                    <p><span>82人</span>定位人数：</p>
+					   <p><span>21人</span>社矫工作人员：</p>
+                </div>
+          </div>
+            </div>
+        </div>
+      </li>
+	  
+	<!--总框架 菱形图 
+      <li style="height:100%;width:100%">
+	  
+      	<div id="homeBg" onClick="fkpage.goToNextSlide();">
+  <div id="home-contentDiv">
+    <div id="btn-Div">
+      <div class="btn-Sort btn-1" id="bgImg1" onClick="window.top.location='default.html'"><span></span></div>
+      <div class="btn-Sort btn-2" id="bgImg2" onClick="window.top.location='zxjs.html'"><span></span></div>
+      <div class="btn-Sort btn-3" id="bgImg3" onClick="window.top.location='zyys.html'"><span></span></div>
+      <div class="btn-Sort btn-4" id="bgImg4" onClick="window.top.location='xmsh.html'"><span></span></div>
+      <div class="btn-Sort btn-5" id="bgImg5" onClick="window.top.location='sngd.html'"><span></span></div>
+      <div class="btn-Sort btn-6" id="bgImg6" onClick="window.top.location='wngh.html'"><span></span></div>
+    </div>
+  </div>
+</div>
+      </li>  -->
+	  <!--总框架 蛇形图 -->  
+      <li style="height:100%;width:100%">
+<div id="homeBg">
+  <div id="zd-contentDiv">
+    <div id="zd-btn-Div">
+      <div class="btn-Sort zdbtn-1" id="bgImg1" onClick="window.location.href='tzxs1.html'"><span></span></div>
+      <div class="btn-Sort zdbtn-2" id="bgImg2" onClick="window.location.href='zhfx.html'"><span></span></div>
+      <div class="btn-Sort zdbtn-3" id="bgImg3" onClick="window.location.href='default.html'"><span></span></div>
+      <div class="btn-Sort zdbtn-4" id="bgImg4"><span></span></div>
+      <div class="btn-Sort zdbtn-5" id="bgImg5" onClick="window.location.href='tzxs.html'"><span></span></div>
+    </div>
+  </div>
+</div>
+      </li>
+    </ul>
+
+	
+    <div  style="position: absolute; bottom: 0; left: 0; text-align: center; width: 100%;display:none">
+      <button onClick="fkpage.goToPrevSlide();">上一页</button>
+      <button onClick="fkpage.goToNextSlide();">下一页</button>
+      <button onClick="shownewts();">切换效果</button>
+    </div>
+	
+	<!-- jQuery library -->
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <!-- FKPageTransitions Javascript file -->
+    <script src="../js/fkpagetransitions.min.js"></script>
+    <script type="text/javascript">
+	var fkpage,cindex = 5;
+  //获得当前时间,刻度为一千分一秒
+  function showLeftTime(){
+    var now=new Date();
+    var year=now.getFullYear();
+    var month=now.getMonth()+1;
+    var day=now.getDate();
+    var hours=now.getHours();
+    var minutes=now.getMinutes();
+    var seconds=now.getSeconds();
+    var zq=now.getDay();
+    var Week = ['日','一','二','三','四','五','六'];
+    if(seconds<10){
+      seconds = "0"+seconds;
+    }
+    if(minutes<10){
+      minutes = "0"+minutes;
+    }
+    var systemTime = "<i>"+hours+":"+minutes+":"+seconds+"</i>"+year+"年"+month+"月"+day+"日 星期"+Week[zq]; 
+    $(".system-Time").html(systemTime);
+    //一秒刷新一次显示时间
+    //var timeID=setTimeout(showLeftTime,1000);
+  }
+	function shownewts(){
+	  if (cindex<0) cindex =5;
+	  var tmp = fkpage.setSlideMode(cindex); 
+	  fkpage.goToNextSlide(); //下一页
+	  cindex --;
+	}
+
+	    $(document).ready(function(){
+        showLeftTime();
+        setInterval('showLeftTime()', 1000);
+	      fkpage = $('.myfkpage').FKPageTransitions();
+	    });
+	</script>
+</body>
+</html>

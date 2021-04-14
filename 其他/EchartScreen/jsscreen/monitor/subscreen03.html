@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="css/subscreen03.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>监控与调度屏</title>
+</head>
+
+<body class="small-screen clearfix">
+    <h3 class="title">预警督办</h3>
+    <div class="mainInner" id="main">
+        <!-- <div class="content">
+            <h4 class="name">预警信息</h4>
+            <div class="inner">
+                <dl>
+                    <dt>
+                        异常原因：
+                    </dt>
+                    <dd class="lager">省经信委接收到任务单后，办理时间超过规定时间13小时</dd>
+                </dl>
+                <div class="clearfix">
+                    <dl>
+                        <dt>监察名称：</dt>
+                        <dd>部门办理超期</dd>
+                    </dl>
+                    <dl>
+                        <dt>检查时间：</dt>
+                        <dd>部门办理超期</dd>
+                    </dl>
+                    <dl>
+                        <dt>预警程度：</dt>
+                        <dd>部门办理超期</dd>
+                    </dl>
+                </div>
+                <dl>
+                    <dt>规则描述：</dt>
+                    <dd>部门办理用时是否超时；部门收到任务后，需要在规定的时间内办理完成，如果未按规定时间办理则超时</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="content mt10">
+            <h4 class="name blue">服务单处办</h4>
+            <div class="inner">
+                <dl>
+                    <dt>诉求内容：</dt>
+                    <dd>市民王先生反应噪音扰民问题，发生地点为南京市建邺区附近，希望省领导关注，并反馈</dd>
+                </dl>
+                <div class="clearfix">
+                    <dl>
+                        <dt>联系号码：</dt>
+                        <dd>1802200191</dd>
+                    </dl>
+                    <dl>
+                        <dt>联系号码2：</dt>
+                        <dd>1802200191</dd>
+                    </dl>
+                    <dl>
+                        <dt>电子邮箱：</dt>
+                        <dd></dd>
+                    </dl>
+                </div>
+                <dl>
+                    <dt>诉求地址：</dt>
+                    <dd>南京建邺区</dd>
+                </dl>
+                <div class="clearfix">
+                    <dl>
+                        <dt>诉求来源：</dt>
+                        <dd>部门办理超期</dd>
+                    </dl>
+                    <dl>
+                        <dt>诉求类型：</dt>
+                        <dd>咨询</dd>
+                    </dl>
+                    <dl>
+                        <dt>归口类型：</dt>
+                        <dd>教育局010201</dd>
+                    </dl>
+                </div>
+                <dl>
+                    <dt>反馈时间：</dt>
+                    <dd></dd>
+                </dl>
+            </div>
+        </div> -->
+        <div class="search clearfix" id="texts">
+            <div class="row chooses">
+                <div class="choose current">短信</div>
+                <div class="choose">微信</div>
+                <div class="choose">APP</div>
+            </div>
+            <textarea name="" id="supvscontent" cols="30" rows="10" placeholder="输入内容"></textarea>
+            <input type="text" class="submit" onclick="submit();" id="submitbtn" value="发送">
+        </div>
+        <div class = "hd  hidden">
+        	<h4>督办详情</h4>
+        	<dl>
+        		<dt>督办时间：</dt>
+        		<dd class="dtime" id="dtime"></dd>
+        	</dl>
+        	<dl>
+        		<dt>督办内容：</dt>
+        		<dd class="dcontent" id="dcontent"></dd>
+        	</dl>
+        </div>
+    </div>
+    <!--配置地址-->
+    <script type="text/x-template" id="main-template">
+        <div class="content">
+            <h4 class="name">预警信息</h4>
+            {{#earlyWarning}}
+			<input type="hidden" id="rowguid" value="{{rowguid}}"/>
+            <div class="inner">
+                <dl>
+                    <dt>异常原因：</dt>
+                    <dd class="lager">{{reason}}</dd>
+                </dl>
+                <div class="clearfix">
+                    <dl>
+                        <dt>监察名称：</dt>
+                        <dd id="warningContent">{{name}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>监察时间：</dt>
+                        <dd id="warningTime">{{time}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>预警程度：</dt>
+                        <dd><span class="warnlevel level0{{degree}}"></span></dd>
+                    </dl>
+                </div>
+                <dl>
+                    <dt>规则描述：</dt>
+                    <dd>{{describe}}</dd>
+                </dl>
+            </div>
+            {{/earlyWarning}}
+        </div>
+        <div class="content mt10">
+            <h4 class="name blue">服务工单处办</h4>
+            {{#agency}}
+            <div class="inner">
+                <dl>
+                    <dt>诉求内容：</dt>
+                    <dd>{{name}}</dd>
+                </dl>
+                <div class="clearfix">
+                    <dl>
+                        <dt>联系号码：</dt>
+                        <dd>{{phone}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>联系号码2：</dt>
+                        <dd>{{phone2}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>电子邮箱：</dt>
+                        <dd>{{email}}</dd>
+                    </dl>
+                </div>
+                <dl>
+                    <dt>诉求地址：</dt>
+                    <dd>{{address}}</dd>
+                </dl>
+                <div class="clearfix">
+                    <dl>
+                        <dt>诉求来源：</dt>
+                        <dd>{{origin}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>诉求类型：</dt>
+                        <dd>{{appealType}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>归口类型：</dt>
+                        <dd>{{puyType}}</dd>
+                    </dl>
+                </div>
+                <dl>
+                    <dt>答复时间：</dt>
+                    <dd></dd>
+                </dl>
+            </div>
+            {{/agency}}
+        </div>
+    </script>
+    <script>
+    var settings = {
+         getmintor: '/rest/submonitor/trd'
+    };
+    </script>
+    <!--测试脚本-->
+    <script src="../js/mock-min.js"></script>
+    <script src="../js/mustache.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="test/_testsubscreen03.js"></script>
+    <script src="js/subscreen03.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/jquery-1.12.2.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/china.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/dapingDataService.js"></script>
+
+</head>
+<body>
+<div class="container">
+   <div class="top">
+       <div class="top-left">
+           <img src="../img/logo.png"  style="position:absolute;top: 35px;left: 6%" alt="">
+           <span>国家工商行政管理总局</span>
+           <div class="side3"></div>
+           <div class="side4"></div>
+       </div>
+       <div class="top-middle">工商总局全国广告情况总览</div>
+       <div class="top-right" style="position: relative;">
+           <img src="../img/sz.png" style="position:absolute;top: 30%;left: 21%" alt="">
+           <span id="nowTime"></span>
+           <div class="side1"></div>
+           <div class="side2"></div>
+           <a href="" style="position: absolute;right: 5%;color: #00EEE4;top: 0%;font-size: 16px;text-decoration:none">进入详情&nbsp;>>></a>
+       </div>
+   </div>
+   <div class="down">
+       <div class="left">
+           <div class="left-top">
+               <div class="bottomline-left">
+                   <div class="side6"></div>
+               </div>
+               <div class="bottomline-right">
+                   <span style="margin-left: 20px">媒体发布量（条次）占比</span>
+                   <div class="side5"></div>
+               </div>
+               <div id="leftTop"></div>
+           </div>
+           <div class="left-middle">
+               <div class="bottomline-left">
+                   <div class="side6"></div>
+               </div>
+               <div class="bottomline-right">
+                   <span style="margin-left: 20px">媒体刊例金额占比</span>
+                   <div class="side5"></div>
+               </div>
+               <div id="leftmiddle" style="height: 90%"></div>
+           </div>
+           <div class="left-down">
+               <div class="bottomline-left">
+                   <div class="side6"></div>
+               </div>
+               <div class="bottomline-right">
+                   <span style="margin-left: 20px">刊例与国民经济指标对比</span>
+                   <div class="side5"></div>
+               </div>
+               <div id="leftdown" style="height: 90%"></div>
+           </div>
+       </div>
+       <div class="middle">
+           <div class="middle-top">
+               <div class="middle-top-1">
+                   <div class="middle_top_wenzi">监测条次</div>
+                   <div class="middle_top_shuzi " id="jianceshuliang"></div>
+               </div>
+               <div class="middle-top-2">
+                   <div class="middle_top_wenzi">违法条次</div>
+                   <div class="middle_top_shuzi " id="weifashuliang"></div>
+               </div>
+               <div class="middle-top-3">
+                   <div class="middle_top_wenzi">违法率</div>
+                   <div class="middle_top_shuzi " id="weifalv"></div>
+               </div>
+               <div class="middle-top-4">
+                   <div class="middle_top_wenzi">刊例金额(万元)</div>
+                   <div class="middle_top_shuzi " id="kanlijine"></div>
+               </div>
+           </div>
+
+           <div class="middle-middle">
+               <div class="bottomline-left">
+                   <div class="side6"></div>
+               </div>
+               <div class="bottomline-right">
+
+                   <span style="margin-left: 20px">月度监测</span>
+                   <div class="side5"></div>
+               </div>
+               <div style="height: 50%;width: 22%;float: right;color: white;margin-top: 15%;font-size: 1em">
+                   <span class="yuedu">月监测条次：<span id="yuejianceshuliang"></span></span>
+                   <span class="yuedu">月违法条次：<span id="yueweifashuliang"></span></span>
+                   <span class="yuedu">月违法率：<span id="yueweifalv"></span></span>
+                   <span class="yuedu">月刊例金额(万元)：<span id="yuekanlijine"></span></span>
+               </div>
+               <div id="ditu" style="height: 90%;width: 78%;padding-bottom: 50px"></div>
+
+           </div>
+
+           <div class="middle-down_left">
+               <div class="bottomline-left">
+                   <div class="side6" style="margin-left: 280px"></div>
+               </div>
+               <div class="bottomline-right" style="width: 250px">
+                   <span style="margin-left: 20px" class="qiehuan_1">违法发布趋势</span>
+                   <div class="side5"></div>
+               </div>
+               <div id="middle-down_left" style="height: 90%;padding-bottom: 50px" ></div>
+           </div>
+           <div class="middle-down_right">
+               <div class="bottomline-left">
+                   <div class="side6" style="margin-left: 280px"></div>
+               </div>
+               <div class="bottomline-right" style="width: 250px">
+                   <span style="margin-left: 20px">违法类型占比</span>
+                   <div class="side5"></div>
+               </div>
+               <div id="middle-down_right" style="height: 90%;padding-bottom: 50px" ></div>
+           </div>
+       </div>
+       <div class="right">
+           <div class="right-top">
+               <div class="bottomline-left">
+                   <div class="side6"></div>
+               </div>
+               <div class="bottomline-right">
+                   <span style="margin-left: 20px" class="qiehuan_2">违法发布条次占比</span>
+                   <div class="side5"></div>
+               </div>
+               <div id="rightTop" style="width: 100%;height: 85%;"></div>
+           </div>
+           <div class="right-middle">
+               <div class="bottomline-left">
+                   <div class="side6"></div>
+               </div>
+               <div class="bottomline-right">
+                   <span style="margin-left: 20px" class="qiehuan_3">地区违法率排名前十</span>
+                   <div class="side5"></div>
+               </div>
+               <div id="rightMiddle" style="width: 100%;height: 100%;margin-top: 2.5%"></div>
+           </div>
+           <div class="right-down">
+               <div class="bottomline-left">
+                   <div class="side6"></div>
+               </div>
+               <div class="bottomline-right">
+                   <span style="margin-left: 20px">违法处理情况统计</span>
+                   <div class="side5"></div>
+               </div>
+               <div id="rightBottom" style="width: 100%;height: 90%;"></div>
+           </div>
+       </div>
+   </div>
+</div>
+
+<script>
+
+</script>
+<script src="../js/index.js"></script>
+</body>
+</html>

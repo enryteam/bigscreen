@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>数据可视化系统 -菜单管理</title>
+    <!-- 公共CSS -->
+    <script src="../../style/common/common_css.js"></script>
+    <!-- 用户CSS -->
+    <link href="../../style/css/style.css" rel="stylesheet">
+</head>
+
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<div id="wrapper">
+    <!--主页面-->
+    <div class="wrapper wrapper-content animated fadeInDown">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox">
+
+                    <div class="ibox-title">
+                        <h5>菜单管理</h5>
+                    </div>
+                    <div class="ibox-content">
+
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <ul id="ggcatatree" style="200px;"></ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="text-warning">在菜单上点击鼠标右键来新建或编辑菜单。</p>
+                            </div>
+                        </div>
+
+                        <div id="pdailog"></div>
+                        <div id="treeMenu" class="easyui-menu">
+                            <div onclick="addMenu(false)" id="add">新增...</div>
+                            <div onclick="addMenu(true)" id="mod">修改...</div>
+                            <div onclick="delMenu()" id="del">删除</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

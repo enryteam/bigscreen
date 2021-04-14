@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>综合分析</title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/layout-bak.css" />
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../js/prefixfree.min.js"></script>
+<script type="text/javascript" src="../js/jquery.transit.min.js"></script>
+<style>
+</style>
+
+</head>
+
+<body>
+<div id="logo"></div>
+
+<div id="toolbar">
+	<span><a href="javascript:void(0)" title="返回上一页" class="btn-back" onclick="history.go(-1)"></a></span>
+	<span><a href="index.html" title="主页" class="btn-index"></a></span>
+	<span><a href="javascript:void(0)" title="菜单" class="btn-list"></a>
+		<ul class="listMenu">
+			<h6>
+				<a href="home1.html" id="base" class="active">基础业务</a>
+				<a href="home2.html" id="zdyw">重点业务</a>
+			</h6>
+			<div id="base-menu">
+				<li class="active"><a href="default.html">总览</a></li>
+				<li><a href="wngh.html">五年规划项目储备</a>
+					<ul>
+						<li><a href="javascript:void(0)">入库储备项目</a></li>
+						<li><a href="javascript:void(0)">初审储备项目</a></li>
+					</ul>
+				</li>
+				<li><a href="sngd.html">三年滚动投资计划</a>
+					<ul>
+						<li><a href="javascript:void(0)">滚动计划编制</a></li>
+						<li><a href="javascript:void(0)">滚动计划审核</a></li>
+					</ul>
+				</li>
+				<li><a href="xmsh.html">项目审核备办理</a>
+					<ul>
+						<li><a href="javascript:void(0)">办理进展</a></li>
+						<li><a href="javascript:void(0)">办结批复</a></li>
+					</ul>
+				</li>
+				<li><a href="zyys.html">中央预算内投资项目管理</a>
+					<ul>
+						<li><a href="javascript:void(0)">年度计划申报</a></li>
+						<li><a href="javascript:void(0)">年度计划下达</a></li>
+						<li><a href="javascript:void(0)">年度计划调度</a></li>
+					</ul>
+				</li>
+				<li><a href="zxjs.html">专项建设基金项目</a>
+					<ul>
+						<li><a href="javascript:void(0)">专项基金项目申报</a></li>
+						<li><a href="javascript:void(0)">专项基金项目投放</a></li>
+					</ul>
+				</li>
+				<li><a href="ptyh.html">平台用户分析</a>
+					<ul>
+						<li><a href="javascript:void(0)">活跃度分析</a></li>
+						<li><a href="javascript:void(0)">用户上报情况</a></li>
+						<li><a href="javascript:void(0)">用户分布情况</a></li>
+					</ul>
+				</li>
+				<li><a href="xmda.html">项目档案</a></li>
+			</div>
+			<div id="zdyw-menu" style="display:none;">
+				<li><a href="fgf.html">放管服</a>
+					<ul>
+						<li><a href="javascript:void(0)">简政放权</a></li>
+						<li><a href="javascript:void(0)">放管结合</a></li>
+						<li><a href="javascript:void(0)">优化服务</a></li>
+					</ul>
+				</li>
+				<li><a href="tzxs.html">投资形势分析</a></li>
+				<li><a href="zftz.html">政府投资精细化管理</a></li>
+				<li><a href="ycyj.html">预测预警分析</a>
+					<ul>
+						<li><a href="javascript:void(0)">项目实施进展监测预警分析</a></li>
+						<li><a href="javascript:void(0)">项目办理进展监测预警分析</a></li>
+						<li><a href="javascript:void(0)">用户分布情况</a></li>
+					</ul>
+				</li>
+				<li><a href="zhfx.html">综合分析报告</a></li>
+			</div>
+		</ul>
+	</span>
+	<span><a href="javascript:void(0)" title="搜索" class="btn-search"></a>
+		<ul class="listSearch">
+			<h6>搜索条件</h6>
+			<li>
+				<lable>上报单位</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>建设地点</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>所属行业</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>重大战略</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>行政层级</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>政府投资方向</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>资金渠道</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>专项类别</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>比对年份</lable>
+				<p><font style="display:inline-block;width:43%;"><input type="text"></font> - 
+				<font style="display:inline-block;width:43%;"><input type="text"></font></p>
+			</li>
+			<li>
+				<lable>项目类型</lable>
+				<p><input type="text"></p>
+			</li>
+			<li>
+				<lable>项目规模</lable>
+				<p><input type="text"></p>
+			</li>
+			<div><button>搜索</button></div>
+		</ul>
+	</span>
+	<span><a href="javascript:void(0)" title="图例" class="btn-chart"></a>
+		<ul class="listChart">
+			<li onclick="addBox('test','分重大战略','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu01.gif" /></a></li>
+			<li onclick="addBox('test2','分重大战略2','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu02.gif" /></a></li>
+			<li onclick="addBox('test3','分重大战略3','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu03.gif" /></a></li>
+			<li onclick="addBox('test4','分重大战略4','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu04.gif" /></a></li>
+			<li onclick="addBox('test5','分重大战略5','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu05.gif" /></a></li>
+			<li onclick="addBox('test6','分重大战略6','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu06.gif" /></a></li>
+			<li onclick="addBox('test7','分重大战略7','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu07.gif" /></a></li>
+			<li onclick="addBox('test8','分重大战略8','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu08.gif" /></a></li>
+			<li onclick="addBox('test9','分重大战略9','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu09.gif" /></a></li>
+			<li onclick="addBox('test10','分重大战略10','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu10.gif" /></a></li>
+			<li onclick="addBox('test11','分重大战略11','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu11.gif" /></a></li>
+			<li onclick="addBox('test12','分重大战略12','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu12.gif" /></a></li>
+			<li onclick="addBox('test13','分重大战略13','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu13.gif" /></a></li>
+			<li onclick="addBox('test14','分重大战略14','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu14.gif" /></a></li>
+			<li onclick="addBox('test15','分重大战略15','pie3d.html','pie3d.html')"><a href="javascript:void(0)"><img src="../themes/images/img_menu15.gif" /></a></li>
+		</ul>
+	</span>
+	<span><a href="javascript:void(0)" title="导出WORD" class="btn-word"></a></span>
+	<span><a href="javascript:void(0)" title="导出PDF" class="btn-pdf"></a></span>
+	<span><a href="javascript:void(0)" title="打印" class="btn-print"></a></span>
+</div>
+<div id="contentDiv">
+	<div class="selectTree" style="top:50px;">
+		<h6 class="selectTree-Title"><span><img src="../themes/images/arrow-icon.png"></span>　　</h6>
+		<ul>
+		    <li><a href="javascript:void(0)">项目储备</a></li>
+			<li><a href="javascript:void(0)">三年滚动计划</a></li>
+			<li><a href="javascript:void(0)">审批核准备案</a></li>
+			<li><a href="javascript:void(0)">中央预算内投资</a></li>
+			<li><a href="javascript:void(0)">专项建设基金</a></li>	
+		</ul>
+		<h6 class="selectTree-Title"><span><img src="../themes/images/arrow-icon.png"></span>项目周期</h6>
+		<ul>
+			<li><a href="javascript:void(0)">谋划阶段</a></li>
+			<li><a href="javascript:void(0)">前期工作</a></li>
+			<li><a href="javascript:void(0)">开工阶段</a></li>
+			<li><a href="javascript:void(0)">在建阶段</a></li>
+			<li><a href="javascript:void(0)">竣工阶段</a></li>
+		</ul>
+	</div>
+		<div class="chartDiv leftChart" style="z-index:1;">
+			<span class="bigWindow" id="windowSize"></span>
+			<span class="jbg topLeft"></span>
+			<span class="jbg topRight"></span>
+			<span class="jbg bottomLeft"></span>
+			<span class="jbg bottomRight"></span>
+			<h1>项目总览</h1>
+			<div class="chartHeight">
+				<iframe src="map.html" class="iframeTest" style="height:625px;" frameborder="0" scrolling="no"></iframe>
+			</div>
+		</div>
+		<div class="chartDiv leftChart" id="fhyhz" style="top:700px;">
+			<span class="close"></span>
+			<span class="jbg topLeft"></span>
+			<span class="jbg topRight"></span>
+			<span class="jbg bottomLeft"></span>
+			<span class="jbg bottomRight"></span>
+			<h6 class="chartDivTitle"><span class="r"><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#fhy-gs');">个数</a><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#fhy-ztz');" class="click-on">总投资</a></span>分行业汇总</h6>
+			<div class="chartHeight" id="fhy-gs" style="display:none;">				
+				<iframe src="zl_hyhz.html" class="iframeTest" style="height:595px;" frameborder="0"></iframe>
+			</div>
+			<div class="chartHeight" id="fhy-ztz">				
+				<iframe src="zl_hyhz.html" class="iframeTest" style="height:595px;" frameborder="0"></iframe>
+			</div>
+		</div>
+		<div class="chartDiv rightChart" id="xmkgc">
+			<span class="close"></span>
+			<span class="jbg topLeft"></span>
+			<span class="jbg topRight"></span>
+			<span class="jbg bottomLeft"></span>
+			<span class="jbg bottomRight"></span>
+			<h6 class="chartDivTitle"><span class="r"><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#xmk-gs');">个数</a><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#xmk-ztz');" class="click-on">总投资</a></span>项目库构成</h6>
+			<div class="chartHeight" id="xmk-gs" style="display:none;">
+				<iframe src="pyramid.html" class="iframeTest"  frameborder="0"></iframe>
+			</div>
+			<div class="chartHeight" id="xmk-ztz">
+				<iframe src="pyramid.html" class="iframeTest"  frameborder="0"></iframe>
+			</div>
+		</div>
+		<div class="chartDiv rightChart" style="top:405px;">
+			<span class="close"></span>
+			<span class="jbg topLeft"></span>
+			<span class="jbg topRight"></span>
+			<span class="jbg bottomLeft"></span>
+			<span class="jbg bottomRight"></span>
+			<h6 class="chartDivTitle"><span class="r"><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#fzd-gs');">个数</a><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#fzd-ztz');" class="click-on">总投资</a></span>分重大战略</h6>
+			<div class="chartHeight" id="fzd-gs" style="display:none;">
+				<iframe src="pie3d.html" class="iframeTest" frameborder="0"></iframe>
+			</div>
+			<div class="chartHeight" id="fzd-ztz">
+				<iframe src="pie3d.html" class="iframeTest" frameborder="0"></iframe>
+			</div>
+		</div>
+		<div class="chartDiv rightChart" style="top:810px;height:556px;">
+			<span class="close"></span>
+			<span class="jbg topLeft"></span>
+			<span class="jbg topRight"></span>
+			<span class="jbg bottomLeft"></span>
+			<span class="jbg bottomRight"></span>
+			<h6 class="chartDivTitle"><span class="r"><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#fzf-gs');">个数</a><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#fzf-ztz');" class="click-on">总投资</a></span>分政府投资方向统计</h6>
+			<div class="chartHeight" id="fzf-gs" style="display:none;">
+				<iframe src="zl_zftzfx.html" class="iframeTest" frameborder="0"></iframe>
+			</div>
+			<div class="chartHeight" id="fzf-ztz">
+				<iframe src="zl_zftzfx.html" class="iframeTest" frameborder="0"></iframe>
+			</div>
+		</div>
+</div>
+<script type="text/javascript" src="../js/draggabilly.pkgd.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".rightChart").css('left',$('.rightChart').offset().left);
+		$(".leftChart").css('width',$(window).width()-495+"px");
+		$('.chartDiv').draggabilly({ handle: '.chartDivTitle' });
+		$('.selectTree').draggabilly({ handle: '.selectTree-Title' });
+	});    
+</script>
+</body>
+</html>

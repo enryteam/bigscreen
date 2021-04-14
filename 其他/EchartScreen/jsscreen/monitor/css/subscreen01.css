@@ -1,0 +1,102 @@
+/**!
+ * [监控与调度钻取屏1]
+ * author: [chengang];
+ * date:2016-12-15
+ */
+.title
+{
+    font-size: 42px;
+    color: #fff;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.warn-list
+{
+    text-align: center;
+    font-size: 0;
+}
+
+.warn-list > li
+{
+    width: 520px;
+    height: 256px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background-image: url("../images/bell.png");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    box-shadow: 0 7px 24px 0 rgba(2,2,25,0.67);
+    font-size: 32px;
+    margin: 25px;
+}
+.current{
+    background-color: #265eb9!important;
+}
+.warn-list > li.color01
+{
+    background-color: rgb(60, 44, 151);
+}
+
+.warn-list > li.color02
+{
+    background-color: rgb(60, 44, 151);
+}
+
+.warn-list > li.color03
+{
+    background-color: rgb(60, 44, 151);
+}
+
+.warn-list > li.color04
+{
+    background-color: rgb(60, 44, 151);
+}
+
+.warn-list > li h2
+{
+    padding-left: 80px;
+    background-position: 30px center;
+    background-repeat: no-repeat;
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 30px;
+}
+
+.warn-list > li.yellow h2
+{
+    background-image: url("../images/yellow-bulb.png");
+}
+
+.warn-list > li.red h2
+{
+    background-image: url("../images/red-bulb.png");
+}
+
+.warn-list > li p
+{
+    text-align: right;
+    padding-right: 50px;
+    margin-top: 55px;
+}
+
+.warn-list > li p .num
+{
+    font-size: 80px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.warn-list > li.yellow .num
+{
+    color: #ffcc00;
+}
+
+.warn-list > li.red .num
+{
+    color: #d03131;
+}

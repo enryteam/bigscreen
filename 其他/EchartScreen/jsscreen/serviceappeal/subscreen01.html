@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/subscreen01.css">
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>服务诉求钻取1</title>
+</head>
+
+<body class="small-screen">
+    <h2 class="title">2016年设区市服务诉求量</h2>
+    <div class="row">
+        <div class="mapstatus" id="chartmapstatus"></div>
+        <div class="barstatus" id="chartbarstatus"></div>
+    </div>
+    <!--配置地址-->
+    <script>
+    var settings = {
+        loaddata: '/rest/subrqst/fst',
+    };
+    
+	setInterval(refreshChart, 1000 * 60);
+    
+    function refreshChart(){
+		Util.ajax({
+			url : "/rest/refresh/areatotalrqst",
+			success : function(data) {
+				renderStatus(data);
+			}
+		});
+	}	
+    </script>
+    <!--测试脚本-->
+    <script src="../js/jquery.mockjax.js"></script>
+    <script src="_test/testsubscreen01.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/jiangsu.js"></script>
+    <script src="js/subscreen01.js"></script>
+</body>
+
+</html>

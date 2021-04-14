@@ -1,0 +1,163 @@
+/**!
+ * [监控与调度屏1]
+ * author: [chengang];
+ * date:2016-12-12
+ */
+.time
+{
+    font-size: 42px;
+    font-family: "方正黑体_GBK";
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+}
+
+.allmedia
+{
+    background: url("../images/allmediabg.png") no-repeat center center;
+    width: 1137px;
+    height: 537px;
+    margin: -67px auto 0 auto;
+    position: relative;
+}
+
+.allmedia > li
+{
+    position: absolute;
+    font-size: 26px;
+    font-family: "方正黑体_GBK";
+}
+
+.allmedia > li.total
+{
+    left: 490px;
+    top: 170px;
+    text-align: center;
+}
+
+.allmedia > li.total p
+{
+    font-size: 30px;
+}
+
+.allmedia > li.total span
+{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffea00;
+}
+
+.allmedia > li.phone
+{
+    left: 260px;
+    top: 210px;
+}
+
+.allmedia > li.wechat
+{
+    left: 0;
+    top: 330px;
+}
+
+.allmedia > li.website
+{
+    left: 210px;
+    top: 465px;
+}
+
+.allmedia > li.email
+{
+    left: 480px;
+    top: 520px;
+}
+
+.allmedia > li.weibo
+{
+    right: 180px;
+    top: 465px;
+}
+
+.allmedia > li.app
+{
+    right: -20px;
+    top: 330px;
+}
+
+.allmedia > li.govconsult
+{
+    left: 780px;
+    top: 210px;
+}
+
+.monitorsummary
+{
+    padding-top: 50px;
+}
+
+.monitorsummary > li
+{
+    width: 791px;
+    height: 326px;
+}
+
+.monitorsummary > li.user
+{
+    float: left;
+    margin-left: 75px;
+}
+
+.monitorsummary > li.order
+{
+    float: right;
+    margin-right: 75px;
+}
+
+.monitorsummary > li > .icon
+{
+    height: 67px;
+}
+
+.monitorsummary > li.user > .icon
+{
+    background: url("../images/usericon.png") no-repeat left center;
+}
+
+.monitorsummary > li.order > .icon
+{
+    background: url("../images/ordericon.png") no-repeat left center;
+}
+
+.datalist
+{
+    font-size: 30px;
+    font-family: "方正黑体_GBK";
+    background: url("../images/monitorbg.png") no-repeat center top;
+    width: 845px;
+    margin-top: 5px;
+}
+
+.datalist .num
+{
+    font-size: 75px;
+    font-weight: bold;
+    color: #ffea00;
+    float: right;
+    margin-right: 30px;
+    font-family: 'Microsoft YaHei';
+    position:relative;
+    bottom:17px;
+}
+
+.monitorsummary > li .datalist
+{
+    padding-top: 37px;
+}
+
+.monitorsummary > li .datalist li
+{
+    background: #072b82;
+    height:58px;
+    line-height:58px;
+    padding-left:40px;
+    margin-bottom:49px;
+}

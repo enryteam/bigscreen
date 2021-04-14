@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global_n.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/iframe.css" />
+<script src="../js/echarts/echarts.js"></script>
+ <script src="../data/data.js"></script>
+</head>
+<body>
+ <div style="width:750px;height:100%;" id="main"> </div>
+        <script>
+		 require.config({
+				paths: {
+					echarts: '../js/echarts'
+				}
+			});
+		 require(
+			[
+				'echarts',
+				'echarts/chart/pie',
+				'echarts/chart/bar',
+				'echarts/chart/map',
+				'echarts/chart/line'
+			],
+			function (ec) {
+                var myChart = ec.init(document.getElementById('main'));
+                var mapType = [
+                    'china',
+                    // 23个省
+                    '广东', '青海', '四川', '海南', '陕西',
+                    '甘肃', '云南', '湖南', '湖北', '黑龙江',
+                    '贵州', '山东', '江西', '河南', '河北',
+                    '山西', '安徽', '福建', '浙江', '江苏',
+                    '吉林', '辽宁', '台湾',
+                    // 5个自治区
+                    '新疆', '广西', '宁夏', '内蒙古', '西藏',
+                    // 4个直辖市
+                    '北京', '天津', '上海', '重庆',
+                    // 2个特别行政区
+                    '香港', '澳门','南昌'
+                ];
+              var  option =   {
+                          tooltip: {
+                              'trigger': 'item',
+                              showContent:true
+                          },
+                            legend: {
+                                orient: 'vertical',
+                                selectedMode:'single',
+                                x:'left',
+                                textStyle:{
+                                    color:'#FFF'
+                                },
+                                selected: {
+                                    '申请项目数' : true,
+                                    '下达项目数':false,
+                                    '调度项目数':false,
+                                    '已反馈项目数':false
+                                },
+                                data:['申请项目数','下达项目数','调度项目数','已反馈项目数']
+                            },
+                            dataRange: {
+                                min: 0,
+                                max: 2000,
+                                text: ['高', '低'],           // 文本，默认为数值文本
+                                calculable: true,
+                                x: 'left',
+                                y2: 50,
+                                color: ['orangered', 'yellow', 'lightskyblue'],
+                                textStyle: {
+                                    "color": "#fff"
+                                }
+                            },
+                            series: [
+                                {
+                                    seriesIndex: 0,
+                                    'name': '申请项目数',
+                                    'type': 'map',
+                                     mapType: 'china',
+                                     selectedMode : 'single',
+                                    tooltip: {
+                                        show:true,
+                                        'trigger': 'item',
+                                        formatter: '{b} {a} {c} 个'
+                                    },
+                                    'mapLocation': {
+                                        "y": "top",
+                                        "height": "85%"
+                                    },
+                                    'data':data.applyNums
+                                },
+                                {
+                                    seriesIndex: 1,
+                                    'name': '下达项目数',
+                                    'type': 'map',
+                                    mapType: 'china',
+                                    selectedMode : 'single',
+                                    tooltip: {
+                                        'trigger': 'item',
+                                        showContent:true,
+                                        formatter: '{b} {a} {c} 个'
+                                    },
+                                        'mapLocation': {
+                                        "y": "top",
+                                        "height": "85%"
+                                    },
+                                    'data': data.issueNums
+                                },
+                                {
+                                    seriesIndex: 2,
+                                    'name': '调度项目数',
+                                    'type': 'map',
+                                    mapType: 'china',
+                                    selectedMode : 'single',
+                                    tooltip: {
+                                        'trigger': 'item',
+                                        showContent:true,
+                                        formatter: '{b} {a} {c} 个'
+                                    },
+                                    'mapLocation': {
+                                        "y": "top",
+                                        "height": "85%"
+                                    },
+                                    'data': data.dispacthNums
+                                },
+                                {
+                                    seriesIndex: 3,
+                                    'name': '已反馈项目数',
+                                    'type': 'map',
+                                    mapType: 'china',
+                                    selectedMode : 'single',
+                                    tooltip: {
+                                        'trigger': 'item',
+                                        showContent:true,
+                                        formatter: '{b} {a} {c} 个'
+                                    },
+                                    'mapLocation': {
+                                        "y": "top",
+                                        "height": "85%"
+                                    },
+                                    'data': data.feedbackNums
+                                }
+                            ]
+                };
+                myChart.setOption(option, true);
+                // 定义初始变量
+                var ecConfig = require('echarts/config');
+                var curIndx = 0;
+                // 绑定事件 地图选择事件
+                myChart.on(ecConfig.EVENT.MAP_SELECTED, function (param) {
+                        var len = mapType.length;
+                        var mt = mapType[curIndx % len];
+                        if (mt == 'china') {
+                            // 全国选择时指定到选中的省份
+                            var selected = param.selected;
+                            for (var i in selected) {
+                                if (selected[i]) {
+                                    mt = i;
+                                    while (len--) {
+                                        if (mapType[len] == mt) {
+                                            curIndx = len;
+                                        }
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                        else {
+                            curIndx = 0;
+                            mt = 'china';
+                        }
+                    // var obj= myChart.component.legend.getSelectedMap();
+                        option.series[0].mapType=mt;
+                        option.series[1].mapType=mt;
+                        option.series[2].mapType=mt;
+                        option.series[3].mapType=mt;
+                        myChart.setOption(option, true);
+                });
+            });
+		 </script>
+</body>
+</html>

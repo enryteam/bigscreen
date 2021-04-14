@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global_n.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/iframe.css" />
+<script src="../js/echarts/echarts.js"></script>
+ <script src="../data/dataFGF.js"></script>
+    <script src="../data/data.js"></script>
+</head>
+<body>
+ <div style="width:750px;height:100%;" id="main"> </div>
+        <script>
+		 require.config({
+				paths: {
+					echarts: '../js/echarts'
+				}
+			});
+		 require(
+			[
+				'echarts',
+				'echarts/chart/pie',
+				'echarts/chart/bar',
+				'echarts/chart/map',
+				'echarts/chart/line'
+			],
+			function (ec) {
+                var myChart = ec.init(document.getElementById('main'));
+                var  option = {
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        orient : 'vertical',
+                        x : 'left',
+						 textStyle:{
+                                    color:'#FFF'
+                                },
+                        selectedMode:'single',
+                        selected:{'投资额 (亿元)':true,'项目个数':false},
+                        data:['投资额 (亿元)','项目个数']
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'投资额 (亿元)',
+                            type:'pie',
+                            radius : '55%',
+                            center: ['50%', '60%'],
+                            data:[
+                                {value:80789.23, name:'审批类项目'},
+                                {value:37634.73 , name:'核准类项目'},
+                                {value:140303.06, name:'备案类项目'}
+                            ]
+                        },
+                        {
+                            name:'项目个数',
+                            type:'pie',
+                            radius : '55%',
+                            center: ['50%', '60%'],
+                            data:[
+                                {value:41943 , name:'审批类项目'},
+                                {value:5977, name:'核准类项目'},
+                                {value:67538, name:'备案类项目'}
+                            ]
+                        }
+                    ]
+                };
+
+                myChart.setOption(option, true);
+            });
+		 </script>
+</body>
+</html>

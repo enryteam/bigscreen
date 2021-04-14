@@ -1,0 +1,10 @@
+
+.menu ul li {display:block;width:311px;padding-top:2px;margin-bottom:5px;background: url(../images/zakladka.png) top left no-repeat;list-style:none;overflow:visible;}
+.menu ul li a {display:block;height:34px; width:273px;margin-top:0px;padding-top:10px;padding-left:35px;font-size:14px;color:#82846f;outline:none;}
+.menu ul li .active {background:url(../images/on.png) top right no-repeat;}
+
+.menu ul li .inactive {background:url(../images/off.png) top right no-repeat;}
+.menu ul li ul {display:none; margin-top:-4px;margin-bottom:20px;   }
+.menu ul li ul li ul {margin-bottom:5px;}
+.menu ul li ul li {display:block;background:none;font-size:12px;list-style:circle;color:#8f9d4c;margin-bottom:0px;margin-top:0px;padding-top:0px;padding-bottom:0px;padding-left:1px;margin-left:35px;}
+.menu ul li ul li a {background:none;font-size:12px;height:15px;color:#8f9d4c;padding-left:0px; }

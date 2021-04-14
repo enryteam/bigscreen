@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="css/screen0203.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>服务座席</title>
+</head>
+<body class="big-screen">
+    <div class="middle-title">
+        
+    </div>
+    <div class="col-left">
+        <div class="col-seatingsstatus">
+            <div class="sub-head ml45">
+                <h2>实时座席状态</h2>
+            </div>
+            <ul class="seatingslegend">
+                <li class="free">置闲</li>
+                <li class="calling">通话中</li>
+                <li class="allmedia">正在受理互联网诉求</li>
+                <li class="none">未上线</li>
+            </ul>
+            <div class="chartseatingstatus" id="chartseatingstatus" style="positon:absolute;z-index:9;width: 800px;">
+            </div>
+        </div>
+        <div class="col-seatingsdetail">
+            <h2 class="time" id="time">2016年12月18日&nbsp;&nbsp;&nbsp;10时35分42秒</h2>
+            <ul class="seatingsdetail" id="seatingsdetail">
+                <div class="state-bg hidden" id="state-bg">
+                    <div class="info">
+                        <div class="head"></div>
+                        <div class="infos">
+                            <div><label>工号：</label><span id="staffagentid"></span></div>
+                            <div><label>姓名：</label><span id="displayname"></span></div>
+                            <div><label>当前状态：</label><span id="status"></span></div>
+                            <div class= "hidden" id="els">
+                            	<label>诉求时间：</label><span id="rqsttime"></span><br/>
+                            	<label>诉求内容：</label><span id="rqsttitle"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <li class="num01" data-num="1" onclick="getUserInfo('monitor_one');">1</li>
+                <li class="num02" data-num="2">2</li>
+                <li class="num03" data-num="3">3</li>
+                <li class="num04" data-num="4">4</li>
+                <li class="num05" data-num="5">5</li>
+                <li class="num06" data-num="6">6</li>
+                <li class="num07" data-num="7">7</li>
+                <li class="num08" data-num="8">8</li>
+                <li class="num09" data-num="9">9</li>
+                <li class="num10" data-num="10">10</li>
+                <li class="num11" data-num="11">11</li>
+                <li class="num12" data-num="12">12</li>
+                <li class="num13" data-num="13">13</li>
+                <li class="num14" data-num="14">14</li>
+                <li class="num15" data-num="15">15</li>
+                <li class="num16" data-num="16">16</li>
+                <li class="num17" data-num="17">17</li>
+                <li class="num18" data-num="18">18</li>
+                <li class="num19" data-num="19">19</li>
+                <li class="num20" data-num="20">20</li>
+                <li class="num21" data-num="21">21</li>
+                <li class="num22" data-num="22">22</li>
+                <li class="num23" data-num="23">23</li>
+                <li class="num24" data-num="24">24</li>
+                <li class="num25" data-num="25">25</li>
+                <li class="num26" data-num="26">26</li>
+                <li class="num27" data-num="27">27</li>
+                <li class="num28" data-num="28">28</li>
+                <li class="num29" data-num="29">29</li>
+                <li class="num30" data-num="30">30</li>
+                <li class="num31" data-num="31">31</li>
+                <li class="num32" data-num="32">32</li>
+                <li class="num33" data-num="33">33</li>
+                <li class="num34" data-num="34">34</li>
+                <li class="num35" data-num="35">35</li>
+                <li class="num36" data-num="36">36</li>
+                <li class="num37" data-num="37">37</li>
+                <li class="num38" data-num="38">38</li> 
+                <li class="num39" data-num="39">39</li>
+                <li class="num40" data-num="40">40</li>
+                <li class="num41" data-num="41">41</li>
+                <li class="num42" data-num="42">42</li>
+                <li class="num43" data-num="43">43</li>
+                <li class="num44" data-num="44">44</li>
+                <li class="num45" data-num="45">45</li>
+                <li class="num46" data-num="46">46</li>
+                <li class="num47" data-num="47">47</li>
+                <li class="num48" data-num="48">48</li>
+                <li class="num49" data-num="49">49</li>
+                <li class="num50" data-num="50">50</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-middle">
+        <ul class="seatings-summary" id="seatingssummary">
+            <li class="total">
+                <span class="icon"></span>
+                <h2>座席</h2>
+                <p data-lbl="total">0</p><em>个</em>
+            </li>
+            <li class="media">
+                <span class="icon"></span>
+                <h2>全媒体座席</h2>
+                <p data-lbl="media">0</p><em>个</em>
+            </li>
+            <li class="servicenum">
+                <span class="icon"></span>
+                <h2>服务代表</h2>
+                <p data-lbl="servicenum">0</p><em>位</em>
+            </li>
+            <li class="inservice">
+                <span class="icon"></span>
+                <h2>当前在线</h2>
+                <p data-lbl="inservice">0</p><em>位</em>
+            </li>
+        </ul>
+    </div>
+    <div class="col-right">
+        <div class="row">
+            <div class="allmediatype-col">
+                <div class="sub-head">
+                    <h2>全媒体各类型占比</h2>
+                </div>
+                <ul class="allmediatype" id="allmediatype">
+                    <li class="phone">
+                        <h2 class="lbl">电话</h2>
+                        <p class="num" data-lbl="phone">0</p>
+                        <p class="percent" data-lbl="phonepercent">0%</p>
+                    </li>
+                    <li class="internet">
+                        <h2 class="lbl">互联网</h2>
+                        <p class="num" data-lbl="internet">0</p>
+                        <p class="percent" data-lbl="internetpercent">0%</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="realtimecall-col">
+                <div class="sub-head">
+                    <h2>实时话务量</h2>
+                </div>
+                <div class="chartrealtimecall" id="chartrealtimecall">
+
+                </div>
+            </div>
+            <div class="connectrate-col">
+                <div class="sub-head">
+                    <h2>今日接通率</h2>
+                </div>
+                <div class="chartconnectrate" id="chartconnectrate">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="internet-col">
+                <div class="sub-head">
+                    <h2>互联网渠道占比</h2>
+                </div>
+                <div class="chartinternetrate" id="chartinternetrate">
+
+                </div>
+            </div>
+            <div class="allmediadeal-col">
+                <div class="sub-head">
+                    <h2>互联网诉求待受理量</h2>
+                </div>
+                <div class="chartallmediadeal" id="chartallmediadeal">
+
+                </div>
+            </div>
+            <div class="acceptrate-col">
+                <div class="sub-head">
+                    <h2>今日受理率</h2>
+                </div>
+                <div class="chartacceptrate" id="chartacceptrate">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--配置地址-->
+    <script>
+        var settings = {
+            loaddata: '/rest/sndseat',
+            //实时获取座位的url
+            seatUrl:'../../websocket/sendseatwebsocket',
+            //实时获取pie图数据url
+            pieDataUrl:'../../websocket/sendpiestatuswebsocket',
+            //人员信息url
+            userInfoUrl:'/rest/userinfo'
+            
+        };
+    </script>
+    <!--测试脚本-->
+    <script src="../js/jquery.mockjax.js"></script>
+    <script src="test/_testscreen0203.js"></script>
+	<script src="../../fui/js/lib/atmosphere.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="js/screen0203.js"></script>
+    <script>
+	    setInterval(refreshChart, 1000 * 25);
+	    
+	    function refreshChart(){
+			Util.ajax({
+				url : "/rest/refresh/fsttheme",
+				success : function(data) {
+					renderAllMediaType(data.allmediatype);
+					renderRealtimeCall(data.realtimecall);
+					renderAllMediaDeal(data.allmediadeal);
+				}
+			})
+		}
+	    
+	    function getUserInfo(code) {
+	    	// 测试用
+// 	    	window.open(_rootPath+"/jsscreen/Videomonitor/VideoMonitoringIndex?code=" + code + "&type=" + type);
+	    	
+	    	var url = "/jsscreen/Videomonitor/VideoMonitoringIndex?code=" + code + "&type=坐席";
+			Util.ajax({
+				url : "/rest/sndrabbitmq/send",
+				type : "post",
+				data : {
+					one : encodeURI(url),
+				},
+				success : function(data) {
+				}
+			})
+		}
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="css/screen01.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>成员单位</title>
+</head>
+<body class="small-screen">
+    
+    <div class="main">
+        <div class="half" id="">
+            <h3>省级部门满意率TOP10</h3>
+            <div class="inner" id="satisfied"></div>
+        </div>
+        <div class="half">
+            <h3>省级部门办事提速率TOP10</h3>
+            <div class="inner" id="efficiency"></div>
+        </div>
+    </div>
+    <!--配置地址-->
+    <script>
+        var settings = {
+            getmember: '/rest/fstmember'
+        };
+    </script>
+    <!--测试脚本-->
+    <script src="../js/mock-min.js"></script>
+    <script src="test/_test01.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="js/screen01.js"></script>
+</body>
+</html>

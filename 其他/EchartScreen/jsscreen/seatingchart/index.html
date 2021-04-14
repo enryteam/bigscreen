@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="../js/jquery-1.11.0.min.js"></script>
+<title>江苏省12345</title>
+</head>
+<body>
+	<div class="row">
+		<div class="modular">
+			<h3>
+				<span>实时话务量</span>
+			</h3>
+			<div class="bd">
+				<div class="realtimecall-col">
+
+					<div class="chartrealtimecall" id="chartrealtimecall"></div>
+				</div>
+			</div>
+		</div>
+		<div class="modular">
+			<h3>
+				<span>坐席服务状态</span>
+			</h3>
+			<div class="bd">
+				<div class="realtimecall-col">
+					<div class="chartrealtimecall" id="chartrealtimeseat"></div>
+				</div>
+			</div>
+		</div>
+		<div class="modular">
+			<h3>
+				<span>互联网各类型占比</span>
+			</h3>
+			<div class="bd">
+
+				<div class="internet-col">
+
+					<div class="chartinternetrate" id="chartinternetrate"></div>
+				</div>
+			</div>
+		</div>
+		<div class="modular">
+			<h3>
+				<span>全媒体及时受理量</span>
+			</h3>
+			<div class="bd">
+				<div class="allmediadeal-col">
+	                <div class="chartallmediadeal" id="chartallmediadeal">
+	
+	                </div>
+            	</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var settings = {
+			loaddata : '/rest/seatingchartleft',
+			seatUrl : '../../websocket/sendseatwebsocket',
+		};
+	</script>
+	<script src="../js/common.js"></script>
+	<script src="../js/echarts.min.js"></script>
+	<script src="../../fui/js/lib/atmosphere.js"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>

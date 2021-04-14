@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="css/extend01.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>延伸显示-屏1</title>
+</head>
+
+<body class="small-screen">
+    <div class="main">
+        <h2>政务12345在线大数据应用下阶段计划</h2>
+        <div class="main-content" id="event">
+            <!-- 模拟数据 -->
+            <ul class="plan-list clearfix">
+                <li class="p1">
+                    <span><br/><i>服务工单<br/>智能识别</i></span>
+                </li>
+                <li class="p2">
+                    <span><br/><i>诉求预测<br/>及预案</i></span>
+                </li>
+                <li class="p3">
+                    <span><i>热点事件<br/>
+跟踪监控</i></span>
+                </li>
+                <li class="p4">
+                    <span><br/><i>识别久拖<br/>
+不决问题</i></span>
+                </li>
+                <li class="p5">
+                    <span><i>成员单位</br/>
+绩效分析</i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--     <script type="text/x-template" id="event-template">
+        <ul class="plan-list clearfix">
+            {{#plan1}}
+            <li class="p{{index}}">
+                <span><i>{{name1}}</i></span>
+            </li>
+            {{/plan1}} {{#plan2}}
+            <li class="p{{index}}">
+                <span>{{name2}}<br/><i>{{name3}}</i></span>
+            </li>
+            {{/plan2}}
+        </ul>
+    </script> -->
+    <!--配置地址-->
+    <script>
+    var settings = {
+        getmintor: '/rest/hotspot'
+    };
+    </script>
+    <!--测试脚本-->
+    <script src="../js/mock-min.js"></script>
+    <script src="../js/mustache.js"></script>
+    <script src="test/_testextend01.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="js/extend01.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script src="../js/echarts/echarts.js"></script>
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+        <div style="width:1000px;height:650px;margin:0px auto;" id="main">
+       
+        </div>
+        <script>
+		 require.config({
+				paths: {
+					echarts: '../js/echarts/'
+				}
+			});
+		 require(
+			[
+				'echarts',
+				'echarts/chart/map'
+			],
+			function (ec) {		
+	var myChart = ec.init(document.getElementById('main'));
+	var placeList = [
+		 {name:'银川', geoCoord:[106.21, 38.49]},
+    {name:'吴忠', geoCoord:[106.18, 38.00]},
+   {name:'固原', geoCoord:[106.23, 36.02]},
+   {name:'中卫市', geoCoord:[105.19, 37.50]},
+      {name:'石嘴山', geoCoord:[106.39, 39.04]},
+		]
+		
+		option = {
+			color: [
+				'#ffff5a',
+				'#ffd200',
+				'#fff000',
+				'#ffea00'
+				],
+			legend: {
+                show:false,			
+				y:'top',
+				x:'center',
+				data:['一般企业用户','部委(含二级单位)','央企','地方发改委'],
+				textStyle : {					
+					fontFamily:'microsoft yahei'
+				}
+			},
+			series : [
+				{
+					name: '一般企业用户',
+					type: 'map',
+					mapType: '宁夏',
+					itemStyle:{
+						normal:{
+							borderColor:'rgba(0,255,255,.5)',
+							borderWidth:1.5,
+							areaStyle:{
+								color: '#000e27',
+								opacity:'0',
+								filter:'Alpha(opacity=0)'
+							}
+						}
+					},
+					data : [],
+					markPoint : {
+						symbolSize: 2,
+						large: true,
+						effect : {
+							show: true
+						},
+						data : (function(){
+							var data = [];
+							  var len = 300;
+							var geoCoord
+							while(len--) {
+								geoCoord = placeList[len % placeList.length].geoCoord;
+								data.push({
+									name : placeList[len % placeList.length].name + len,
+									value : 150,
+									geoCoord : [
+									    104 + Math.random() * 2+1,
+        33 + Math.random() * 2+3 
+									]
+								})
+							}
+							return data;
+						})()
+					}
+				},
+				{
+					name: '部委(含二级单位)',
+					type: 'map',
+					mapType: '宁夏',
+					data : [],
+					markPoint : {
+						symbolSize: 3,
+						large: true,
+						effect : {
+							show: true
+						},
+						data : (function(){
+							var data = [];
+							var len = placeList.length-3;
+							while(len--) {
+								data.push({
+									name : placeList[len].name,
+									value : 20,
+									geoCoord : placeList[len].geoCoord
+								})
+							}
+							return data;
+						})()
+					}
+				},
+				{
+					name: '央企',
+					type: 'map',
+					mapType: '宁夏',
+					hoverable: false,
+					roam:false,
+					data : [],
+					markPoint : {
+						symbol : 'diamond',
+						symbolSize: 6,
+						large: true,
+						effect : {
+							show: true
+						},
+						data : (function(){
+							var data = [];
+							var len = placeList.length-1;
+							while(len--) {
+								data.push({
+									name : placeList[len].name,
+									value : 1,
+									geoCoord : placeList[len].geoCoord
+								})
+							}
+							return data;
+						})()
+					}
+				},
+				{
+					name: '地方发改委',
+					type: 'map',
+					mapType: '宁夏',
+					hoverable: false,
+					roam:false,
+					data : [],
+					markPoint : {
+						symbol : 'diamond',
+						symbolSize: 6,
+						large: true,
+						effect : {
+							show: true
+						},
+						data : (function(){
+							var data = [];
+							var len = placeList.length;
+							var geoCoord
+							while(len--) {
+								geoCoord = placeList[len % placeList.length].geoCoord;
+								data.push({
+									name : placeList[len % placeList.length].name,
+									value : 10,
+									geoCoord : [
+										geoCoord[0]-0.2,
+										geoCoord[1] -0.2
+									]
+								})
+							}
+							return data;
+						})()
+					}
+				}
+			]
+		};
+		myChart.setOption(option);
+  });
+</script>
+</body>
+</html>

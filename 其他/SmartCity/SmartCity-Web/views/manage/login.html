@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>可视化设计系统-登录</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/images/common/favicon.ico">
+    <!-- 公共CSS -->
+    <script src="../../style/common/common_css.js"></script>
+    <!-- 用户CSS -->
+    <link rel="stylesheet" type="text/css" href="../../style/css/login.css">
+    <!-- jquery -->
+    <script type="text/javascript" src="../../style/common/jquery/jquery.min.js"></script>
+</head>
+
+<!--消息 -->
+<body>
+<div class="login-container">
+    <div class="login-main">
+        <div class="row">
+            <script>
+                $(function () {
+                    window.setTimeout(function () {
+                        $("div.panel-danger").remove();
+                    }, 4000);
+                });
+            </script>
+            <div class="col-sm-8 login-info animated fadeInLeftBig">
+                <h3 class="login-info-title">数据可视化设计系统</h3>
+                <div class="login-info-list">
+                    <div class="login-info-item">
+                        <i class="fa fa-check"></i>&nbsp基于组件化的设计思想，把产品分解成可视化元素组件，把设计流程封装成组件的装配过程。
+                    </div>
+                    <div class="login-info-item">
+                        <i class="fa fa-check"></i>&nbsp组件元素之间可以快速替换，以组成不同风格的设计产品，提高产品的原型设计和产品设计的效率。
+                    </div>
+                    <div class="login-info-item">
+                        <i class="fa fa-check"></i>&nbsp支持不同数据源的接入及处理，以及后台管理模块的生成，加快产品开发的速度。
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 login-panel animated fadeInRightBig">
+
+                <form id="signupForm">
+                    <div align="center" class="login-panel-title">
+                        <h4>登录系统</h4>
+                    </div>
+                    <div class="tabList">
+                        <div class="tab-user">密码登录</div>
+                        <div class="tab-code">短信登录</div>
+                        <div class="tab-QRcode">扫码登录</div>
+                    </div>
+
+                    <div class="text-input">
+                        <div class="text-input_prefix">
+                            <span><i class="fa fa-user-o"></i></span>
+                        </div>
+                        <input type="text" name="username" value="root" class="form-control uname"
+                               placeholder="您的账号" required="true" aria-required="true"/>
+                    </div>
+
+                    <div class="text-input">
+                        <div class="text-input_prefix">
+                            <span><i class="fa fa-lock"></i></span>
+                        </div>
+                        <input type="password" name="password" value="123" class="form-control pword m-b"
+                               placeholder="您的密码" required="true" aria-required="true"/>
+                        <div class="text-input_suffix">
+                            <span><i class="fa fa-eye"></i></span>
+                        </div>
+                    </div>
+                    <div class="text-input">
+                        <div class="text-input_prefix">
+                            <span><i class="fa fa-diamond"></i></span>
+                        </div>
+                        <input type="text" id="validateCode" name="validateCode" class="form-control code"
+                               placeholder="请输入验证码" maxlength="4"/>
+                        <span id="validateCode-img">6672</span>
+                    </div>
+                    <div id="rememberMe">
+                        <input type="checkbox" class="i-checks" name="rememberme"/>&nbsp;&nbsp;记住账号
+                    </div>
+                    <button class="btn btn-info btn-block full-width" id="btnSubmit" data-loading="正在验证登录，请稍后...">登录</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="login-footer">
+            © <a href="http://www.xxx.com" target="_blank">且听风吟_z</a>&nbsp;&nbsp;2018 版权所有
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- 公共js -->
+<script src="../../style/js/login.js"></script>
+<script src="../../style/common/common_js.js"></script>
+</html>

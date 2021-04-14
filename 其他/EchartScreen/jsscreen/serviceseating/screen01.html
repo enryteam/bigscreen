@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="css/screen01.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>服务座席</title>
+</head>
+<body class="small-screen">
+    <div class="row">
+        <div class="col">
+            <h2 class="col-title">平均受理用时（按来源）</h2>
+            <div class="col-bd" id="chartprocesstimebyway"></div>
+        </div>
+        <div class="col" id="knowledgesum">
+            <h2 class="knowledgetitle">知识库总数量<span class="total" data-lbl="total">0</span>篇</h2>
+            <ul class="knowledgelist">
+                <li class="type01">
+                  	<span class="icon"></span>
+                    <div class="info">
+                        <span class="num" data-lbl="adoptrate">0.0%</span>
+                        <h2 class="lbl">知识采纳率</h2>
+                    </div>
+                </li>
+                <li class="type02">
+                    <span class="icon"></span>
+                    <div class="info">
+                        <span class="num" data-lbl="keywordcount">0</span>
+                        <h2 class="lbl">日均更新量</h2>
+                    </div>
+                </li>
+                <li class="type03">
+                    <span class="icon"></span>
+                    <div class="info">
+                        <span class="num" data-lbl="querycount">0</span>
+                        <h2 class="lbl">平均被检索次数</h2>
+                    </div>
+                </li>
+                <li class="type04">
+                 	 <span class="icon"></span>
+                    <div class="info">
+                        <span class="num" data-lbl="wordcount">0</span>
+                        <h2 class="lbl">平均篇幅字数</h2>
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" >
+            <h2 class="col-title">平均受理用时（按类型）</h2>
+            <div class="col-bd" id="chartprocesstimebytype"></div>
+        </div>
+        <div class="col">
+            <h2 class="col-title">知识库各类型占比</h2>
+            <div class="col-bd" id="chartknowledgetype"></div>
+        </div>
+    </div>
+
+
+
+    <!--配置地址-->
+    <script>
+        var settings = {
+            loaddata: '/rest/fstseat'
+        };
+    </script>
+    <!--测试脚本-->
+    <script src="../js/jquery.mockjax.js"></script>
+    <script src="test/_testscreen01.js"></script>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="js/screen01.js"></script>
+</html>

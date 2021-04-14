@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="1080px" viewBox="0 0 100% 100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>back</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="49.3151855%" cy="50%" fx="49.3151855%" fy="50%" r="50%" gradientTransform="translate(0.493152,0.500000),scale(0.562500,1.000000),rotate(90.000000),scale(1.000000,2.023215),translate(-0.493152,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#002E9F" offset="0%"></stop>
+            <stop stop-color="#060925" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.6" offset="50.8868243%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.197470498" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.6" offset="50.8868243%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.197470498" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.6" offset="50.8868243%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.197470498" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="53.046875%" x2="100%" y2="53.046875%" id="linearGradient-5">
+            <stop stop-color="#060925" offset="0%"></stop>
+            <stop stop-color="#060925" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-13.7%" y="-122.4%" width="127.5%" height="344.7%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#71D1E3" offset="0%"></stop>
+            <stop stop-color="#060924" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1014">
+            <g id="back" transform="translate(0.000000, -99.000000)">
+                <path d="M0,99 L1920,99 L1920,1179 L0,1179 L0,99 Z" id="矩形" stroke="#979797" fill="url(#radialGradient-1)" stroke-dasharray="1"></path>
+                <g id="编组-6" opacity="0.488327753" transform="translate(0.000000, 99.000000)">
+                    <path d="M48,1077.5 L412,0.5" id="直线-4" stroke="url(#linearGradient-2)" stroke-width="0.5" stroke-linecap="square"></path>
+                    <path d="M579.5,1081.5 L727.5,0.5" id="直线-4" stroke="url(#linearGradient-3)" stroke-width="0.5" stroke-linecap="square"></path>
+                    <path d="M1508,1078 L1872,1" id="直线-4" stroke="url(#linearGradient-2)" stroke-width="0.5" stroke-linecap="square" transform="translate(1690.000000, 539.500000) scale(-1, 1) translate(-1690.000000, -539.500000) "></path>
+                    <path d="M1192.5,1082 L1340.5,1" id="直线-4" stroke="url(#linearGradient-3)" stroke-width="0.5" stroke-linecap="square" transform="translate(1266.500000, 541.500000) scale(-1, 1) translate(-1266.500000, -541.500000) "></path>
+                    <path d="M960.5,1081.5 L960.5,0.5" id="直线-4" stroke="url(#linearGradient-4)" stroke-width="0.5" stroke-linecap="square"></path>
+                    <path d="M0.5,72.5 L1920.5,72.5" id="直线" stroke-opacity="0.195640297" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square"></path>
+                    <path d="M0.5,687.5 L1920.5,687.5" id="直线" stroke-opacity="0.477218094" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square"></path>
+                    <path d="M0.5,344.5 L1920.5,344.5" id="直线" stroke-opacity="0.477218094" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square"></path>
+                    <path d="M0.5,1047.5 L1920.5,1047.5" id="直线" stroke-opacity="0.157643138" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square"></path>
+                    <circle id="椭圆形" fill="#FFFFFF" cx="961" cy="345" r="2"></circle>
+                    <circle id="椭圆形" fill="#FFFFFF" cx="680" cy="345" r="2"></circle>
+                    <circle id="椭圆形" fill="#FFFFFF" cx="295" cy="345" r="2"></circle>
+                    <circle id="椭圆形" fill="#FFFFFF" cx="960" cy="687" r="2"></circle>
+                    <circle id="椭圆形" fill="#FFFFFF" cx="718" cy="72" r="2"></circle>
+                    <circle id="椭圆形" fill="#FFFFFF" cx="960" cy="1048" r="2"></circle>
+                    <circle id="椭圆形" fill="#FFFFFF" cx="584" cy="1048" r="2"></circle>
+                    <circle id="椭圆形" fill="#FFFFFF" cx="63" cy="1032" r="2"></circle>
+                </g>
+                <path d="M0,99 L412,99 L412,1179 L0,1179 L0,99 Z" id="矩形" fill="url(#linearGradient-5)"></path>
+                <path d="M1508,99 L1920,99 L1920,1179 L1508,1179 L1508,99 Z" id="矩形" fill="url(#linearGradient-5)" transform="translate(1714.000000, 639.000000) scale(-1, 1) translate(-1714.000000, -639.000000) "></path>
+                <ellipse id="椭圆形" stroke="#979797" fill="#218DFF" opacity="0.381394159" filter="url(#filter-6)" cx="959.5" cy="61.5" rx="547.5" ry="61.5"></ellipse>
+                <text id="Narrow-Band-Internet" fill="url(#linearGradient-7)" opacity="0.860537574" font-family="HiraginoSansGB-W3, Hiragino Sans GB" font-size="16" font-weight="300" letter-spacing="28">
+                    <tspan x="216" y="1153">Narrow Band Internet of Things Data Brain</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

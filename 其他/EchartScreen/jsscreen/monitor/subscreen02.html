@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="css/subscreen02.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>监控与调度屏</title>
+    <style type="text/css">
+    	.info{}
+    </style>
+</head>
+<body class="small-screen">
+    <h2 class="title">答复临近超期</h2>
+    <table class="replytable">
+        <thead>
+            <tr>
+            	<th style="display:none;"></th>
+                <th class="col01">序</th>
+                <th>异常信息</th>
+                <!-- <th class="col03">监察名称</th>
+                <th class="col04">预警等级</th> -->
+                <th class="col05">剩余时间</th>
+                <th class="col06">督办状态</th>
+                <th class="col03">监察时间</th>
+            </tr>
+        </thead>
+        <tbody id="infolist"></tbody>
+    </table>
+    <!--配置地址-->
+    <script>
+        var settings = {
+           // loaddata: 'loaddata'
+        	loaddata: '/rest/submonitor/snd'
+        };
+    </script>
+    <!-- 答复临近超期 -->
+    <script id="reply-tmpl" type="x-tmpl-mustache">
+        {{#item}}
+        <tr onclick="info(this);">
+ 			<td style="display:none;">
+				<input id="rowguid" value="{{rowguid}}"/>
+				<input id="cguid" value="{{cguid}}"/>
+			</td>
+            <td>{{num}}</td>
+            <td class="lt">{{info}}</td>
+            <!--<td>{{title}}</td>
+            <td><span class="warnlevel level0{{level}}"></span></td>
+            <td>{{#deal}}已处理{{/deal}}{{^deal}}未处理{{/deal}}</td>-->
+			<td>{{deal}}小时</td>
+            <td>{{status}}</td>
+			<td>{{time}}</td>
+        </tr>
+        {{/item}}
+    </script>
+    <!--测试脚本-->
+    <script src="../js/jquery.mockjax.js"></script>
+  <!--   <script src="test/_testsubscreen02.js"></script> -->
+    <script src="../js/mustache.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="js/subscreen02.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/*!
+ * project: 
+ * author: dongyf
+ * date:2016-12-13
+ */
+body{
+	background: url(../images/bg-sc.png);
+	width: 1280px;
+	height: 720px;
+
+}
+.modular{
+	float: left;
+}
+.modular h3{
+	display: block;
+	text-align: center;
+}
+.modular span{
+	padding-left: 20px;
+	font-size: 28px;
+	color: #fff;
+	line-height: 66.67px;
+	background: url(../images/title.png) no-repeat;
+}
+.bd{
+	width: 586.67px;
+	height: 260px;
+	margin:0 25.67px 26.67px 26.67px;
+	// background: #141a5a;
+}
+
+.chartinternetrate,
+.chartrealtimecall,
+.chartallmediadeal,
+.chartacceptrate
+{
+    height: 280px;
+}
+
+.allmediatype-col,
+.internet-col,
+.realtimecall-col,
+.allmediadeal-col
+{
+    width: 566.67px;
+    float: left;
+    
+}
+
+.realtimecall-col .sub-head,
+.allmediadeal-col .sub-head
+{
+    padding-left: 60px;
+}
+.allmediatype-col .sub-head,
+.internet-col .sub-head
+{
+    padding-left: 66.67px;
+}

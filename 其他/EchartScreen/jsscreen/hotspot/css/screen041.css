@@ -1,0 +1,129 @@
+@charset "UTF-8";
+.main {
+  width: 100%;
+  height: 100%;
+  font-family: '方正黑体_GBK';
+  background: url(../images/screen4.png) 0 0 no-repeat;
+}
+.main > div {
+  float: left;
+  margin-top: 125px;
+  height: 893px;
+}
+
+.left {
+  width: 519px;
+  margin-left: 45px;
+}
+.left .inner {
+  margin: 39px 0 0 15px;
+  height: 252px;
+}
+.left .inner:first-child {
+  margin-top: 36px;
+}
+.left .title {
+  padding-left: 28px;
+  font-size: 30px;
+  line-height: 56px;
+  color: #c9ccff;
+}
+.left .list {
+  margin: 28px 0 0 26px;
+  font-size: 0;
+}
+.left .item {
+  float: left;
+  margin-right: 20px;
+  width: 128px;
+  height: 128px;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  border: 1px solid transparent;
+}
+.left .item span {
+  display: table-cell;
+  width: inherit;
+  height: inherit;
+  vertical-align: middle;
+}
+.left .item.blue {
+  background-color: #1e54c2;
+  border-color: #1081eb;
+}
+.left .item.green {
+  background-color: #0592ab;
+  border-color: #0b96bb;
+}
+.left .item.Purple {
+  background-color: #5050ba;
+  border-color: #5f65d3;
+}
+
+.middle {
+  width: 714px;
+  margin-left: 32px;
+}
+.middle .inner {
+  margin: 39px 0 0 19px;
+}
+.middle .inner.mtnew {
+  margin-top: 28px;
+}
+.middle .title {
+  padding-left: 29px;
+  font-size: 30px;
+  line-height: 56px;
+  color: #6bcdfe;
+}
+.middle .list {
+  margin: 28px 0 0 27px;
+  font-size: 0;
+}
+.middle .item {
+  float: left;
+  margin: 0 23px 44px 0;
+  width: 193px;
+  height: 189px;
+  font-size: 28px;
+  text-align: center;
+}
+.middle .item.other {
+  height: 142px;
+}
+.middle .item span {
+  display: table-cell;
+  width: inherit;
+  height: inherit;
+  vertical-align: middle;
+}
+
+.right {
+  margin-left: 31px;
+  width: 519px;
+}
+.right .list {
+  margin: 119px 0 0 0;
+  font-size: 0;
+}
+.right .item {
+  float: left;
+  margin: 0 14px 61px 53px;
+  width: 171px;
+  height: 171px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 36px;
+  border: 1px solid #61b1fb;
+  background-color: #087ce8;
+  border-radius: 6px;
+}
+.right .item span {
+  display: table-cell;
+  width: inherit;
+  height: inherit;
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=screen041.css.map */

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>数据可视化系统 -数据字典</title>
+    <!-- 公共CSS -->
+    <script src="../../style/common/common_css.js"></script>
+    <!-- 用户CSS -->
+    <link href="../../style/css/style.css" rel="stylesheet">
+</head>
+
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<div id="wrapper">
+    <!--主页面-->
+    <div class="wrapper wrapper-content animated fadeInDown">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox">
+
+                    <div class="ibox-title">
+                        <h5>数据字典</h5>
+                    </div>
+                    <div class="ibox-content">
+                        主 &nbsp; 键：<input type="text" class="inputform2" name="staffId" id="staffId" value=""
+                                          size="20">
+                        字段名称： <input
+                            type="text" class="inputform2" name="login_name" id="login_name" value=""
+                            size="20"> </select>
+                        <button action="frame.User" method="" class="btn btn-info btn-sm">搜索</button>
+
+
+                        <div align="right" style="padding:3px;">
+                            <button type="submit" action="" class="btn btn-info btn-sm">新建</button>
+                            <button type="submit" action="" class="btn btn-info btn-sm">修改</button>
+                            <button type="submit" action="" class="btn btn-danger btn-sm">删除</button>
+                        </div>
+
+                        <div id="dg83">
+                            <table class="grid3" cellpadding="0" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th class="" width="8%">单选</th>
+                                    <th class="" width="10%">工号</th>
+                                    <th class="" width="10%">用户名</th>
+                                    <th class="" width="10%">状态</th>
+                                    <th class="" width="10%">登陆次数</th>
+                                    <th class="" width="15%">登陆时间</th>
+                                    <th class="" width="20%">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="tr-row1">
+                                    <td class=" grid3-td">
+                                        <div class="radio radio-info radio-inline">
+                                            <input id="user_id0" type="radio" name="user_id" value="1"> <label
+                                                for="user_id0"></label>
+                                        </div>
+                                    </td>
+                                    <td class=" grid3-td">admin</td>
+                                    <td class=" grid3-td">系统管理员</td>
+                                    <td class=" grid3-td" align="center">启用</td>
+                                    <td class=" grid3-td" align="center">89</td>
+                                    <td class=" grid3-td" align="center">2017-11-08 18:32:07</td>
+                                    <td class=" grid3-td">
+                                        <button action="" target="_self" class="btn btn-primary btn-xs"
+                                                type="button">关联角色
+                                        </button>
+                                        <button action="" target="_self" class="btn btn-primary btn-xs"
+                                                type="button">授权菜单
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="pagesizeinfo">
+                                <div class="pagesizeLeft">
+                                    <button type="button" class="btn btn-white btn-xs">
+                                        <i class="fa fa-angle-double-left"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-white btn-xs">
+                                        <i class="fa fa-angle-left"></i>
+                                    </button>
+                                    <button class="btn btn-white btn-xs" type="button">
+                                        <i class="fa fa-angle-right"></i>
+                                    </button>
+                                    <button class="btn btn-white btn-xs" type="button">
+                                        <i class="fa fa-angle-double-right"></i>
+                                    </button>
+                                    到 <input type="text" name="extCurrPage" id="extCurrPage" class="inputform"
+                                             style="width:40px;height:22px;"
+                                             value="1" onkeydown="">/<font color="red">1</font>页
+                                    <button class="btn btn-white btn-xs" type="button" onclick="">GO</button>
+                                </div>
+                                <div class="pagesizeRight">
+                                    共<font color="red">2</font>条记录， 每页显示15条 。
+                                </div>
+                            </div>
+                            <input type="hidden" name="currpage_" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

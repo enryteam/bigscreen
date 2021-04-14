@@ -1,0 +1,85 @@
+/*!
+ * project: 
+ * author: dongyf
+ * date:2016-12-11
+ */
+
+.doublecol .col{
+	width: 1120px;
+}
+.doublecol{
+    height: 1080px;
+    width: 1120px;
+    float: left;
+}
+
+.doublecol-monitor{
+	float: left;
+	width: 800px;
+	height: 1080px;
+}
+.doublecol .servicetoday-tt{
+	line-height: 50px;
+	height: 50px;
+}
+#chartservicetoday{
+	height: 470px;
+}
+.doublecol h2{
+    text-align: center;
+    font-size: 42px;
+    height: 100px;
+    line-height: 100px;
+    font-family: "方正黑体_GBK";
+}
+.doublecol-bd {
+	overflow: hidden;
+}
+.doublecol-bd .module{
+	float: left;
+	position: relative;
+	width: 234px;
+	height: 165px;
+	margin:10px 10px 19px 18px;
+	background-image: url(../images/bg-monitor.png);
+	background-repeat: no-repeat;
+}
+.video{
+	position: relative;
+	top: 4px;
+	left: 4px;
+	width: 228px;
+	height: 126px;
+	background-color: #fff;
+}
+.doublecol-bd .module span{
+	font-size: 26px;
+	line-height: 50px;
+}
+.doublecol .col-bd{
+	padding-left: 20px;
+}
+.col .module{
+	float: left;
+	width: 241px;
+	height:78px;
+	margin-right: 28px;
+	margin-bottom: 30px;
+	line-height: 78px;
+	border:1px solid #2c69bd;
+	border-radius: 39px;
+	overflow: hidden;
+}
+.col .module span{
+	float: left;
+	margin-left: 23px;
+	font-size: 30px;
+	line-height: 78px;
+}
+.col .module em{
+	float: right;
+	margin-right: 38px;
+	font-size: 46px;
+	line-height: 78px;
+	color: #feea44;
+}

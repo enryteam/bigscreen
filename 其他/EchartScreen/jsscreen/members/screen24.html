@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link href="../css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/screen24.css">
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title></title>
+</head>	
+<body>
+	<div class="small-screen">
+		<div class="row">
+			<div class="doublecol">
+				<h2>设区市交办量（2016.12）</h2>
+				<div class="doublecol-bd" id="seasondeal">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="doublecol" >
+				<div class="col-one" id="chartforthwith">
+				</div>
+				<div class="col-one bgb" id="hotline" style="margin-left:184px;">
+					<span style="position:relative;top:-200px; font-size:40px;">平均整合热线条数</span>
+					<em>50</em>
+				</div>
+				<div class="col-one bgp" id="depart" style="margin-left:300px;">
+					<span style="position:relative;top:-200px; font-size:40px;">平均联办部门数量</span>
+					<em>50</em>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <script>
+    var settings = {
+        loaddata: '/rest/trdmember',
+    };
+    </script>
+    <!--测试脚本-->
+    <script src="../js/jquery.mockjax.js"></script>
+    <script src="test/_testscreen24.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/jiangsu.js"></script>
+    <script src="js/screen24.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="css/screen0203.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>成员单位</title>
+</head>
+
+<body class="big-screen">
+    <div class="middle-title">
+    </div>
+    <div class="col-left">
+        <h2 class="head">
+            <span style= "position:relative; z-index:99;">成员单位组成</span>
+        </h2>
+        <div class="memberCount">
+            <div class="modular">
+                <h4> 16个省级大热线 </h4>
+                <span>12388</span>
+                <span>12348</span>
+                <span>12333</span>
+                <span>12366</span>
+                <span>12315</span>
+                <span>12365</span>
+                <span>96777</span>
+                <span>12345</span>
+                <span>10000</span>
+                <img src="images/bg-color.png" />
+            </div>
+            <div class="modular">
+                <h4> 13个设区市 </h4>
+                <span>南京市</span>
+                <span>苏州市</span>
+                <span>无锡市</span>
+                <span>南通市</span>
+                <span>镇江市</span>
+                <span>淮安市</span>
+                <span>宿迁市</span>
+                <span>扬州市</span>
+                <span>泰州市</span>
+                <img src="images/bg-color.png" />
+            </div>
+            <div class="modular">
+                <h4> 30个小热线 </h4>
+                <span>12338</span>
+                <span>12389</span>
+                <span>12330</span>
+                <span>12322</span>
+                <span>12300</span>
+                <span>968890</span>
+                <span>12305</span>
+                <span>12336</span>
+                <span>12358</span>
+                <img src="images/bg-l.png" />
+            </div>
+            <div class="modular">
+            	<h4> 44个无热线 </h4>
+                <span>教育厅</span>
+                <span>民政厅</span>
+                <span>省民委</span>
+                <span>财政厅</span>
+                <span>水利厅</span>
+                <span>国资委</span>
+                <span>体育局</span>
+                <span>省侨办</span>
+                <span>工商联</span>
+                <img src="images/bg-c.png" />
+            </div>
+        </div>
+<!--         <div class="memberCount" id="memberCount">
+            <div class="circle1" data-id="8">
+                <div class="inner"></div>
+            </div>
+            <div class="circle2" data-id="6">
+                <div class="inner"></div>
+            </div>
+            <div class="circle3" data-id="10">
+                <div class="inner"></div>
+            </div>
+            <div class="circle4"  data-id="15">
+                <div class="inner"></div>
+            </div>
+            <div class="circle5" data-id="4">
+                <div class="inner"></div>
+            </div>
+            <div class="circle6" data-id="2">
+                <div class="inner"></div>
+            </div>
+            <div class="circle7" data-id="9">
+                <div class="inner"></div>
+            </div>
+            <div class="circle8" data-id="5">
+                <div class="inner"></div>
+            </div>
+            <div class="circle9" data-id="3">
+                <div class="inner"></div>
+            </div>
+            <div class="circle10" data-id="12">
+                <div class="inner"></div>
+            </div>
+            <div class="circle11" data-id="11">
+                <div class="inner"></div>
+            </div>
+            <div class="circle12" data-id="1">
+                <div class="inner"></div>
+            </div>
+            <div class="circle13" data-id="13">
+                <div class="inner"></div>
+            </div>
+            <div class="circle14" data-id="7">
+                <div class="inner"></div>
+            </div>
+            <div class="circle15" data-id="14">
+                <div class="inner"></div>
+            </div>
+        </div> -->
+    </div>
+    <div class="col-middle">
+        <ul class="seatings-summary" id="seatingssummary">
+            <li class="total">
+                <span class="icon"></span>
+                <h2>省级部门</h2>
+                <p id="member">0</p><em>个</em>
+            </li>
+            <li class="media">
+                <span class="icon"></span>
+                <h2>设区市</h2>
+                <p id="city">0</p><em>个</em>
+            </li>
+            <li class="servicenum">
+                <span class="icon"></span>
+                <h2>日平均交办</h2>
+                <p id="work">0</p><em>件</em>
+            </li>
+            <li class="inservice">
+                <span class="icon"></span>
+                <h2>平均满意度</h2>
+                <p id="satisfied" style='width:570px'>0</p>
+            </li>
+        </ul>
+    </div>
+    <div class="col-right">
+        <div class="row">
+            <h2 class="head">
+                <span style= "position:relative; z-index:99;">三方通话与服务工单交办量(<em></em>~<em></em>)</span>
+            </h2>
+            <div class="workline" id="workline">
+            </div>
+        </div>
+        <div class="row workgauge" id="workgauge"></div>
+    </div>
+    <!--配置地址-->
+    <script>
+    var settings = {
+        getmember: '/rest/sndmember'
+    };
+    </script>
+    <!--测试脚本-->
+    <script src="../js/mock-min.js"></script>
+    <script src="test/_test01.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="js/screen0203.js"></script>
+</body>
+
+</html>

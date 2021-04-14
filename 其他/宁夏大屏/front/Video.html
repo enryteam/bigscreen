@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../themes/css/global_n.css" />
+    <link rel="stylesheet" type="text/css" href="../themes/css/iframe.css" />
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/echarts/echarts.js"></script>
+    <script type="text/javascript">
+        $(function ($) {
+            // 你可以在这里继续使用$作为别名...
+
+            $("#spanID").html("");
+        });
+        //播放
+        function testPlay(indexNo) {
+            var av = document.getElementById("Axvideo");
+            var nvsAddress = "192.168.1.124";
+            var nvsPort = 6677;
+            var nvsUid = "admin";
+            var nvsPwd = "admin123451";
+            var camId = indexNo;
+            var mainStream = true;
+            av.PlayLiveVideoByNvsServer(nvsAddress, nvsPort, nvsUid, nvsPwd, camId, mainStream);
+        }
+
+        //停止
+        function testStop() {
+            var av = document.getElementById("Axvideo");
+            av.StopPlayLiveVideo();
+            //  alert("关闭视频");
+        }
+
+
+    </script>
+</head>
+<body onunload="testStop()">
+<span id="spanID" style=" display:none;"></span>
+   <object classid="clsid:562d9687-3669-471d-a5f8-cd65910ad3eb" codebase="lib/setup.exe"
+        width="100%" height="100%" id="Axvideo">
+    </object>
+    <script>
+       //testPlay('4');
+    </script>
+</body>
+</html>

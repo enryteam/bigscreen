@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="css/screen01.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>监控与调度屏</title>
+</head>
+<body class="small-screen">
+    <h2 class="time" id="time"></h2>
+    <ul class="allmedia" id="allmedia">
+        <li class="total"><p>实时<br />全媒体诉求</p><span>0</span></li>
+        <li class="phone">电话（<span>0</span>）</li>
+        <li class="wechat">微信（<span>0</span>）</li>
+        <li class="website">网站（<span>0</span>）</li>
+        <li class="email">电子邮件（<span>0</span>）</li>
+        <li class="weibo">微博（<span>0</span>）</li>
+        <li class="app">移动APP（<span>0</span>）</li>
+        <li class="govconsult">政务服务网（<span>0</span>）</li>
+    </ul>
+    <ul class="monitorsummary clearfix">
+        <li class="user">
+            <div class="icon"></div>
+            <ul class="datalist" id="onlinestatus">
+                <li>在线用户<span class="num" data-lbl="user">0</span></li>
+                <li>在线服务代表<span class="num" data-lbl="customerservice">0</span></li>
+                <li>在线成员单位（联办）服务专席<span class="num" data-lbl="servicevip">0</span></li>
+            </ul>
+        </li>
+        <li class="order">
+            <div class="icon"></div>
+            <ul class="datalist" id="workorderstatus">
+                <li>正在登记服务工单<span class="num" data-lbl="register">0</span></li>
+                <li>成员单位在办服务工单<span class="num" data-lbl="member">0</span></li>
+                <li>待回访服务工单<span class="num" data-lbl="wait">0</span></li>
+            </ul>
+        </li>
+    </ul>
+    <!--配置地址-->
+    <script>
+        var settings = {
+            loaddata: '/rest/fstmonitor',
+            usercount:'../../websocket/usercountwebsocket',
+        };
+    </script>
+
+    <!--测试脚本-->
+    <script src="../js/jquery.mockjax.js"></script>
+    <script src="test/_testscreen01.js"></script>
+
+	<script src="../../fui/js/lib/atmosphere.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="js/screen01.js"></script>
+    
+    <script>
+    	setInterval(refreshChart, 1000 * 10);
+    
+	    function refreshChart() {
+	        Util.ajax({
+	            url: "/rest/refresh/fourtheme",
+	            success: function(data) {
+	                renderAllMediaAppeal(data.allmediaappeal);
+	            }
+	        })
+	    };
+    </script>
+</body>
+</html>

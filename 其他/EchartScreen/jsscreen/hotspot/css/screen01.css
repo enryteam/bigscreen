@@ -1,0 +1,117 @@
+/**!
+ * [服务座席屏1]
+ * author: [chengang];
+ * date:2016-12-9
+ */
+
+
+.col h2{
+    font-family: "方正黑体_GBK";
+    font-size: 40px;
+    line-height: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+
+.knowledgelist {
+    font-size: 0;
+    padding-top: 40px;
+}
+
+.knowledgelist > li .icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    width: 122px;
+    height: 122px;
+}
+.bgappeal{
+    background: url(../images/bgappeal.png) no-repeat;
+    overflow: hidden;
+}
+.bgappeal .info{
+    font-size: 26px;
+}
+.bgappeal .title{
+    float: left;
+    padding:150px 0 0 405px;
+}
+.bgappeal .title span{
+    display: block;
+    width: 185px;
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+}
+.bgappeal .title em{
+    display: block;
+        width: 185px;
+        text-align: center;
+        color: #f7e444;
+    font-size: 60px;
+    font-weight: bold;
+}
+.bgappeal .details{
+    float: left;
+    margin-left: 140px;
+}
+.bgappeal .details span{
+    display: block;
+    width: 183px;
+    height: 42px;
+    margin-bottom: 12px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 21px;
+    background: #1a2173;
+}
+.bgappeal .details .one{
+    margin-left: -50px;
+}
+.bgappeal .details .two{
+    margin-left: -30px;
+}
+.bgappeal .details .three{
+    margin-left: -10px;
+}
+.tab-appeal{
+    width: 930px;
+}
+.tab-appeal table{
+    width: 100%;
+    margin-left: 25px;
+}
+.tab-appeal tr:nth-child(2n+1){
+    background-color: #000467;
+}
+.tab-appeal tr:nth-child(2n){
+    background-color: #00024e;
+}
+.tab-appeal th{
+    font-size: 28px;
+    background-color: #095dab;
+    border-right: 1px solid #282f97;
+    text-align: center;
+}
+.tab-appeal tr td:last-child{
+    border-right:none;
+    color: #f7e444;
+    font-size: 30px;
+}
+.tab-appeal td{
+    font-size: 24px;
+    height: 66px;
+    text-align: center;
+    border-right: 1px solid #282f97;
+    overflow: hidden;
+}
+.tab-appeal .tone{
+    width: 74px;
+    height: 66px;
+}
+.tab-appeal .ttwo{
+    width: 580px;
+}

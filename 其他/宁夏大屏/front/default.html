@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>综合分析</title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/layout.css" />
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<style>
+</style>
+
+</head>
+
+<body>
+
+
+    
+		<div class="chartDiv" style="width: 425px !important;  ">
+            <div >
+            	<div class='smzq' style="margin: 10px 0 0 30px;">
+                    <font>地区</font><span><a href="javascript:void(0)">银川市</a><a href="javascript:void(0)" class="click_on">石嘴山市</a><a href="javascript:void(0)">吴忠市</a><a href="javascript:void(0)">固原市</a><a href="javascript:void(0)">中卫市</a></span>
+                </div>
+            </div>
+            <div class="mkhf">
+            	<h5>矫正类型</h5>
+                <ul>
+                	<li class="click_on"><a href="javascript:void(0)" >缓刑</a></li>
+                    <li><a href="javascript:void(0)">假释</a></li>
+                    <li><a href="javascript:void(0)">管制</a></li>
+                    <li><a href="javascript:void(0)">暂予监外执行</a></li>
+               </ul>
+            </div>
+ 
+			<span class="bigWindow" id="windowSize"></span>
+	
+			<h1>宁夏自治区社区矫正人员分布情况</h1>
+			<div class="chartHeight">
+				<iframe src="map.html" class="iframeTest" style="height:590px; " frameborder="0" scrolling="no"></iframe>
+			</div>
+		</div>
+
+<!--
+
+		<div class="chartDiv" id="xmkgc" style="height: 370px !important; width: 390px; left: 350px;">
+			<span class="close"></span>
+
+			<h6 class="chartDivTitle"><span class="r"><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#xmk-gs');">全区</a><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#xmk-ztz');" class="click-on">地市</a></span>矫正类型<i title="设为主控"></i></h6>
+			<div class="chartHeight" id="xmk-gs" style="display:none;">
+				<iframe src="pyramid.html" class="iframeTest"  frameborder="0" scrolling="no"></iframe>
+			</div>
+			<div class="chartHeight" id="xmk-ztz">
+				<iframe src="pyramid.html" class="iframeTest"  frameborder="0" scrolling="no"></iframe>
+			</div>
+		</div>
+		
+		
+		
+		<div class="chartDiv" style="top:405px;height: 315px !important; width: 390px;">
+			<span class="close"></span>
+
+			<h6 class="chartDivTitle"><span class="r"><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#fzd-gs');">全区</a><a href="javascript:void(0)" onclick="Tab(this,'.chartDivTitle a','click-on');showHide('#fzd-ztz');" class="click-on">地市</a></span>年龄结构<i title="设为主控"></i></h6>
+			<div class="chartHeight" id="fzd-gs" style="display:none;">
+				<iframe src="pie3d.html" class="iframeTest" frameborder="0" ></iframe>
+			</div>
+			<div class="chartHeight" id="fzd-ztz">
+				<iframe src="pie3d.html" class="iframeTest" frameborder="0" ></iframe>
+			</div>
+		</div>-->
+		
+
+<script type="text/javascript" src="../js/draggabilly.pkgd.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.chartDiv').draggabilly({ handle: '.chartDivTitle' });
+		$('.selectTree').draggabilly({ handle: '.selectTree-Title' });
+	});    
+</script>
+</body>
+</html>

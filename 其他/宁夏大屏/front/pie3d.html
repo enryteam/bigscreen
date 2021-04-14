@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global_n.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/iframe.css" />
+<script type="text/javascript" src="../js/fusioncharts/fusioncharts.js"></script>
+</head>
+<body>
+ <div id="chart-container"> </div>
+<script>
+FusionCharts.ready(function () {
+    var demographicsChart = new FusionCharts({
+        type: 'pie3d',
+        renderAt: 'chart-container',
+        width: '300',
+        height: '200',
+                backgroundColor:"none",
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+                "startingAngle": "120",
+                "showLabels": "0",
+                "showLegend": "1",
+				"bgColor":"#061b36",
+				"borderColor":"#061b36",
+				"valueFontColor":"#FFFFFF",
+				"bgAlpha":"100",
+				"showBorder":"0",
+				
+				//"showLabels":"1",                
+				//"labelPosition":"0",
+                 
+				"legendBgColor":"#061b36",
+				"legendBorderColor":"#061b36",
+				"legendValueFontColor":"#FFFFFF",
+				"legendBgAlpha":"100",
+				"legendShowBorder":"0",
+				
+				
+				
+                "enableMultiSlicing": "0",
+                "slicingDistance": "15",
+                "showPercentValues": "1",
+                "showPercentInTooltip": "0",
+                "plotTooltext": "$label<br>总人数: $datavalue(人)",
+                "theme": "fint"
+            },
+            "data": [{
+                "label": "18周岁以下",
+                "value": "100"
+            }, {
+                "label": "18岁-30岁",
+                "value": "200"
+            }, {
+                "label": "30岁-40岁",
+                "value": "250"
+            }, {
+                "label": "40岁-60岁",
+                "value": "350"
+            }, {
+                "label": "60岁以上",
+                "value": "110"
+            }]
+        }
+    });
+    demographicsChart.render();
+});
+</script>
+</body>
+</html>

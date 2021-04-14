@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="css/subappealscreen04.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <title>监控与调度屏</title>
+</head>
+
+<body class="small-screen clearfix">
+    <h3 class="title">诉求详情</h3>
+    <div class="mainInner" id="main">
+    </div>
+    <!--配置地址-->
+    <script type="text/x-template" id="main-template">
+        <div class="content">
+            <h4 class="name">服务工单基本信息</h4>
+            {{#earlyWarning}}
+            <div class="inner">
+                <div class="clearfix">
+                    <dl>
+                        <dt>诉求人：</dt>
+                        <dd>{{name}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>性别：</dt>
+                        <dd>{{sex}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>紧急事项：</dt>
+                        <dd>{{degree}}</dd>
+                    </dl>
+                </div>
+                <div class="clearfix">
+                    <dl>
+                        <dt>年龄范围：</dt>
+                        <dd>{{age}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>诉求类型：</dt>
+                        <dd>{{type}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>来电时间：</dt>
+                        <dd>{{time}}</dd>
+                    </dl>
+                </div>
+                <dl>
+                    <dt>来源渠道：</dt>
+                    <dd>{{describe}}</dd>
+                </dl>
+                <dl>
+                    <dt>诉求内容：</dt>
+                    <dd style="height:150px; width:1550px;">{{info}}</dd>
+                </dl>
+                <dl>
+                    <dt>诉求地址：</dt>
+                    <dd>{{area}}</dd>
+                </dl>
+            </div>
+            {{/earlyWarning}}
+        </div>
+        <div class="content mt10">
+            <h4 class="name blue">服务工单处办</h4>
+            {{#agency}}
+            <div class="inner">
+                <dl>
+                    <dt>答复内容：</dt>
+                    <dd style="  width:1550px;">{{info}}</dd>
+                </dl>
+				<dl class="l" style="width:800px;">
+                    <dt>答复时间：</dt>
+                    <dd style="">{{answer_date}}</dd>
+                </dl>
+				<dl class="l" style="width:600px;">
+                    <dt>答复部门：</dt>
+                    <dd style="">{{handle_ouname}}</dd>
+                </dl>
+            </div>
+            {{/agency}}
+        </div>
+    </script>
+    <script>
+    var settings = {
+        getmintor: '/rest/subrqst/four'
+    };
+    </script>
+    <!--测试脚本-->
+    <script src="../js/mock-min.js"></script>
+    <script src="../js/mustache.js"></script>
+    <script src="../js/common.js"></script>
+    <!-- <script src="test/_testsubappealscreen04.js"></script> -->
+    <script src="js/subscreen04.js"></script>
+</body>
+
+</html>

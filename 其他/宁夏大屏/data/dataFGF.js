@@ -1,0 +1,127 @@
+/**
+ * Created by tannc on 2016/6/20.
+ */
+// 放管服内容
+var FGF_DATA={};
+// 审批的数据源
+FGF_DATA.approvalData=[
+    {name:'北京',value:1014},
+    {name:'天津',value:1126},
+    {name:'河北',value:870},
+    {name:'山西',value:57},
+    {name:'内蒙古',value:72},
+    {name:'辽宁',value:286},
+    {name:'吉林',value:1093},
+    {name:'黑龙江',value:1259},
+    {name:'上海',value:1168},
+    {name:'江苏',value:2995},
+    {name:'浙江',value:142},
+    {name:'安徽',value:2713},
+    {name:'福建',value:1037},
+    {name:'江西',value:283},
+    {name:'山东',value:1743},
+    {name:'河南',value:695},
+    {name:'湖北',value:1683},
+    {name:'湖南',value:1027},
+    {name:'广东',value:0},
+    {name:'广西',value:1742},
+    {name:'海南',value:961},
+    {name:'重庆',value:2},
+    {name:'四川',value:1628},
+    {name:'贵州',value:3016},
+    {name:'云南',value:5315},
+    {name:'西藏',value:1640},
+    {name:'陕西',value:4072},
+    {name:'甘肃',value:498},
+    {name:'青海',value:103},
+    {name:'宁夏',value:258},
+    {name:'新疆',value:2324}
+];
+// 核准的数据源
+FGF_DATA.authorizeData=[
+    {name:'北京',value:1122},
+    {name:'天津',value:175},
+    {name:'河北',value:574},
+    {name:'山西',value:12},
+    {name:'内蒙古',value:17},
+    {name:'辽宁',value:14},
+    {name:'吉林',value:267},
+    {name:'黑龙江',value:214},
+    {name:'上海',value:109},
+    {name:'江苏',value:386},
+    {name:'浙江',value:8},
+    {name:'安徽',value:100},
+    {name:'福建',value:51},
+    {name:'江西',value:51},
+    {name:'山东',value:1098},
+    {name:'河南',value:55},
+    {name:'湖北',value:416},
+    {name:'湖南',value:154},
+    {name:'广东',value:0},
+    {name:'广西',value:48},
+    {name:'海南',value:0},
+    {name:'重庆',value:41},
+    {name:'四川',value:167},
+    {name:'贵州',value:33},
+    {name:'云南',value:433},
+    {name:'西藏',value:1},
+    {name:'陕西',value:211},
+    {name:'甘肃',value:10},
+    {name:'青海',value:6},
+    {name:'宁夏',value:34},
+    {name:'新疆',value:82}
+];
+// 备案的数据源
+FGF_DATA.recordData=[
+    {name:'北京',value:1404},
+    {name:'天津',value:1906},
+    {name:'河北',value:2521},
+    {name:'山西',value:70},
+    {name:'内蒙古',value:41},
+    {name:'辽宁',value:4205},
+    {name:'吉林',value:1156},
+    {name:'黑龙江',value:1616},
+    {name:'上海',value:2896},
+    {name:'江苏',value:4965},
+    {name:'浙江',value:3619},
+    {name:'安徽',value:3584},
+    {name:'福建',value:1254},
+    {name:'江西',value:153},
+    {name:'山东',value:4052},
+    {name:'河南',value:3761},
+    {name:'湖北',value:4676},
+    {name:'湖南',value:1185},
+    {name:'广东',value:4976},
+    {name:'广西',value:754},
+    {name:'海南',value:144},
+    {name:'重庆',value:2362},
+    {name:'四川',value:6078},
+    {name:'贵州',value:1635},
+    {name:'云南',value:3156},
+    {name:'西藏',value:15},
+    {name:'陕西',value:2746},
+    {name:'甘肃',value:196},
+    {name:'青海',value:20},
+    {name:'宁夏',value:222},
+    {name:'新疆',value:761}
+];
+/// X轴 的数据
+FGF_DATA.Y_axisData=[
+    '项目审批','项目核准','固定资产投资项目节能评估和审查',
+    '建设项目用地预审','建设项目（不含核与辐射设施建设项目）环境影响评价文件审批(报告书)',
+    '建设项目（不含核与辐射设施建设项目）环境影响评价文件审批(登记表)',
+    '生产建设项目水土保持设施验收审批','河道管理范围内建设项目工程建设方案审批',
+    '生产建设项目水土保持方案审批','水工程建设规划同意书审核',
+    '建设项目水资源论证报告书审批','建设项目取水许可审批',
+    '洪水影响评价','卷烟、烟用二醋酸纤维素及丝束投资项目核准',
+    '国家规划矿区内新增年生产能力120万吨及以上煤炭开发项目核准',
+    '新建（含异地扩建）进口液化天然气接收、储运设施项目核准','通航安全核查',
+    '航道条件与通航安全影响评价','地震安全性评价报告结果审定及抗震设防要求确定',
+    '涉及文物保护单位保护范围的其他建设工程或者爆破、钻探、挖掘等作业审批',
+    '危险化学品（包括煤制燃料，进口液化天然气接收、储运设施，炼油，化工等）建设项目安全设施设计审查',
+    '较重、严重职业病危害的建设项目职业病防护设施竣工验收','输油输气管网建设项目安全条件审查',
+    '新建、扩建、改建建设项目和技术引进项目的职业病危害预评价报告审核','核电厂址区域核应急方案审查'
+];
+// 放管服的图例
+var FGF_Legend=["审批类项目","核准类项目","备案类项目"];
+

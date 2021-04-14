@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/**!
+ * [监控与调度屏2]
+ * author: [shsbo];
+ * date:2016-12-13
+ */
+.ml24 {
+  margin-left: 24px;
+}
+
+.small-screen {
+  position: relative;
+  font-family: "方正黑体_GBK";
+  background: none;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: url(../images/bgg.png) 0 0 no-repeat;
+}
+
+.halfW {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+}
+.leftH{
+  position: relative;
+  top: 100px;
+  width: 1920px;
+  height: 540px;
+}
+.halfH {
+  width: 100%;
+  height: 50%;
+}
+
+.left{
+  width: 1920px;
+  height: 540px;
+}
+.cc{
+  position: absolute;
+  width: 1920px;
+  height: 540px;
+  background: url(../images/detail.png) 50px 50px no-repeat;
+}
+.cc span{
+  display: block;
+  width: 200px;
+  font-size: 36px;
+  text-align: center;
+}
+.cc em{
+  display: block;
+  width: 200px;
+  text-align: center;
+  font-size: 40px;
+}
+.cc div:nth-child(1){
+  position: absolute;
+  top: 113px;
+  left: 72px;
+}
+.cc div:nth-child(2){
+  position: absolute;
+  top: 113px;
+  left: 376px;
+}
+.cc div:nth-child(3){
+  position: absolute;
+  top: 113px;
+  left: 671px;
+}
+.cc div:nth-child(4){
+  position: absolute;
+  top: 113px;
+  left: 967px;
+}
+.cc div:nth-child(5){
+  position: absolute;
+  top: 113px;
+  left: 1266px;
+}
+.TotalInner {
+  padding: 42px 21px 0;
+}
+.TotalInner .lump {
+  float: left;
+  text-align: center;
+  background: url(../images/mintorbg.png) repeat;
+  border: 1px solid #2c69bd;
+  border-radius: 3px;
+}
+.TotalInner .lump.type1 {
+  width: 199px;
+  height: 160px;
+}
+.TotalInner .lump.type2 {
+  width: 465px;
+  height: 160px;
+}
+.TotalInner .lump.type3 {
+  margin-top: 34px;
+  width: 444px;
+  height: 269px;
+}
+.TotalInner .lump .number {
+  padding-top: 29px;
+  font-family: Microsoft Yahei;
+  font-size: 42px;
+  font-weight: bold;
+  color: #feea44;
+  line-height: 60px;
+}
+.TotalInner .lump .intro {
+  padding-top: 14px;
+  font-size: 36px;
+  color: #fff;
+  line-height: 50px;
+}
+.TotalInner .lump .special {
+  padding: 59px 0 10px;
+  font-size: 36px;
+  color: #fff;
+  line-height: 100px;
+}
+.TotalInner .lump .special .orange {
+  padding: 0 10px;
+  font-size: 60px;
+  font-family: Microsoft Yahei;
+  font-weight: bold;
+  color: #feea44;
+}
+
+.showmessage {
+  float: left;
+  width: 696px;
+  height: 335px;
+  overflow: hidden;
+  background: url(../images/bg-right.png) no-repeat;
+  margin-left: 50px;
+
+}
+.showmessage:first-child {
+  float: left;
+  width: 696px;
+  height: 335px;
+  overflow: hidden;
+  background: url(../images/bg-left.png) no-repeat;
+}
+.showmessage .showleft {
+  font-size: 40px;
+  line-height: 100px;
+  text-align: center;
+}
+.showmessage .showleft em{
+	font-size: 60px;
+	color:#fff601;
+	line-height: 100px;
+	vertical-align: -5px;
+	margin-left: 20px;
+}
+
+.showmessage .showright {
+  float: left;
+  width: 638px;
+}
+.showmessage .showright .sritem {
+  margin-bottom: 19px;
+  width: 100%;
+  padding-left: 100px;
+}
+.showmessage .showright .sritem p {
+  padding-top: 10px;
+  font-size: 32px;
+  line-height: 40px;
+}
+.showmessage .showright .sritem .total {
+  float: left;
+  margin: 6px 0;
+  height: 28px;
+  width: 440px;
+  background-color: #000;
+  border-radius: 28px;
+}
+.showmessage .showright .sritem .total .inner {
+  width: 20%;
+  height: inherit;
+  background-color: #e1da1f;
+  border-radius: 28px;
+}
+.showmessage .showright .sritem .total .inner.blue {
+  background-color: #1081ea;
+}
+.showmessage .showright .sritem .percent {
+  float: left;
+  margin-left: 26px;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+/*# sourceMappingURL=screen02.css.map */

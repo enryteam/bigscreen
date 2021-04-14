@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>数据可视化系统 -欢迎</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../resources/images/common/favicon.ico">
+    <!-- 公共CSS -->
+    <script src="../../style/common/common_css.js"></script>
+    <!-- 用户CSS -->
+    <link href="../../style/css/style.css" rel="stylesheet">
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<div id="wrapper">
+    <!--主页面-->
+    <div class="wrapper wrapper-content animated fadeInDown">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox">
+
+                    <div class="ibox-title">
+                        <h5>系统介绍</h5>
+                    </div>
+
+                    <div class="ibox-content">
+                        <p>
+                            <b>"SmartCity"</b> 设计系统是由<a href="">
+                            且听风吟_z </a>研发维护的，具有自主知识产权的数据可视化解决方案设计系统。<br/><br/>
+
+                            系统包含数据导入、数据建模、视图管理、项目管理、OLAP分析、控制端生成、常用设计工具 JavaUtils、系统管理、系统监控等功能模块。
+                            提供快速生成数据可视化解决方案、数据分析等功能。<br/><br/>
+
+                            以软硬件结合方式，以设计、开发为基础；通过用户调研、需求分析、产品设计、数据呈现，针对海量的数据信息，
+                            为城市应急、公共安全、交通应急、汇报展示等领域的指挥或控制中心，提供的针对性可视化应用解决方案。
+                        </p>
+                        <p>&nbsp;</p>
+                        <h2>功能模块</h2>
+                        <p>&nbsp;</p>
+                        <p>1、数据导入</p>
+                        <p>2、数据建模</p>
+                        <p>3、视图管理</p>
+                        <p>4、项目管理</p>
+                        <p>5、OLAP分析</p>
+                        <p>6、控制端生成</p>
+                        <p>7、JavaUtils</p>
+                        <p>8、系统管理</p>
+                        <p>9、系统监控</p>
+                        <p>0、技术支持</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 公共js -->
+<script src="../../style/common/common_js.js"></script>
+<!-- 用户JS -->
+<script type="text/javascript" src="../../style/js/hAdmin.js"></script>
+<script type="text/javascript" src="../../style/js/index.js"></script>
+
+<!--加载子页面-->
+<script>
+    $(document).ready(function () {
+        $(".navbar-static-top").load("../../views/manage/common/nav-header.html");
+        $(".navbar-static-side").load("../../views/manage/common/nav-aside.html");
+        $(".modal").load("../../views/manage/common/modal.html");
+    });
+</script>
+
+</html>

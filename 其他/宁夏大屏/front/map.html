@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../themes/css/global_n.css" />
+<link rel="stylesheet" type="text/css" href="../themes/css/iframe.css" />
+<script src="../js/base.js"></script>
+<script src="../js/echarts/echarts.js"></script>
+</head>
+<body>
+ <div style="width:460px;height:460px;margin:0 auto;" id="main"> </div>
+        <script>
+		 require.config({
+				paths: {
+					echarts: '../js/echarts'
+				}
+			});
+		 require(
+			[
+				'echarts',
+				'echarts/chart/pie', 
+				'echarts/chart/bar',
+				'echarts/chart/map',
+				'echarts/chart/line'
+			],
+			function (ec) {
+				var myChart = ec.init(document.getElementById('main')); 
+				option = {
+						timeline:{
+							y2:0,
+				
+							data:[
+								'2015-09','2015-10','2015-11'
+							],
+							label : {
+								formatter : function(s) {
+									return s.slice(0, 4);
+								},
+								textStyle: {
+									color:'#fff'	
+								}
+							},
+							autoPlay : true,
+							playInterval : 1000,
+							height:70,
+							lineStyle: {
+								color:'#fff'
+							},
+							controlStyle:{
+								normal: {
+									color:'#FFFFFF'
+								},
+								emphasis:{
+									color: '#1e90ff',
+								}
+							}
+						},
+						options:[
+							{
+								tooltip : {'trigger':'item'},
+								dataRange: {
+									min: 0,
+									max : 53000,
+									text:['高','低'],           // 文本，默认为数值文本
+									calculable : true,
+									x: 'left',
+									y2:50,
+									color: ['orangered','yellow','lightskyblue'],
+									textStyle:{
+										"color": "#fff"
+									}
+								},
+								series : [
+									{
+										'name':'投资分布',
+										'type':'map',
+										'mapType':'宁夏',
+										'mapLocation': {
+											"y": "top",
+											"height":"85%"
+										},
+										'data':[
+													{name: '银川市',value: Math.round(Math.random()*53000)},
+													{name: '石嘴山市',value:  Math.round(Math.random()*53000)},
+													{name: '固原市',value: Math.round(Math.random()*53000)},
+													{name: '吴忠市',value: Math.round(Math.random()*53000)},
+													{name: '中卫市',value:  Math.round(Math.random()*53000)}
+												]
+									}
+								]
+							},
+							{
+								series : [
+									{'data':[
+												{name: '银川市',value: Math.round(Math.random()*53000)},
+													{name: '石嘴山市',value:  Math.round(Math.random()*53000)},
+													{name: '固原市',value: Math.round(Math.random()*53000)},
+													{name: '吴忠市',value: Math.round(Math.random()*53000)},
+													{name: '中卫市',value:  Math.round(Math.random()*53000)}
+												]}
+								]
+							},
+							{
+								series : [
+									{'data': [
+												{name: '银川市',value: Math.round(Math.random()*53000)},
+													{name: '石嘴山市',value:  Math.round(Math.random()*53000)},
+													{name: '固原市',value: Math.round(Math.random()*53000)},
+													{name: '吴忠市',value: Math.round(Math.random()*53000)},
+													{name: '中卫市',value:  Math.round(Math.random()*53000)}
+												]}
+								]
+							}
+							
+						]
+					}; 
+				myChart.setOption(option);
+			});
+		 </script>
+</body>
+</html>
