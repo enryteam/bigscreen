@@ -4,7 +4,15 @@
 
 
 
+# 大屏HTML
 
+http://yuanbaoshuju.com/preview.html
+
+![image-20210508180406924](https://gitee.com/AiShiYuShiJiePingXing/img/raw/master/img/image-20210508180406924.png)
+
+![image-20210508180420889](https://gitee.com/AiShiYuShiJiePingXing/img/raw/master/img/image-20210508180420889.png)
+
+![](https://gitee.com/AiShiYuShiJiePingXing/img/raw/master/img/image-20210508180344364.png)
 
 # DataGear大屏看板模板
 
