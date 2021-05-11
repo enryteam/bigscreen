@@ -57,16 +57,26 @@ https://gitee.com/han_meng_fei_sha/TeZhongSheBeiZongHeJianGuanDaPing/tree/master
 
 
 
+# Echarts电商平台数据可视化大屏
+
+Echarts电商平台数据可视化大屏全栈实战项目分享（附源码）：https://juejin.cn/post/6960125126008389669
+
+- [电商平台](https://github.com/jackchen0120/EC-Platform-Monitor)
+
+> Vue全家桶、WebSocket前后端数据推送、后端框架Koa2、Echarts新版图表组件（折线图、柱状图、饼图、地图、散点图），还支持主题切换, 展示酷炫的图表效果，同时也能够支持大屏和小屏的切换，保证了图表在不同屏幕上呈现的效果。
+
+在线DEMO演示：http://106.55.168.13:8999/screen
+
+![image-20210511142337746](https://gitee.com/AiShiYuShiJiePingXing/img/raw/master/img/image-20210511142337746.png)
+
+
+
 # 附录
 
 资源来源：
 
 - [bigdata-examples](https://github.com/zhangti0708/bigdata-examples)
-
 - [大屏数据展示模板](https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi)
-
 - [可视化大屏资源](https://gitee.com/longkang/bigscreen)
-
 - [echart大屏数据](https://gitee.com/chun_cheng/echart-large-screen-data)
 - [特种设备综合监管大屏](https://gitee.com/han_meng_fei_sha/TeZhongSheBeiZongHeJianGuanDaPing)
-
