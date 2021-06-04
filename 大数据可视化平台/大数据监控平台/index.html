@@ -1,0 +1,227 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/china.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="head clearfix">
+		<div class="home"><a href="#"><img src="images/Home.png" width="28"> <i> 首页</i></a></div>
+	<div class="menu menu1 pulll_left">
+		<ul>
+			<li><a href="#">功能菜单一 </a></li>
+			<li><a href="#">功能菜单二</a></li>
+
+		</ul>
+		</div>
+	<h1 class="pulll_left">公司名称有限公司大数据监控平台</h1>
+		<div class="menu menu2 pulll_left">
+		<ul>
+			<li><a href="#">功能菜单一 </a></li>
+			<li><a href="#">功能菜单二</a></li>
+		</ul>
+		</div>
+		
+		<div class="time" id="showTime">2018/6/12 17:00:12</div>
+		<script>
+var t = null;
+    t = setTimeout(time,1000);//開始运行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+		var y=dt.getFullYear();
+		var mt=dt.getMonth()+1;
+		var day=dt.getDate();
+       var h=dt.getHours();//获取时
+       var m=dt.getMinutes();//获取分
+       var s=dt.getSeconds();//获取秒
+       document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
+       t = setTimeout(time,1000); //设定定时器，循环运行     
+    } 
+
+</script>
+	</div>
+	<div class="mainbox">
+	
+	<ul class="clearfix nav1">
+		<li style="width: 22%">
+		<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" style="height: 200px;">
+<table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <th></th>
+      <th>数据</th>
+      <th>运行</th>
+      <th>待机</th>
+      <th>时间</th>
+     
+     
+    </tr>
+    <tr>
+      <td>集回1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2281.0</td>
+    </tr>
+    
+	   <tr>
+      <td>集回1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2281.0</td>
+    </tr> <tr>
+      <td>集回1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2281.0</td>
+    </tr> <tr>
+      <td>集回1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2281.0</td>
+    </tr> <tr>
+      <td>集回1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2281.0</td>
+    </tr>
+  </tbody>
+</table>
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" style="height: 250px;">
+				<ul class="ybp clearfix">
+				<li  id="echart5"></li>
+				<li  id="echart6"></li>
+				<li   id="echart7"></li>
+				<li  id="echart8"></li>
+				</ul>
+			</div>
+			</div>
+		</li>
+		<li style="width: 56%">
+		
+		<div class="box">
+			<div class="boxnav mapc" style="height: 550px; position: relative">
+				<div class="mapnav">
+				<ul>
+					<li><div><span>数据名称</span><p>358</p></div></li>
+					<li><div><span>数据名称</span><p>913452</p></div></li>
+					<li><div><span>数据名称</span><p>19532</p></div></li>
+					<li><div><span>数据名称</span><p>521711</p></div></li>
+					<li><div><span>数据名称</span><p>13552</p></div></li>
+					</ul>
+				
+				</div>
+				
+			
+			<div class="map" id="map">
+			
+			
+			</div>
+			</div>
+		
+		</li>
+		<li style="width: 22%">
+		
+		<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" style="height: 200px;">
+			<table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <th></th>
+      <th>数据</th>
+      <th>运行</th>
+      <th>待机</th>
+      <th>时间</th>
+     
+     
+    </tr>
+    <tr>
+      <td>集回1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2281.0</td>
+    </tr>
+    
+	   <tr>
+      <td>集回1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2281.0</td>
+    </tr> <tr>
+      <td>集回1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2281.0</td>
+    </tr> <tr>
+      <td>集回1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2281.0</td>
+    </tr> <tr>
+      <td>集回1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>2281.0</td>
+    </tr>
+  </tbody>
+</table>
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" style="height: 250px;">
+			<div class="" style="height: 190px" id="echart1"></div>
+				<div class="leidanav">
+				<ul class="clearfix">
+					<li><span>文本1</span><p>43</p></li>
+					<li><span>文本2</span><p>100</p></li>
+					<li><span>文本3</span><p>28</p></li>
+					<li><span>文本4</span><p>3</p></li>
+					<li><span>文本5</span><p>150</p></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+		
+		</li>
+		</ul>
+		
+		<div class="box" style="padding: 20px 0;">
+		<ul class="clearfix nav2 ">
+		<li style="width:35%"><div class="tit01">标题样式</div>
+			<div class="ftechart" id="echart2"></div>
+			</li>
+		<li style="width:20%">
+			<div class="tit01">标题样式</div>
+			<div class="ftechart" id="echart9"></div>
+			</li>
+		<li style="width:25%"><div class="tit01">标题样式</div><div class="ftechart" id="echart3"></div></li>
+		<li style="width:20%"><div class="tit01">标题样式</div><div class="ftechart" id="echart4"></div></li>
+		</ul>
+		</div>
+	</div>
+</body>
+</html>
