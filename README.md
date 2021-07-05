@@ -211,6 +211,26 @@ Echarts电商平台数据可视化大屏全栈实战项目分享（附源码）�
 
 
 
+## AJ-Report-可视化拖拽图表工具
+
+Gitee地址：https://gitee.com/anji-plus/report
+
+电脑在线体验: https://report.anji-plus.com/index.html   体验账号：guest  密码：guest
+
+在线文档: https://report.anji-plus.com/report-doc/
+
+大屏设计（AJ-Report）是一个可视化拖拽编辑的，直观，酷炫，具有科技感的图表工具全开源项目。 内置的基础功能包括数据源，数据集，报表管理。
+
+![操作](https://images.gitee.com/uploads/images/2021/0703/094742_c0243f70_1728982.gif)
+
+
+
+
+
+
+
+
+
 # 附录B：相关资源内容来源及整理
 
 资源来源：
