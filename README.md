@@ -62,9 +62,9 @@
 
 
 
-# 附录：一些优秀大屏参考案例
+# 三、一些优秀大屏参考案例
 
-## 大屏HTML
+## 3.1 大屏HTML
 
 地址：http://yuanbaoshuju.com/preview.html
 
@@ -74,7 +74,7 @@
 
 ![](https://gitee.com/AiShiYuShiJiePingXing/img/raw/master/img/image-20210508180344364.png)
 
-## DataGear大屏看板模板
+## 3.2 DataGear大屏看板模板
 
 Gitee地址：[DataGearDashboardTemplate](https://gitee.com/datagear/DataGearDashboardTemplate)
 
@@ -92,13 +92,11 @@ https://gitee.com/datagear/datagear
 
 https://github.com/datageartech/datagear
 
-## 模板参考项目
+## 3.3 模板参考项目
 
 [Lang/大屏数据展示模板](https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi)
 
-## 特种设备综合监管大屏
-
-### 介绍：
+## 3.4 特种设备综合监管大屏
 
 数据可视化大屏-特种设备综合监管 压力容器
  https://blog.csdn.net/yue31313/article/details/90813821
@@ -109,11 +107,11 @@ https://github.com/datageartech/datagear
 
 3、数据转换成图表所用数据，代码逻辑优化。提高数据生成图表开发效率。
 
-### 源码下载：
+源码下载：
 
 https://gitee.com/han_meng_fei_sha/TeZhongSheBeiZongHeJianGuanDaPing/tree/master
 
-## Echarts电商平台数据可视化大屏
+## 3.5 Echarts电商平台数据可视化大屏
 
 Echarts电商平台数据可视化大屏全栈实战项目分享（附源码）：https://juejin.cn/post/6960125126008389669
 
@@ -125,7 +123,7 @@ Echarts电商平台数据可视化大屏全栈实战项目分享（附源码）�
 
 ![image-20210511142337746](https://gitee.com/AiShiYuShiJiePingXing/img/raw/master/img/image-20210511142337746.png)
 
-## AJ-Report-可视化拖拽图表工具
+## 3.6 AJ-Report-可视化拖拽图表工具
 
 Gitee地址：https://gitee.com/anji-plus/report
 
@@ -137,9 +135,42 @@ Gitee地址：https://gitee.com/anji-plus/report
 
 ![操作](https://images.gitee.com/uploads/images/2021/0703/094742_c0243f70_1728982.gif)
 
+## 3.7 Vue大屏数据可视化
 
+- [Vue大屏数据可视化](https://gitee.com/zhufei_yao/study_hard)
+- Gitee地址：https://gitee.com/zhufei_yao/study_hard
 
-# 附录B：相关资源内容来源及整理
+项目描述：
+
+- 一个基于 vue、datav、Echart 框架的 " **数据大屏项目** "，通过 vue 组件实现数据动态刷新渲染，内部图表可实现自由替换。部分图表使用 DataV 自带组件，可进行更改，详情请点击下方 DataV 文档。
+
+项目展示：
+
+![项目展示](https://images.gitee.com/uploads/images/2020/0411/221307_0f8af2e7_4964818.gif)
+
+## 3.8 data_view_web
+
+- [data_view_web](https://gitee.com/1967988842/data_view_web)
+- Gitee地址：https://gitee.com/1967988842/data_view_web
+- Github地址：https://github.com/ggymm/data-view-web
+
+### 3.8.1 数据可视化平台
+
+前端介绍：
+
+- 图表基于echarts4
+
+- UI部分基于element-ui
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0515/144320_3dc500d4_673473.png)
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0515/144337_c1095cd5_673473.png)
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0515/144413_0375d5bd_673473.png)
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0515/144509_0fb58b7f_673473.png)
+
+# 四、相关资源内容来源及整理
 
 资源来源：
 
