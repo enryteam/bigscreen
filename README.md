@@ -170,7 +170,98 @@ Gitee地址：https://gitee.com/anji-plus/report
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0515/144509_0fb58b7f_673473.png)
 
-# 四、相关资源内容来源及整理
+# 四、可视化资源及网站
+
+## 4.1 阿里空间大数据可视化AntV
+
+- https://antv.gitee.io/zh
+
+## 4.2 开源地图开发工具 Mapbox
+
+- https://www.mapbox.com/
+
+## 4.3 2D/3D可视化工具 
+
+- 2D/3D可视化工具 Maptalks：https://maptalks.org/
+- D3.js：https://d3js.org/
+- 三维可视化引擎：Three.js：https://threejs.org/
+
+## 4.4 开源图表
+
+- Echarts：https://www.echartsjs.com/zh/index.html
+- HighCharts：https://www.highcharts.com.cn/
+- 空间可视化图表Kepler：https://kepler.gl/
+
+## 4.5 Web3D城市可视化
+
+- https://zhuanlan.zhihu.com/p/55457466
+- https://zhuanlan.zhihu.com/p/61871753
+
+## 4.6 地图引擎 maptalks 和 three.js 结合
+
+- https://github.com/maptalks/maptalks.three
+- https://maptalks.org/maptalks.three/demo/index.html
+
+## 4.7 有关空间数据分析和可视化的知乎专栏
+
+（1）Geospatial and GIS
+
+- https://zhuanlan.zhihu.com/gagogl
+  （2）时空大数据可视化
+- https://zhuanlan.zhihu.com/timespacedatav
+  （3）AntV
+- https://zhuanlan.zhihu.com/aiux-antv
+  （4）GIS之家专栏
+- https://zhuanlan.zhihu.com/gishome
+  （5）漂亮得不像实力派的可视化
+- https://zhuanlan.zhihu.com/rendering-fantasy
+  （6）Cesium学习
+  Cesium开发笔记：https://zhuanlan.zhihu.com/Cesium2
+  Cesium资料大全：https://zhuanlan.zhihu.com/p/34217817?utm_source=wechat_session&utm_medium=social&s_r=0
+  （7）WebGL九浅一深
+- https://zhuanlan.zhihu.com/webgllover
+  （8）戏学平面设计
+- https://zhuanlan.zhihu.com/c_1101177979924811776
+
+## 4.8 基于软件的可视化工具
+
+### （1）Tableau—收费
+
+支持更大的数据量、更好的表现形式；
+类似高级版的Excel数据透视表；
+商业分析比较多，地理层面较少。
+
+### （2）Power BI—免费
+
+类似Tableau，商务分析工具套件，可用来分析资料及共用深入咨询。
+
+### （3）Microsoft Power Map for Excel
+
+Excel里面的地图可视化插件
+
+### （4）ArcScene三维可视化
+
+ArcGIS软件下的三维可视化工具
+
+### （5）QGIS—ArcMap的开源版
+
+QGIS是一个免费的开源地理信息分析和可视化软件。与ArcGIS相比，除了价格上的优势外，前者的可视化功能比ArcGIS更有多样性。
+如颜色重叠的部分可以叠加和变色，展现出3D效果。
+
+### （6）Cartogram
+
+变形地图工具是一个ArcMap的插件。
+变形地图将一个地区按面积以外的衡量方式来展示。
+
+### （7）Carto-给予网络平台的可视化工具
+
+Carto是一个可以上传数据并在线做地图展示的平台，在网络平台的操作上和极海平台类似。它的优势是它有根据时间显示数据的能力，可以按时间顺序做成动图。
+
+### （8）Mapbox
+
+侧重在于地图的个性化设置
+
+# 五、相关资源内容来源及整理
 
 资源来源：
 
@@ -179,3 +270,4 @@ Gitee地址：https://gitee.com/anji-plus/report
 - [可视化大屏资源](https://gitee.com/longkang/bigscreen)
 - [echart大屏数据](https://gitee.com/chun_cheng/echart-large-screen-data)
 - [特种设备综合监管大屏](https://gitee.com/han_meng_fei_sha/TeZhongSheBeiZongHeJianGuanDaPing)
+- [数据可视化学习总结](https://blog.csdn.net/Ocean111best/article/details/104924452)
