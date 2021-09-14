@@ -8,15 +8,13 @@
 
 同时推荐一波自己的另一个关于智慧城市的仓库，里面含有**智慧城市、智慧交通、智慧公交、智慧公路、智慧政务、智慧校园、车路协同、智慧社区等等等等的案例，解决方案，需求分析，需求整理等，欢迎各位朋友按需查阅！！！！！**
 
+可视化大屏仓库地址：https://gitee.com/AiShiYuShiJiePingXing/bigscreen
+
 智慧城市仓库地址：https://gitee.com/AiShiYuShiJiePingXing/smart-city
-
-
 
 大屏仓库克隆：`  git clone https://gitee.com/AiShiYuShiJiePingXing/bigscreen.git  `
 
 智慧城市仓库克隆：`git clone https://gitee.com/AiShiYuShiJiePingXing/smart-city.git`
-
-
 
 ![image-20210705145822193](https://gitee.com/AiShiYuShiJiePingXing/img/raw/master/img/image-20210705145822193.png)
 
@@ -28,25 +26,9 @@
 
 包含内容有：大屏入口屏-主屏、大数据分析系统、企业、物流、食物、收费站、数字孪生、物流大数据、舆情分析、智慧城市、智慧高速、智慧公交、智慧交通、智慧社区等相关资源的大屏图片。
 
+内容有且不限：
 
-
-## 大屏设计参考手册、大数据可视化平台
-
-## 登录界面、视频监控、数字蓝色、移动能效、智慧仓库
-
-## 智慧城市、智慧电商、智慧工地、智慧公安
-
-## 智慧公司、智慧环保、智慧交通
-
-## 智慧金融、智慧景区、智慧金融、智慧矿产、智慧企业、智慧气象
-
-## 智慧设备、智慧社区、智慧市场、智慧图书、智慧网络、智慧物联
-
-## 智慧物流、智慧消防、智慧销售
-
-## 智慧医疗、智慧运维、智慧运营
-
-## 智慧政务、GIS大屏、axure高保真大屏原型
+![image-20210914232520561](https://gitee.com/er-huomeng/l-img/raw/master/image-20210914232520561.png)
 
 
 
@@ -259,7 +241,7 @@ Carto是一个可以上传数据并在线做地图展示的平台，在网络平
 
 ### （8）Mapbox
 
-侧重在于地图的个性化设置
+侧重在于地图的个性化设置。
 
 # 五、相关资源内容来源及整理
 
@@ -271,3 +253,4 @@ Carto是一个可以上传数据并在线做地图展示的平台，在网络平
 - [echart大屏数据](https://gitee.com/chun_cheng/echart-large-screen-data)
 - [特种设备综合监管大屏](https://gitee.com/han_meng_fei_sha/TeZhongSheBeiZongHeJianGuanDaPing)
 - [数据可视化学习总结](https://blog.csdn.net/Ocean111best/article/details/104924452)
+
