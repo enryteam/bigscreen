@@ -152,6 +152,18 @@ Gitee地址：https://gitee.com/anji-plus/report
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0515/144509_0fb58b7f_673473.png)
 
+## 3.9  EC-Platform-Monitor
+
+Github地址：https://github.com/jackchen0120/EC-Platform-Monitor
+
+新版Echarts电商平台数据可视化大屏监控系统进阶实战项目。
+
+涉及技术知识点有：Vue全家桶、WebSocket前后端数据推送、后端框架Koa2、Echarts新版图表组件（折线图、柱状图、饼图、地图、散点图），还支持主题切换, 展示酷炫的图表效果，同时也能够支持大屏和小屏的切换，保证了图表在不同屏幕上呈现的效果。
+
+在线Demo展示：http://106.55.168.13:8999/
+
+![image-20210924090955402](https://gitee.com/er-huomeng/l-img/raw/master/typora/image-20210924090955402.png)
+
 # 四、可视化资源及网站
 
 ## 4.1 阿里空间大数据可视化AntV
