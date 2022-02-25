@@ -304,4 +304,5 @@ datart 是新一代数据可视化开放平台，支持各类企业数据可视�
 - [echart大屏数据](https://gitee.com/chun_cheng/echart-large-screen-data)
 - [特种设备综合监管大屏](https://gitee.com/han_meng_fei_sha/TeZhongSheBeiZongHeJianGuanDaPing)
 - [数据可视化学习总结](https://blog.csdn.net/Ocean111best/article/details/104924452)
+- [vue、 echarts、iview 实现大数据可视化大屏模板](https://github.com/bym110/vue-echarts)
 
