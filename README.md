@@ -8,15 +8,7 @@
 
 同时推荐一波自己的另一个关于智慧城市的仓库，里面含有**智慧城市、智慧交通、智慧公交、智慧公路、智慧政务、智慧校园、车路协同、智慧社区等等等等的案例，解决方案，需求分析，需求整理等，欢迎各位朋友按需查阅！！！！！**
 
-可视化大屏仓库地址：https://gitee.com/AiShiYuShiJiePingXing/bigscreen
 
-智慧城市仓库地址：https://gitee.com/AiShiYuShiJiePingXing/smart-city
-
-大屏仓库克隆：`  git clone https://gitee.com/AiShiYuShiJiePingXing/bigscreen.git  `
-
-智慧城市仓库克隆：`git clone https://gitee.com/AiShiYuShiJiePingXing/smart-city.git`
-
-![image-20210705145822193](https://gitee.com/AiShiYuShiJiePingXing/img/raw/master/img/image-20210705145822193.png)
 
 # 一、大屏设计资源
 
